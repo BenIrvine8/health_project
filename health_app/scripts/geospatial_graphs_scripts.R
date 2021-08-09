@@ -53,6 +53,7 @@ scotland_health_survey_local_clean_zones <- la_zones %>%
 #only 12 area codes?!
 scotland_health_survey_local_clean %>% 
   distinct(area_code)
+#yes not enough data. add "dummy" geospatial coordinates so can keep map with other areas as white.
 
 #plot geospatial graph with example filters
 scotland_health_survey_local_clean_zones %>% 
