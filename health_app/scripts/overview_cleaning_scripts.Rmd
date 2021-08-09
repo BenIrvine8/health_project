@@ -20,6 +20,16 @@ library(here)
 scotland_health_survey_clean <- scotland_health_survey %>% 
   filter(scottish_health_survey_indicator %in% c("Any cardiovascular condition: Has a cardiovascular condition", "Any cardiovascular condition: No cardiovascular condition", "Life satisfaction: Above the mode (9 to 10-Extremely satisfied)", "Life satisfaction: Below the mode (0-Extremely dissatisfied to 7)", "Life satisfaction: Mode (8)", "Obesity: Not obese", "Obesity: Obese", "Overweight: Not overweight or obese", "Overweight: Overweight (including obese)", "Overweight: Overweight (including obese)", "Summary activity levels: Low activity", "Summary activity levels: Meets recommendations", "Summary activity levels: Some activity", "Summary activity levels: Very low activity"),
          measurement == "Percent")
+
+
+scotland_health_survey_clean <- scotland_health_survey_clean %>% 
+  rename(year = date_code, 
+         percentage = value,
+         area_code = feature_code) %>% 
+  select(area_code, year, scottish_health_survey_indicator, sex, percentage) %>% 
+  arrange(year, scottish_health_survey_indicator, sex)
+
+
 ```
 
 ```{r}
@@ -120,10 +130,24 @@ scotland_health_survey_local <- read_csv(here("data/raw_data/scotland health sur
 scotland_health_survey_local <- scotland_health_survey_local %>% 
   rename(area_code = feature_code)
 
-health_survey_local_clean <- health_board_names %>% 
-  select(area_code, hb_name) %>% 
-  distinct() %>% 
-  right_join(scotland_health_survey_local, by = "area_code")
+  scotland_health_survey_local <- health_board_names %>% 
+    select(area_code, hb_name) %>% 
+    distinct() %>% 
+    right_join(scotland_health_survey_local, by = "area_code") 
+  
+
+  scotland_health_survey_local_clean <-  scotland_health_survey_local %>% 
+ filter(scottish_health_survey_indicator %in% c("Any cardiovascular condition: Has a cardiovascular condition", "Any cardiovascular condition: No cardiovascular condition", "Life satisfaction: Above the mode (9 to 10-Extremely satisfied)", "Life satisfaction: Below the mode (0-Extremely dissatisfied to 7)", "Life satisfaction: Mode (8)", "Obesity: Not obese", "Obesity: Obese", "Overweight: Not overweight or obese", "Overweight: Overweight (including obese)", "Overweight: Overweight (including obese)", "Summary activity levels: Low activity", "Summary activity levels: Meets recommendations", "Summary activity levels: Some activity", "Summary activity levels: Very low activity"),
+         measurement == "Percent")
+
+
+scotland_health_survey_local_clean <- scotland_health_survey_local_clean %>% 
+  rename(year = date_code, 
+         percentage = value) %>% 
+  select(area_code, year, scottish_health_survey_indicator, sex, percentage) %>% 
+  arrange(area_code, year, scottish_health_survey_indicator, sex)
+
+write_csv(scotland_health_survey_local_clean, here("data/clean_data/scotland_health_survey_local_clean.csv"))
 
 ```
 
