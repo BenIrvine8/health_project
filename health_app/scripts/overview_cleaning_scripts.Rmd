@@ -9,8 +9,10 @@ library(janitor)
 library(here)
 ```
 
+# Scottish Health Survey Overview
+
 ```{r}
-  scotland_health_survey <- read_csv(here("../data/raw_data/scotland_health_survey.csv")) %>%
+  scotland_health_survey <- read_csv(here("data/raw_data/scotland_health_survey.csv")) %>%
   clean_names()
 ```
 
@@ -21,9 +23,10 @@ scotland_health_survey_clean <- scotland_health_survey %>%
 ```
 
 ```{r}
-write_csv(scotland_health_survey_clean, "../data/clean_data/scotland_health_survey_clean.csv")
+write_csv(scotland_health_survey_clean, here("data/clean_data/scotland_health_survey_clean.csv"))
 ```
 
+# Greenspace cleaning
 
 ```{r}
 greenspace <- read_csv(here("data/raw_data/greenspace.csv")) %>%
@@ -36,6 +39,8 @@ greenspace <- read_csv(here("data/raw_data/greenspace.csv")) %>%
 ```
 
 
+# Healthy life expectancy
+
 ```{r}
 healthy_life_expectancy <- read_csv(here("data/raw_data/healthy_life_expectancy.csv")) %>%
   clean_names() %>%
@@ -47,6 +52,7 @@ healthy_life_expectancy <- read_csv(here("data/raw_data/healthy_life_expectancy.
 ```
 
 
+# Life expectancy
 ```{r}
 life_expectancy <- read_csv(here("data/raw_data/life_expectancy.csv")) %>%
   clean_names() %>%
@@ -57,6 +63,7 @@ life_expectancy <- read_csv(here("data/raw_data/life_expectancy.csv")) %>%
 ```
 
 
+# council names
 ```{r}
 council_names <- read_csv(here("data/clean_data/council_area_names.csv"))
 
@@ -66,9 +73,11 @@ council_names <- read_csv(here("data/clean_data/council_area_names.csv"))
   right_join(greenspace, by = "area_code")
 ```
 
+
+# writing life expectancy file
 ```{r}
-write_csv(life_expectancy, "../Desktop/codeclan/health_project/health_app/data/clean_data/life_expectancy.csv")
-write_csv(healthy_life_expectancy, "../Desktop/codeclan/health_project/health_app/data/clean_data/healthy_life_expectancy.csv")
+write_csv(life_expectancy, "Desktop/codeclan/health_project/health_app/data/clean_data/life_expectancy.csv")
+write_csv(healthy_life_expectancy, "Desktop/codeclan/health_project/health_app/data/clean_data/healthy_life_expectancy.csv")
 ```
 
 
@@ -94,11 +103,11 @@ health_board_names <- bind_rows(council_codes, health_board_codes) %>%
 ```
 
 ```{r}
-write_csv(health_board_names, "../data/clean_data/health_board_names.csv")
+write_csv(health_board_names, here("data/clean_data/health_board_names.csv"))
 ```
 
 
-
+# Scottish Health Survey by Local Area
 ```{r}
 scotland_health_survey_local <- read_csv(here("data/raw_data/scotland health survey local level.csv")) %>% 
   clean_names()
@@ -116,8 +125,5 @@ health_survey_local_clean <- health_board_names %>%
   distinct() %>% 
   right_join(scotland_health_survey_local, by = "area_code")
 
-health_survey_local_clean %>% 
-  filter(is.na(hb_name)) %>% 
-  distinct(area_code)
 ```
 
