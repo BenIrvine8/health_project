@@ -1,0 +1,58 @@
+---
+title: "Life expectancy graphs for Overview page"
+output: html_notebook
+---
+
+```{r}
+library(tidyverse)
+
+```
+
+```{r}
+life <- read_csv("data/clean_data/life_expectancy.csv")
+```
+
+```{r}
+view(life)
+glimpse(life)
+```
+
+```{r}
+distinct(.data = life, age)  # character is a character with bands
+distinct(.data = life, simd_quintiles) # character 5 categories
+distinct(.data = life, urban_rural_classification) # character 7 categories
+```
+```{r}
+# life expectancy at zero years
+life %>% 
+  filter(age == "0 years",
+         date_code == "2016-2018",
+         simd_quintiles == "All",
+         urban_rural_classification == "All") %>% 
+  ggplot() +
+  aes(x = sex, y = years_to_live) +
+  geom_col() +
+  scale_y_continuous() +
+  labs(
+    x = "\nSex",
+    y = "Life expectancy (years) at birth",
+    title = "Life expectancy in Scotland in 2016\n",
+    subtitle = "Data from the Scottish Government\n")
+
+```
+
+
+```{r}
+# bar graph of male life expectancy, with age on the x axis, years to live on y axis
+life %>% 
+  filter(sex == "Male",
+         date_code == "2016-2018",
+         simd_quintiles == "All",
+         urban_rural_classification == "All") %>% 
+  ggplot() +
+  aes(x = age, y = years_to_live) +
+  scale_y_continuous() +
+  geom_col()
+```
+
+
