@@ -1,0 +1,421 @@
+feature_code,date_code,measurement,units,value,scottish_health_survey_indicator,sex
+S92000003,2010,Percent,Percent Of Adults,30,Life satisfaction: Above the mode (9 to 10-Extremely satisfied),Male
+S92000003,2019,Percent,Percent Of Adults,36,Life satisfaction: Above the mode (9 to 10-Extremely satisfied),Male
+S92000003,2014,Percent,Percent Of Adults,35,Life satisfaction: Above the mode (9 to 10-Extremely satisfied),Female
+S92000003,2008,Percent,Percent Of Adults,30,Life satisfaction: Above the mode (9 to 10-Extremely satisfied),Female
+S92000003,2008,Percent,Percent Of Adults,31,Life satisfaction: Above the mode (9 to 10-Extremely satisfied),All
+S92000003,2012,Percent,Percent Of Adults,33,Life satisfaction: Above the mode (9 to 10-Extremely satisfied),Male
+S92000003,2009,Percent,Percent Of Adults,30,Life satisfaction: Above the mode (9 to 10-Extremely satisfied),Male
+S92000003,2019,Percent,Percent Of Adults,35,Life satisfaction: Above the mode (9 to 10-Extremely satisfied),Female
+S92000003,2011,Percent,Percent Of Adults,31,Life satisfaction: Above the mode (9 to 10-Extremely satisfied),All
+S92000003,2014,Percent,Percent Of Adults,34,Life satisfaction: Above the mode (9 to 10-Extremely satisfied),All
+S92000003,2019,Percent,Percent Of Adults,36,Life satisfaction: Above the mode (9 to 10-Extremely satisfied),All
+S92000003,2015,Percent,Percent Of Adults,33,Life satisfaction: Above the mode (9 to 10-Extremely satisfied),All
+S92000003,2018,Percent,Percent Of Adults,36,Life satisfaction: Above the mode (9 to 10-Extremely satisfied),Female
+S92000003,2012,Percent,Percent Of Adults,32,Life satisfaction: Above the mode (9 to 10-Extremely satisfied),All
+S92000003,2012,Percent,Percent Of Adults,32,Life satisfaction: Above the mode (9 to 10-Extremely satisfied),Female
+S92000003,2015,Percent,Percent Of Adults,34,Life satisfaction: Above the mode (9 to 10-Extremely satisfied),Female
+S92000003,2017,Percent,Percent Of Adults,34,Life satisfaction: Above the mode (9 to 10-Extremely satisfied),All
+S92000003,2010,Percent,Percent Of Adults,30,Life satisfaction: Above the mode (9 to 10-Extremely satisfied),All
+S92000003,2009,Percent,Percent Of Adults,31,Life satisfaction: Above the mode (9 to 10-Extremely satisfied),All
+S92000003,2016,Percent,Percent Of Adults,35,Life satisfaction: Above the mode (9 to 10-Extremely satisfied),Female
+S92000003,2008,Percent,Percent Of Adults,32,Life satisfaction: Above the mode (9 to 10-Extremely satisfied),Male
+S92000003,2016,Percent,Percent Of Adults,34,Life satisfaction: Above the mode (9 to 10-Extremely satisfied),All
+S92000003,2011,Percent,Percent Of Adults,30,Life satisfaction: Above the mode (9 to 10-Extremely satisfied),Male
+S92000003,2011,Percent,Percent Of Adults,31,Life satisfaction: Above the mode (9 to 10-Extremely satisfied),Female
+S92000003,2010,Percent,Percent Of Adults,30,Life satisfaction: Above the mode (9 to 10-Extremely satisfied),Female
+S92000003,2009,Percent,Percent Of Adults,32,Life satisfaction: Above the mode (9 to 10-Extremely satisfied),Female
+S92000003,2016,Percent,Percent Of Adults,32,Life satisfaction: Above the mode (9 to 10-Extremely satisfied),Male
+S92000003,2014,Percent,Percent Of Adults,33,Life satisfaction: Above the mode (9 to 10-Extremely satisfied),Male
+S92000003,2013,Percent,Percent Of Adults,32,Life satisfaction: Above the mode (9 to 10-Extremely satisfied),Female
+S92000003,2013,Percent,Percent Of Adults,31,Life satisfaction: Above the mode (9 to 10-Extremely satisfied),Male
+S92000003,2018,Percent,Percent Of Adults,35,Life satisfaction: Above the mode (9 to 10-Extremely satisfied),All
+S92000003,2017,Percent,Percent Of Adults,33,Life satisfaction: Above the mode (9 to 10-Extremely satisfied),Male
+S92000003,2017,Percent,Percent Of Adults,35,Life satisfaction: Above the mode (9 to 10-Extremely satisfied),Female
+S92000003,2018,Percent,Percent Of Adults,34,Life satisfaction: Above the mode (9 to 10-Extremely satisfied),Male
+S92000003,2013,Percent,Percent Of Adults,32,Life satisfaction: Above the mode (9 to 10-Extremely satisfied),All
+S92000003,2015,Percent,Percent Of Adults,33,Life satisfaction: Above the mode (9 to 10-Extremely satisfied),Male
+S92000003,2015,Percent,Percent Of Adults,12,Summary activity levels: Some activity,All
+S92000003,2013,Percent,Percent Of Adults,8,Summary activity levels: Some activity,Male
+S92000003,2014,Percent,Percent Of Adults,12,Summary activity levels: Some activity,Female
+S92000003,2013,Percent,Percent Of Adults,14,Summary activity levels: Some activity,Female
+S92000003,2016,Percent,Percent Of Adults,11,Summary activity levels: Some activity,All
+S92000003,2017,Percent,Percent Of Adults,9,Summary activity levels: Some activity,Male
+S92000003,2014,Percent,Percent Of Adults,11,Summary activity levels: Some activity,All
+S92000003,2016,Percent,Percent Of Adults,10,Summary activity levels: Some activity,Male
+S92000003,2017,Percent,Percent Of Adults,12,Summary activity levels: Some activity,Female
+S92000003,2018,Percent,Percent Of Adults,12,Summary activity levels: Some activity,Female
+S92000003,2014,Percent,Percent Of Adults,10,Summary activity levels: Some activity,Male
+S92000003,2018,Percent,Percent Of Adults,8,Summary activity levels: Some activity,Male
+S92000003,2015,Percent,Percent Of Adults,14,Summary activity levels: Some activity,Female
+S92000003,2015,Percent,Percent Of Adults,9,Summary activity levels: Some activity,Male
+S92000003,2012,Percent,Percent Of Adults,10,Summary activity levels: Some activity,Male
+S92000003,2012,Percent,Percent Of Adults,14,Summary activity levels: Some activity,Female
+S92000003,2012,Percent,Percent Of Adults,12,Summary activity levels: Some activity,All
+S92000003,2017,Percent,Percent Of Adults,11,Summary activity levels: Some activity,All
+S92000003,2013,Percent,Percent Of Adults,11,Summary activity levels: Some activity,All
+S92000003,2018,Percent,Percent Of Adults,10,Summary activity levels: Some activity,All
+S92000003,2016,Percent,Percent Of Adults,12,Summary activity levels: Some activity,Female
+S92000003,2019,Percent,Percent Of Adults,9,Summary activity levels: Some activity,Male
+S92000003,2019,Percent,Percent Of Adults,12,Summary activity levels: Some activity,Female
+S92000003,2019,Percent,Percent Of Adults,11,Summary activity levels: Some activity,All
+S92000003,2014,Percent,Percent Of Adults,86,Any cardiovascular condition: No cardiovascular condition,Female
+S92000003,2014,Percent,Percent Of Adults,84,Any cardiovascular condition: No cardiovascular condition,All
+S92000003,2008,Percent,Percent Of Adults,85,Any cardiovascular condition: No cardiovascular condition,All
+S92000003,2016,Percent,Percent Of Adults,85,Any cardiovascular condition: No cardiovascular condition,Female
+S92000003,2011,Percent,Percent Of Adults,84,Any cardiovascular condition: No cardiovascular condition,Male
+S92000003,2008,Percent,Percent Of Adults,85,Any cardiovascular condition: No cardiovascular condition,Male
+S92000003,2008,Percent,Percent Of Adults,84,Any cardiovascular condition: No cardiovascular condition,Female
+S92000003,2018,Percent,Percent Of Adults,84,Any cardiovascular condition: No cardiovascular condition,Female
+S92000003,2018,Percent,Percent Of Adults,84,Any cardiovascular condition: No cardiovascular condition,Male
+S92000003,2018,Percent,Percent Of Adults,84,Any cardiovascular condition: No cardiovascular condition,All
+S92000003,2013,Percent,Percent Of Adults,84,Any cardiovascular condition: No cardiovascular condition,Male
+S92000003,2017,Percent,Percent Of Adults,85,Any cardiovascular condition: No cardiovascular condition,Female
+S92000003,2014,Percent,Percent Of Adults,82,Any cardiovascular condition: No cardiovascular condition,Male
+S92000003,2015,Percent,Percent Of Adults,85,Any cardiovascular condition: No cardiovascular condition,Female
+S92000003,2017,Percent,Percent Of Adults,85,Any cardiovascular condition: No cardiovascular condition,All
+S92000003,2015,Percent,Percent Of Adults,85,Any cardiovascular condition: No cardiovascular condition,All
+S92000003,2017,Percent,Percent Of Adults,84,Any cardiovascular condition: No cardiovascular condition,Male
+S92000003,2015,Percent,Percent Of Adults,84,Any cardiovascular condition: No cardiovascular condition,Male
+S92000003,2013,Percent,Percent Of Adults,85,Any cardiovascular condition: No cardiovascular condition,Female
+S92000003,2013,Percent,Percent Of Adults,84,Any cardiovascular condition: No cardiovascular condition,All
+S92000003,2012,Percent,Percent Of Adults,83,Any cardiovascular condition: No cardiovascular condition,Male
+S92000003,2009,Percent,Percent Of Adults,86,Any cardiovascular condition: No cardiovascular condition,Female
+S92000003,2012,Percent,Percent Of Adults,84,Any cardiovascular condition: No cardiovascular condition,All
+S92000003,2019,Percent,Percent Of Adults,86,Any cardiovascular condition: No cardiovascular condition,Female
+S92000003,2011,Percent,Percent Of Adults,85,Any cardiovascular condition: No cardiovascular condition,All
+S92000003,2012,Percent,Percent Of Adults,84,Any cardiovascular condition: No cardiovascular condition,Female
+S92000003,2009,Percent,Percent Of Adults,86,Any cardiovascular condition: No cardiovascular condition,All
+S92000003,2011,Percent,Percent Of Adults,86,Any cardiovascular condition: No cardiovascular condition,Female
+S92000003,2010,Percent,Percent Of Adults,86,Any cardiovascular condition: No cardiovascular condition,Female
+S92000003,2016,Percent,Percent Of Adults,85,Any cardiovascular condition: No cardiovascular condition,All
+S92000003,2019,Percent,Percent Of Adults,85,Any cardiovascular condition: No cardiovascular condition,All
+S92000003,2019,Percent,Percent Of Adults,83,Any cardiovascular condition: No cardiovascular condition,Male
+S92000003,2010,Percent,Percent Of Adults,84,Any cardiovascular condition: No cardiovascular condition,Male
+S92000003,2009,Percent,Percent Of Adults,85,Any cardiovascular condition: No cardiovascular condition,Male
+S92000003,2010,Percent,Percent Of Adults,85,Any cardiovascular condition: No cardiovascular condition,All
+S92000003,2016,Percent,Percent Of Adults,84,Any cardiovascular condition: No cardiovascular condition,Male
+S92000003,2012,Percent,Percent Of Adults,73,Obesity: Not obese,All
+S92000003,2011,Percent,Percent Of Adults,72,Obesity: Not obese,Female
+S92000003,2012,Percent,Percent Of Adults,72,Obesity: Not obese,Female
+S92000003,2013,Percent,Percent Of Adults,72,Obesity: Not obese,All
+S92000003,2011,Percent,Percent Of Adults,72,Obesity: Not obese,Male
+S92000003,2016,Percent,Percent Of Adults,71,Obesity: Not obese,Female
+S92000003,2010,Percent,Percent Of Adults,71,Obesity: Not obese,Female
+S92000003,2009,Percent,Percent Of Adults,72,Obesity: Not obese,All
+S92000003,2009,Percent,Percent Of Adults,72,Obesity: Not obese,Female
+S92000003,2009,Percent,Percent Of Adults,72,Obesity: Not obese,Male
+S92000003,2012,Percent,Percent Of Adults,73,Obesity: Not obese,Male
+S92000003,2013,Percent,Percent Of Adults,70,Obesity: Not obese,Female
+S92000003,2011,Percent,Percent Of Adults,72,Obesity: Not obese,All
+S92000003,2013,Percent,Percent Of Adults,74,Obesity: Not obese,Male
+S92000003,2018,Percent,Percent Of Adults,70,Obesity: Not obese,Female
+S92000003,2018,Percent,Percent Of Adults,73,Obesity: Not obese,Male
+S92000003,2018,Percent,Percent Of Adults,72,Obesity: Not obese,All
+S92000003,2010,Percent,Percent Of Adults,73,Obesity: Not obese,Male
+S92000003,2017,Percent,Percent Of Adults,71,Obesity: Not obese,All
+S92000003,2017,Percent,Percent Of Adults,70,Obesity: Not obese,Female
+S92000003,2015,Percent,Percent Of Adults,70,Obesity: Not obese,Female
+S92000003,2017,Percent,Percent Of Adults,73,Obesity: Not obese,Male
+S92000003,2014,Percent,Percent Of Adults,74,Obesity: Not obese,Male
+S92000003,2015,Percent,Percent Of Adults,71,Obesity: Not obese,All
+S92000003,2016,Percent,Percent Of Adults,71,Obesity: Not obese,All
+S92000003,2016,Percent,Percent Of Adults,71,Obesity: Not obese,Male
+S92000003,2014,Percent,Percent Of Adults,71,Obesity: Not obese,Female
+S92000003,2014,Percent,Percent Of Adults,72,Obesity: Not obese,All
+S92000003,2010,Percent,Percent Of Adults,72,Obesity: Not obese,All
+S92000003,2015,Percent,Percent Of Adults,72,Obesity: Not obese,Male
+S92000003,2019,Percent,Percent Of Adults,71,Obesity: Not obese,Male
+S92000003,2008,Percent,Percent Of Adults,73,Obesity: Not obese,All
+S92000003,2019,Percent,Percent Of Adults,71,Obesity: Not obese,All
+S92000003,2008,Percent,Percent Of Adults,73,Obesity: Not obese,Female
+S92000003,2008,Percent,Percent Of Adults,74,Obesity: Not obese,Male
+S92000003,2019,Percent,Percent Of Adults,70,Obesity: Not obese,Female
+S92000003,2014,Percent,Percent Of Adults,28,Obesity: Obese,All
+S92000003,2017,Percent,Percent Of Adults,30,Obesity: Obese,Female
+S92000003,2010,Percent,Percent Of Adults,28,Obesity: Obese,All
+S92000003,2010,Percent,Percent Of Adults,27,Obesity: Obese,Male
+S92000003,2015,Percent,Percent Of Adults,29,Obesity: Obese,All
+S92000003,2018,Percent,Percent Of Adults,28,Obesity: Obese,All
+S92000003,2012,Percent,Percent Of Adults,28,Obesity: Obese,Female
+S92000003,2012,Percent,Percent Of Adults,27,Obesity: Obese,All
+S92000003,2009,Percent,Percent Of Adults,28,Obesity: Obese,Male
+S92000003,2012,Percent,Percent Of Adults,27,Obesity: Obese,Male
+S92000003,2010,Percent,Percent Of Adults,29,Obesity: Obese,Female
+S92000003,2013,Percent,Percent Of Adults,28,Obesity: Obese,All
+S92000003,2014,Percent,Percent Of Adults,29,Obesity: Obese,Female
+S92000003,2017,Percent,Percent Of Adults,29,Obesity: Obese,All
+S92000003,2013,Percent,Percent Of Adults,30,Obesity: Obese,Female
+S92000003,2017,Percent,Percent Of Adults,27,Obesity: Obese,Male
+S92000003,2008,Percent,Percent Of Adults,27,Obesity: Obese,All
+S92000003,2014,Percent,Percent Of Adults,26,Obesity: Obese,Male
+S92000003,2011,Percent,Percent Of Adults,28,Obesity: Obese,All
+S92000003,2009,Percent,Percent Of Adults,28,Obesity: Obese,All
+S92000003,2009,Percent,Percent Of Adults,28,Obesity: Obese,Female
+S92000003,2008,Percent,Percent Of Adults,27,Obesity: Obese,Female
+S92000003,2019,Percent,Percent Of Adults,29,Obesity: Obese,All
+S92000003,2016,Percent,Percent Of Adults,29,Obesity: Obese,Female
+S92000003,2016,Percent,Percent Of Adults,29,Obesity: Obese,Male
+S92000003,2015,Percent,Percent Of Adults,30,Obesity: Obese,Female
+S92000003,2013,Percent,Percent Of Adults,26,Obesity: Obese,Male
+S92000003,2019,Percent,Percent Of Adults,29,Obesity: Obese,Male
+S92000003,2019,Percent,Percent Of Adults,30,Obesity: Obese,Female
+S92000003,2018,Percent,Percent Of Adults,27,Obesity: Obese,Male
+S92000003,2015,Percent,Percent Of Adults,28,Obesity: Obese,Male
+S92000003,2016,Percent,Percent Of Adults,29,Obesity: Obese,All
+S92000003,2018,Percent,Percent Of Adults,30,Obesity: Obese,Female
+S92000003,2011,Percent,Percent Of Adults,28,Obesity: Obese,Male
+S92000003,2011,Percent,Percent Of Adults,28,Obesity: Obese,Female
+S92000003,2008,Percent,Percent Of Adults,26,Obesity: Obese,Male
+S92000003,2010,Percent,Percent Of Adults,14,Any cardiovascular condition: Has a cardiovascular condition,Female
+S92000003,2015,Percent,Percent Of Adults,15,Any cardiovascular condition: Has a cardiovascular condition,Female
+S92000003,2017,Percent,Percent Of Adults,16,Any cardiovascular condition: Has a cardiovascular condition,Male
+S92000003,2013,Percent,Percent Of Adults,16,Any cardiovascular condition: Has a cardiovascular condition,Male
+S92000003,2018,Percent,Percent Of Adults,62,Summary activity levels: Meets recommendations,Female
+S92000003,2018,Percent,Percent Of Adults,66,Summary activity levels: Meets recommendations,All
+S92000003,2009,Percent,Percent Of Adults,14,Any cardiovascular condition: Has a cardiovascular condition,All
+S92000003,2009,Percent,Percent Of Adults,14,Any cardiovascular condition: Has a cardiovascular condition,Female
+S92000003,2010,Percent,Percent Of Adults,16,Any cardiovascular condition: Has a cardiovascular condition,Male
+S92000003,2009,Percent,Percent Of Adults,15,Any cardiovascular condition: Has a cardiovascular condition,Male
+S92000003,2017,Percent,Percent Of Adults,15,Any cardiovascular condition: Has a cardiovascular condition,Female
+S92000003,2015,Percent,Percent Of Adults,16,Any cardiovascular condition: Has a cardiovascular condition,Male
+S92000003,2010,Percent,Percent Of Adults,15,Any cardiovascular condition: Has a cardiovascular condition,All
+S92000003,2015,Percent,Percent Of Adults,15,Any cardiovascular condition: Has a cardiovascular condition,All
+S92000003,2017,Percent,Percent Of Adults,15,Any cardiovascular condition: Has a cardiovascular condition,All
+S92000003,2014,Percent,Percent Of Adults,18,Any cardiovascular condition: Has a cardiovascular condition,Male
+S92000003,2016,Percent,Percent Of Adults,64,Summary activity levels: Meets recommendations,All
+S92000003,2013,Percent,Percent Of Adults,58,Summary activity levels: Meets recommendations,Female
+S92000003,2013,Percent,Percent Of Adults,71,Summary activity levels: Meets recommendations,Male
+S92000003,2013,Percent,Percent Of Adults,64,Summary activity levels: Meets recommendations,All
+S92000003,2015,Percent,Percent Of Adults,59,Summary activity levels: Meets recommendations,Female
+S92000003,2019,Percent,Percent Of Adults,71,Summary activity levels: Meets recommendations,Male
+S92000003,2019,Percent,Percent Of Adults,61,Summary activity levels: Meets recommendations,Female
+S92000003,2014,Percent,Percent Of Adults,59,Summary activity levels: Meets recommendations,Female
+S92000003,2014,Percent,Percent Of Adults,63,Summary activity levels: Meets recommendations,All
+S92000003,2012,Percent,Percent Of Adults,67,Summary activity levels: Meets recommendations,Male
+S92000003,2019,Percent,Percent Of Adults,66,Summary activity levels: Meets recommendations,All
+S92000003,2012,Percent,Percent Of Adults,58,Summary activity levels: Meets recommendations,Female
+S92000003,2014,Percent,Percent Of Adults,68,Summary activity levels: Meets recommendations,Male
+S92000003,2016,Percent,Percent Of Adults,69,Summary activity levels: Meets recommendations,Male
+S92000003,2018,Percent,Percent Of Adults,70,Summary activity levels: Meets recommendations,Male
+S92000003,2016,Percent,Percent Of Adults,59,Summary activity levels: Meets recommendations,Female
+S92000003,2015,Percent,Percent Of Adults,67,Summary activity levels: Meets recommendations,Male
+S92000003,2017,Percent,Percent Of Adults,65,Summary activity levels: Meets recommendations,All
+S92000003,2015,Percent,Percent Of Adults,63,Summary activity levels: Meets recommendations,All
+S92000003,2012,Percent,Percent Of Adults,62,Summary activity levels: Meets recommendations,All
+S92000003,2013,Percent,Percent Of Adults,15,Any cardiovascular condition: Has a cardiovascular condition,Female
+S92000003,2013,Percent,Percent Of Adults,16,Any cardiovascular condition: Has a cardiovascular condition,All
+S92000003,2008,Percent,Percent Of Adults,15,Any cardiovascular condition: Has a cardiovascular condition,Male
+S92000003,2008,Percent,Percent Of Adults,16,Any cardiovascular condition: Has a cardiovascular condition,Female
+S92000003,2011,Percent,Percent Of Adults,16,Any cardiovascular condition: Has a cardiovascular condition,Male
+S92000003,2008,Percent,Percent Of Adults,15,Any cardiovascular condition: Has a cardiovascular condition,All
+S92000003,2014,Percent,Percent Of Adults,16,Any cardiovascular condition: Has a cardiovascular condition,All
+S92000003,2012,Percent,Percent Of Adults,17,Any cardiovascular condition: Has a cardiovascular condition,Male
+S92000003,2012,Percent,Percent Of Adults,16,Any cardiovascular condition: Has a cardiovascular condition,All
+S92000003,2019,Percent,Percent Of Adults,15,Any cardiovascular condition: Has a cardiovascular condition,All
+S92000003,2019,Percent,Percent Of Adults,14,Any cardiovascular condition: Has a cardiovascular condition,Female
+S92000003,2018,Percent,Percent Of Adults,16,Any cardiovascular condition: Has a cardiovascular condition,Female
+S92000003,2012,Percent,Percent Of Adults,16,Any cardiovascular condition: Has a cardiovascular condition,Female
+S92000003,2011,Percent,Percent Of Adults,15,Any cardiovascular condition: Has a cardiovascular condition,All
+S92000003,2018,Percent,Percent Of Adults,16,Any cardiovascular condition: Has a cardiovascular condition,All
+S92000003,2016,Percent,Percent Of Adults,15,Any cardiovascular condition: Has a cardiovascular condition,All
+S92000003,2016,Percent,Percent Of Adults,15,Any cardiovascular condition: Has a cardiovascular condition,Female
+S92000003,2019,Percent,Percent Of Adults,17,Any cardiovascular condition: Has a cardiovascular condition,Male
+S92000003,2016,Percent,Percent Of Adults,16,Any cardiovascular condition: Has a cardiovascular condition,Male
+S92000003,2018,Percent,Percent Of Adults,16,Any cardiovascular condition: Has a cardiovascular condition,Male
+S92000003,2011,Percent,Percent Of Adults,14,Any cardiovascular condition: Has a cardiovascular condition,Female
+S92000003,2014,Percent,Percent Of Adults,14,Any cardiovascular condition: Has a cardiovascular condition,Female
+S92000003,2016,Percent,Percent Of Adults,32,Life satisfaction: Mode (8),Female
+S92000003,2009,Percent,Percent Of Adults,31,Life satisfaction: Mode (8),All
+S92000003,2009,Percent,Percent Of Adults,31,Life satisfaction: Mode (8),Male
+S92000003,2015,Percent,Percent Of Adults,33,Life satisfaction: Mode (8),All
+S92000003,2017,Percent,Percent Of Adults,31,Life satisfaction: Mode (8),All
+S92000003,2011,Percent,Percent Of Adults,32,Life satisfaction: Mode (8),Male
+S92000003,2011,Percent,Percent Of Adults,31,Life satisfaction: Mode (8),All
+S92000003,2008,Percent,Percent Of Adults,30,Life satisfaction: Mode (8),All
+S92000003,2018,Percent,Percent Of Adults,30,Life satisfaction: Mode (8),Male
+S92000003,2018,Percent,Percent Of Adults,31,Life satisfaction: Mode (8),Female
+S92000003,2010,Percent,Percent Of Adults,31,Life satisfaction: Mode (8),All
+S92000003,2011,Percent,Percent Of Adults,31,Life satisfaction: Mode (8),Female
+S92000003,2018,Percent,Percent Of Adults,30,Life satisfaction: Mode (8),All
+S92000003,2015,Percent,Percent Of Adults,35,Life satisfaction: Mode (8),Male
+S92000003,2017,Percent,Percent Of Adults,60,Summary activity levels: Meets recommendations,Female
+S92000003,2017,Percent,Percent Of Adults,31,Life satisfaction: Mode (8),Male
+S92000003,2009,Percent,Percent Of Adults,32,Life satisfaction: Mode (8),Female
+S92000003,2017,Percent,Percent Of Adults,71,Summary activity levels: Meets recommendations,Male
+S92000003,2015,Percent,Percent Of Adults,32,Life satisfaction: Mode (8),Female
+S92000003,2012,Percent,Percent Of Adults,31,Life satisfaction: Mode (8),Female
+S92000003,2012,Percent,Percent Of Adults,30,Life satisfaction: Mode (8),Male
+S92000003,2017,Percent,Percent Of Adults,32,Life satisfaction: Mode (8),Female
+S92000003,2014,Percent,Percent Of Adults,32,Life satisfaction: Mode (8),All
+S92000003,2014,Percent,Percent Of Adults,34,Life satisfaction: Mode (8),Male
+S92000003,2019,Percent,Percent Of Adults,30,Life satisfaction: Mode (8),Male
+S92000003,2019,Percent,Percent Of Adults,29,Life satisfaction: Mode (8),Female
+S92000003,2013,Percent,Percent Of Adults,32,Life satisfaction: Mode (8),All
+S92000003,2013,Percent,Percent Of Adults,34,Life satisfaction: Mode (8),Male
+S92000003,2019,Percent,Percent Of Adults,30,Life satisfaction: Mode (8),All
+S92000003,2013,Percent,Percent Of Adults,30,Life satisfaction: Mode (8),Female
+S92000003,2008,Percent,Percent Of Adults,30,Life satisfaction: Mode (8),Female
+S92000003,2012,Percent,Percent Of Adults,31,Life satisfaction: Mode (8),All
+S92000003,2010,Percent,Percent Of Adults,31,Life satisfaction: Mode (8),Male
+S92000003,2010,Percent,Percent Of Adults,30,Life satisfaction: Mode (8),Female
+S92000003,2016,Percent,Percent Of Adults,33,Life satisfaction: Mode (8),All
+S92000003,2016,Percent,Percent Of Adults,33,Life satisfaction: Mode (8),Male
+S92000003,2008,Percent,Percent Of Adults,30,Life satisfaction: Mode (8),Male
+S92000003,2014,Percent,Percent Of Adults,31,Life satisfaction: Mode (8),Female
+S92000003,2008,Percent,Percent Of Adults,40,Life satisfaction: Below the mode (0-Extremely dissatisfied to 7),All
+S92000003,2010,Percent,Percent Of Adults,39,Life satisfaction: Below the mode (0-Extremely dissatisfied to 7),Male
+S92000003,2008,Percent,Percent Of Adults,41,Life satisfaction: Below the mode (0-Extremely dissatisfied to 7),Female
+S92000003,2008,Percent,Percent Of Adults,39,Life satisfaction: Below the mode (0-Extremely dissatisfied to 7),Male
+S92000003,2010,Percent,Percent Of Adults,40,Life satisfaction: Below the mode (0-Extremely dissatisfied to 7),All
+S92000003,2015,Percent,Percent Of Adults,33,Life satisfaction: Below the mode (0-Extremely dissatisfied to 7),All
+S92000003,2017,Percent,Percent Of Adults,33,Life satisfaction: Below the mode (0-Extremely dissatisfied to 7),Female
+S92000003,2017,Percent,Percent Of Adults,35,Life satisfaction: Below the mode (0-Extremely dissatisfied to 7),All
+S92000003,2009,Percent,Percent Of Adults,39,Life satisfaction: Below the mode (0-Extremely dissatisfied to 7),Male
+S92000003,2015,Percent,Percent Of Adults,32,Life satisfaction: Below the mode (0-Extremely dissatisfied to 7),Male
+S92000003,2017,Percent,Percent Of Adults,36,Life satisfaction: Below the mode (0-Extremely dissatisfied to 7),Male
+S92000003,2018,Percent,Percent Of Adults,34,Life satisfaction: Below the mode (0-Extremely dissatisfied to 7),Female
+S92000003,2018,Percent,Percent Of Adults,35,Life satisfaction: Below the mode (0-Extremely dissatisfied to 7),All
+S92000003,2018,Percent,Percent Of Adults,36,Life satisfaction: Below the mode (0-Extremely dissatisfied to 7),Male
+S92000003,2015,Percent,Percent Of Adults,35,Life satisfaction: Below the mode (0-Extremely dissatisfied to 7),Female
+S92000003,2011,Percent,Percent Of Adults,38,Life satisfaction: Below the mode (0-Extremely dissatisfied to 7),Male
+S92000003,2011,Percent,Percent Of Adults,38,Life satisfaction: Below the mode (0-Extremely dissatisfied to 7),Female
+S92000003,2014,Percent,Percent Of Adults,33,Life satisfaction: Below the mode (0-Extremely dissatisfied to 7),Male
+S92000003,2014,Percent,Percent Of Adults,33,Life satisfaction: Below the mode (0-Extremely dissatisfied to 7),All
+S92000003,2014,Percent,Percent Of Adults,34,Life satisfaction: Below the mode (0-Extremely dissatisfied to 7),Female
+S92000003,2013,Percent,Percent Of Adults,37,Life satisfaction: Below the mode (0-Extremely dissatisfied to 7),Female
+S92000003,2013,Percent,Percent Of Adults,34,Life satisfaction: Below the mode (0-Extremely dissatisfied to 7),Male
+S92000003,2010,Percent,Percent Of Adults,40,Life satisfaction: Below the mode (0-Extremely dissatisfied to 7),Female
+S92000003,2016,Percent,Percent Of Adults,35,Life satisfaction: Below the mode (0-Extremely dissatisfied to 7),Male
+S92000003,2016,Percent,Percent Of Adults,33,Life satisfaction: Below the mode (0-Extremely dissatisfied to 7),Female
+S92000003,2013,Percent,Percent Of Adults,36,Life satisfaction: Below the mode (0-Extremely dissatisfied to 7),All
+S92000003,2017,Percent,Percent Of Adults,20,Summary activity levels: Very low activity,All
+S92000003,2016,Percent,Percent Of Adults,23,Summary activity levels: Very low activity,Female
+S92000003,2018,Percent,Percent Of Adults,21,Summary activity levels: Very low activity,All
+S92000003,2018,Percent,Percent Of Adults,19,Summary activity levels: Very low activity,Male
+S92000003,2018,Percent,Percent Of Adults,22,Summary activity levels: Very low activity,Female
+S92000003,2019,Percent,Percent Of Adults,18,Summary activity levels: Very low activity,Male
+S92000003,2012,Percent,Percent Of Adults,23,Summary activity levels: Very low activity,Female
+S92000003,2012,Percent,Percent Of Adults,19,Summary activity levels: Very low activity,Male
+S92000003,2015,Percent,Percent Of Adults,19,Summary activity levels: Very low activity,Male
+S92000003,2017,Percent,Percent Of Adults,17,Summary activity levels: Very low activity,Male
+S92000003,2017,Percent,Percent Of Adults,23,Summary activity levels: Very low activity,Female
+S92000003,2015,Percent,Percent Of Adults,23,Summary activity levels: Very low activity,Female
+S92000003,2015,Percent,Percent Of Adults,21,Summary activity levels: Very low activity,All
+S92000003,2013,Percent,Percent Of Adults,18,Summary activity levels: Very low activity,Male
+S92000003,2019,Percent,Percent Of Adults,23,Summary activity levels: Very low activity,Female
+S92000003,2013,Percent,Percent Of Adults,23,Summary activity levels: Very low activity,Female
+S92000003,2013,Percent,Percent Of Adults,21,Summary activity levels: Very low activity,All
+S92000003,2014,Percent,Percent Of Adults,19,Summary activity levels: Very low activity,Male
+S92000003,2012,Percent,Percent Of Adults,21,Summary activity levels: Very low activity,All
+S92000003,2016,Percent,Percent Of Adults,18,Summary activity levels: Very low activity,Male
+S92000003,2016,Percent,Percent Of Adults,20,Summary activity levels: Very low activity,All
+S92000003,2019,Percent,Percent Of Adults,3,Summary activity levels: Low activity,Male
+S92000003,2012,Percent,Percent Of Adults,37,Life satisfaction: Below the mode (0-Extremely dissatisfied to 7),All
+S92000003,2012,Percent,Percent Of Adults,36,Life satisfaction: Below the mode (0-Extremely dissatisfied to 7),Female
+S92000003,2013,Percent,Percent Of Adults,3,Summary activity levels: Low activity,Male
+S92000003,2013,Percent,Percent Of Adults,5,Summary activity levels: Low activity,Female
+S92000003,2012,Percent,Percent Of Adults,4,Summary activity levels: Low activity,Male
+S92000003,2012,Percent,Percent Of Adults,5,Summary activity levels: Low activity,All
+S92000003,2012,Percent,Percent Of Adults,6,Summary activity levels: Low activity,Female
+S92000003,2019,Percent,Percent Of Adults,3,Summary activity levels: Low activity,All
+S92000003,2018,Percent,Percent Of Adults,4,Summary activity levels: Low activity,Female
+S92000003,2009,Percent,Percent Of Adults,38,Life satisfaction: Below the mode (0-Extremely dissatisfied to 7),All
+S92000003,2019,Percent,Percent Of Adults,34,Life satisfaction: Below the mode (0-Extremely dissatisfied to 7),Male
+S92000003,2009,Percent,Percent Of Adults,37,Life satisfaction: Below the mode (0-Extremely dissatisfied to 7),Female
+S92000003,2016,Percent,Percent Of Adults,34,Life satisfaction: Below the mode (0-Extremely dissatisfied to 7),All
+S92000003,2012,Percent,Percent Of Adults,37,Life satisfaction: Below the mode (0-Extremely dissatisfied to 7),Male
+S92000003,2011,Percent,Percent Of Adults,38,Life satisfaction: Below the mode (0-Extremely dissatisfied to 7),All
+S92000003,2019,Percent,Percent Of Adults,35,Life satisfaction: Below the mode (0-Extremely dissatisfied to 7),All
+S92000003,2019,Percent,Percent Of Adults,35,Life satisfaction: Below the mode (0-Extremely dissatisfied to 7),Female
+S92000003,2018,Percent,Percent Of Adults,4,Summary activity levels: Low activity,All
+S92000003,2014,Percent,Percent Of Adults,4,Summary activity levels: Low activity,All
+S92000003,2014,Percent,Percent Of Adults,4,Summary activity levels: Low activity,Male
+S92000003,2018,Percent,Percent Of Adults,3,Summary activity levels: Low activity,Male
+S92000003,2014,Percent,Percent Of Adults,24,Summary activity levels: Very low activity,Female
+S92000003,2014,Percent,Percent Of Adults,22,Summary activity levels: Very low activity,All
+S92000003,2019,Percent,Percent Of Adults,20,Summary activity levels: Very low activity,All
+S92000003,2016,Percent,Percent Of Adults,5,Summary activity levels: Low activity,All
+S92000003,2016,Percent,Percent Of Adults,3,Summary activity levels: Low activity,Male
+S92000003,2015,Percent,Percent Of Adults,5,Summary activity levels: Low activity,All
+S92000003,2015,Percent,Percent Of Adults,4,Summary activity levels: Low activity,Male
+S92000003,2016,Percent,Percent Of Adults,6,Summary activity levels: Low activity,Female
+S92000003,2013,Percent,Percent Of Adults,4,Summary activity levels: Low activity,All
+S92000003,2019,Percent,Percent Of Adults,4,Summary activity levels: Low activity,Female
+S92000003,2015,Percent,Percent Of Adults,5,Summary activity levels: Low activity,Female
+S92000003,2017,Percent,Percent Of Adults,4,Summary activity levels: Low activity,All
+S92000003,2014,Percent,Percent Of Adults,5,Summary activity levels: Low activity,Female
+S92000003,2017,Percent,Percent Of Adults,5,Summary activity levels: Low activity,Female
+S92000003,2017,Percent,Percent Of Adults,3,Summary activity levels: Low activity,Male
+S92000003,2018,Percent,Percent Of Adults,63,Overweight: Overweight (including obese),Female
+S92000003,2012,Percent,Percent Of Adults,64,Overweight: Overweight (including obese),All
+S92000003,2011,Percent,Percent Of Adults,60,Overweight: Overweight (including obese),Female
+S92000003,2018,Percent,Percent Of Adults,68,Overweight: Overweight (including obese),Male
+S92000003,2011,Percent,Percent Of Adults,69,Overweight: Overweight (including obese),Male
+S92000003,2018,Percent,Percent Of Adults,65,Overweight: Overweight (including obese),All
+S92000003,2012,Percent,Percent Of Adults,60,Overweight: Overweight (including obese),Female
+S92000003,2011,Percent,Percent Of Adults,64,Overweight: Overweight (including obese),All
+S92000003,2009,Percent,Percent Of Adults,65,Overweight: Overweight (including obese),All
+S92000003,2015,Percent,Percent Of Adults,62,Overweight: Overweight (including obese),Female
+S92000003,2014,Percent,Percent Of Adults,61,Overweight: Overweight (including obese),Female
+S92000003,2009,Percent,Percent Of Adults,61,Overweight: Overweight (including obese),Female
+S92000003,2013,Percent,Percent Of Adults,61,Overweight: Overweight (including obese),Female
+S92000003,2019,Percent,Percent Of Adults,63,Overweight: Overweight (including obese),Female
+S92000003,2014,Percent,Percent Of Adults,69,Overweight: Overweight (including obese),Male
+S92000003,2016,Percent,Percent Of Adults,61,Overweight: Overweight (including obese),Female
+S92000003,2014,Percent,Percent Of Adults,65,Overweight: Overweight (including obese),All
+S92000003,2010,Percent,Percent Of Adults,65,Overweight: Overweight (including obese),All
+S92000003,2008,Percent,Percent Of Adults,68,Overweight: Overweight (including obese),Male
+S92000003,2016,Percent,Percent Of Adults,65,Overweight: Overweight (including obese),All
+S92000003,2015,Percent,Percent Of Adults,67,Overweight: Overweight (including obese),Male
+S92000003,2009,Percent,Percent Of Adults,68,Overweight: Overweight (including obese),Male
+S92000003,2019,Percent,Percent Of Adults,66,Overweight: Overweight (including obese),All
+S92000003,2010,Percent,Percent Of Adults,68,Overweight: Overweight (including obese),Male
+S92000003,2013,Percent,Percent Of Adults,69,Overweight: Overweight (including obese),Male
+S92000003,2015,Percent,Percent Of Adults,65,Overweight: Overweight (including obese),All
+S92000003,2013,Percent,Percent Of Adults,65,Overweight: Overweight (including obese),All
+S92000003,2017,Percent,Percent Of Adults,67,Overweight: Overweight (including obese),Male
+S92000003,2012,Percent,Percent Of Adults,68,Overweight: Overweight (including obese),Male
+S92000003,2010,Percent,Percent Of Adults,62,Overweight: Overweight (including obese),Female
+S92000003,2017,Percent,Percent Of Adults,65,Overweight: Overweight (including obese),All
+S92000003,2017,Percent,Percent Of Adults,63,Overweight: Overweight (including obese),Female
+S92000003,2019,Percent,Percent Of Adults,69,Overweight: Overweight (including obese),Male
+S92000003,2008,Percent,Percent Of Adults,62,Overweight: Overweight (including obese),Female
+S92000003,2008,Percent,Percent Of Adults,65,Overweight: Overweight (including obese),All
+S92000003,2016,Percent,Percent Of Adults,68,Overweight: Overweight (including obese),Male
+S92000003,2011,Percent,Percent Of Adults,31,Overweight: Not overweight or obese,Male
+S92000003,2010,Percent,Percent Of Adults,35,Overweight: Not overweight or obese,All
+S92000003,2019,Percent,Percent Of Adults,34,Overweight: Not overweight or obese,All
+S92000003,2011,Percent,Percent Of Adults,40,Overweight: Not overweight or obese,Female
+S92000003,2018,Percent,Percent Of Adults,35,Overweight: Not overweight or obese,All
+S92000003,2019,Percent,Percent Of Adults,31,Overweight: Not overweight or obese,Male
+S92000003,2009,Percent,Percent Of Adults,39,Overweight: Not overweight or obese,Female
+S92000003,2012,Percent,Percent Of Adults,32,Overweight: Not overweight or obese,Male
+S92000003,2013,Percent,Percent Of Adults,39,Overweight: Not overweight or obese,Female
+S92000003,2018,Percent,Percent Of Adults,32,Overweight: Not overweight or obese,Male
+S92000003,2012,Percent,Percent Of Adults,36,Overweight: Not overweight or obese,All
+S92000003,2015,Percent,Percent Of Adults,35,Overweight: Not overweight or obese,All
+S92000003,2012,Percent,Percent Of Adults,40,Overweight: Not overweight or obese,Female
+S92000003,2019,Percent,Percent Of Adults,37,Overweight: Not overweight or obese,Female
+S92000003,2016,Percent,Percent Of Adults,35,Overweight: Not overweight or obese,All
+S92000003,2009,Percent,Percent Of Adults,35,Overweight: Not overweight or obese,All
+S92000003,2014,Percent,Percent Of Adults,31,Overweight: Not overweight or obese,Male
+S92000003,2013,Percent,Percent Of Adults,31,Overweight: Not overweight or obese,Male
+S92000003,2017,Percent,Percent Of Adults,33,Overweight: Not overweight or obese,Male
+S92000003,2016,Percent,Percent Of Adults,39,Overweight: Not overweight or obese,Female
+S92000003,2016,Percent,Percent Of Adults,32,Overweight: Not overweight or obese,Male
+S92000003,2009,Percent,Percent Of Adults,32,Overweight: Not overweight or obese,Male
+S92000003,2015,Percent,Percent Of Adults,33,Overweight: Not overweight or obese,Male
+S92000003,2013,Percent,Percent Of Adults,35,Overweight: Not overweight or obese,All
+S92000003,2017,Percent,Percent Of Adults,37,Overweight: Not overweight or obese,Female
+S92000003,2015,Percent,Percent Of Adults,38,Overweight: Not overweight or obese,Female
+S92000003,2008,Percent,Percent Of Adults,38,Overweight: Not overweight or obese,Female
+S92000003,2018,Percent,Percent Of Adults,37,Overweight: Not overweight or obese,Female
+S92000003,2011,Percent,Percent Of Adults,36,Overweight: Not overweight or obese,All
+S92000003,2014,Percent,Percent Of Adults,39,Overweight: Not overweight or obese,Female
+S92000003,2008,Percent,Percent Of Adults,35,Overweight: Not overweight or obese,All
+S92000003,2008,Percent,Percent Of Adults,32,Overweight: Not overweight or obese,Male
+S92000003,2010,Percent,Percent Of Adults,38,Overweight: Not overweight or obese,Female
+S92000003,2017,Percent,Percent Of Adults,35,Overweight: Not overweight or obese,All
+S92000003,2010,Percent,Percent Of Adults,32,Overweight: Not overweight or obese,Male
+S92000003,2014,Percent,Percent Of Adults,35,Overweight: Not overweight or obese,All
