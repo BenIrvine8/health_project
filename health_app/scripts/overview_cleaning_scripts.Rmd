@@ -6,10 +6,11 @@ output: html_notebook
 ```{r}
 library(tidyverse)
 library(janitor)
+library(here)
 ```
 
 ```{r}
-scotland_health_survey <- read_csv("data/raw_data/scotland_health_survey.csv") %>% 
+  scotland_health_survey <- read_csv(here("../data/raw_data/scotland_health_survey.csv")) %>%
   clean_names()
 ```
 
@@ -71,4 +72,52 @@ write_csv(healthy_life_expectancy, "../Desktop/codeclan/health_project/health_ap
 ```
 
 
+# reading in area code and name detail
+```{r}
+ area_names <- read_csv("../data/clean_data/council codes.csv") %>% 
+    clean_names() %>% 
+    rename(area_code = ca)
+```
+
+
+```{r}
+council_codes <- area_names %>%
+  select(area_code, hb_name)
+
+health_board_codes <- area_names %>% 
+  select(hb, hb_name) %>% 
+  rename(area_code = hb)
+
+health_board_names <- bind_rows(council_codes, health_board_codes) %>% 
+  distinct()
+
+```
+
+```{r}
+write_csv(health_board_names, "../data/clean_data/health_board_names.csv")
+```
+
+
+
+```{r}
+scotland_health_survey_local <- read_csv(here("data/raw_data/scotland health survey local level.csv")) %>% 
+  clean_names()
+```
+
+
+
+```{r}
+
+scotland_health_survey_local <- scotland_health_survey_local %>% 
+  rename(area_code = feature_code)
+
+health_survey_local_clean <- health_board_names %>% 
+  select(area_code, hb_name) %>% 
+  distinct() %>% 
+  right_join(scotland_health_survey_local, by = "area_code")
+
+health_survey_local_clean %>% 
+  filter(is.na(hb_name)) %>% 
+  distinct(area_code)
+```
 

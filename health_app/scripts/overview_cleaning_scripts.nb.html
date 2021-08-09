@@ -217,189 +217,160 @@ pre code {
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxubGlicmFyeSh0aWR5dmVyc2UpXG5gYGBcbmBgYCJ9 -->
-<pre class="r"><code>```r
-library(tidyverse)</code></pre>
-<pre><code>
-&lt;!-- rnb-source-end --&gt;
-
-&lt;!-- rnb-output-begin eyJkYXRhIjoiUmVnaXN0ZXJlZCBTMyBtZXRob2RzIG92ZXJ3cml0dGVuIGJ5ICdkYnBseXInOlxuICBtZXRob2QgICAgICAgICBmcm9tXG4gIHByaW50LnRibF9sYXp5ICAgICBcbiAgcHJpbnQudGJsX3NxbCAgICAgIFxu4pSA4pSAIEF0dGFjaGluZyBwYWNrYWdlcyDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIAgdGlkeXZlcnNlIDEuMy4xIOKUgOKUgFxu4pyTIGdncGxvdDIgMy4zLjQgICAgIOKckyBwdXJyciAgIDAuMy40XG7inJMgdGliYmxlICAzLjEuMiAgICAg4pyTIGRwbHlyICAgMS4wLjdcbuKckyB0aWR5ciAgIDEuMS4zICAgICDinJMgc3RyaW5nciAxLjQuMFxu4pyTIHJlYWRyICAgMS40LjAgICAgIOKckyBmb3JjYXRzIDAuNS4xXG7ilIDilIAgQ29uZmxpY3RzIOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgCB0aWR5dmVyc2VfY29uZmxpY3RzKCkg4pSA4pSAXG54IGRwbHlyOjpmaWx0ZXIoKSBtYXNrcyBzdGF0czo6ZmlsdGVyKClcbnggZHBseXI6OmxhZygpICAgIG1hc2tzIHN0YXRzOjpsYWcoKVxuIn0= --&gt;
-</code></pre>
-<p>Registered S3 methods overwritten by ‘dbplyr’: method from print.tbl_lazy<br />
-print.tbl_sql<br />
-── Attaching packages ───────────────────────────────────────────────── tidyverse 1.3.1 ── ✓ ggplot2 3.3.4 ✓ purrr 0.3.4 ✓ tibble 3.1.2 ✓ dplyr 1.0.7 ✓ tidyr 1.1.3 ✓ stringr 1.4.0 ✓ readr 1.4.0 ✓ forcats 0.5.1 ── Conflicts ──────────────────────────────────────────────────── tidyverse_conflicts() ── x dplyr::filter() masks stats::filter() x dplyr::lag() masks stats::lag()</p>
-<pre><code>
-
-
-&lt;!-- rnb-output-end --&gt;
-
-&lt;!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxubGlicmFyeShqYW5pdG9yKVxuYGBgXG5gYGAifQ== --&gt;
-
-```r
-```r
-library(janitor)</code></pre>
-<pre><code>
-&lt;!-- rnb-source-end --&gt;
-
-&lt;!-- rnb-output-begin eyJkYXRhIjoiXG5BdHRhY2hpbmcgcGFja2FnZTog4oCYamFuaXRvcuKAmVxuXG5UaGUgZm9sbG93aW5nIG9iamVjdHMgYXJlIG1hc2tlZCBmcm9tIOKAmHBhY2thZ2U6c3RhdHPigJk6XG5cbiAgICBjaGlzcS50ZXN0LCBmaXNoZXIudGVzdFxuIn0= --&gt;
-</code></pre>
-<p>Attaching package: ‘janitor’</p>
-<p>The following objects are masked from ‘package:stats’:</p>
-<pre><code>chisq.test, fisher.test</code></pre>
-<pre><code>
-
-
-&lt;!-- rnb-output-end --&gt;
-
-&lt;!-- rnb-chunk-end --&gt;
-
-
-&lt;!-- rnb-text-begin --&gt;
-
-
-
-&lt;!-- rnb-text-end --&gt;
-
-
-&lt;!-- rnb-chunk-begin --&gt;
-
-
-&lt;!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxuc2NvdGxhbmRfaGVhbHRoX3N1cnZleSA8LSByZWFkX2NzdihcXGRhdGEvcmF3X2RhdGEvc2NvdGxhbmRfaGVhbHRoX3N1cnZleS5jc3ZcXCkgJT4lIFxuICBjbGVhbl9uYW1lcygpXG5gYGBcbmBgYCJ9 --&gt;
-
-```r
-```r
-scotland_health_survey &lt;- read_csv(\data/raw_data/scotland_health_survey.csv\) %&gt;% 
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeSh0aWR5dmVyc2UpXG5saWJyYXJ5KGphbml0b3IpXG5saWJyYXJ5KGhlcmUpXG5gYGAifQ== -->
+<pre class="r"><code>library(tidyverse)
+library(janitor)
+library(here)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiaGVyZSgpIHN0YXJ0cyBhdCAvVXNlcnMvYmFycnlvZGVhL2hlYWx0aF9wcm9qZWN0L2hlYWx0aF9hcHBcbiJ9 -->
+<pre><code>here() starts at /Users/barryodea/health_project/health_app</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuICBzY290bGFuZF9oZWFsdGhfc3VydmV5IDwtIHJlYWRfY3N2KGhlcmUoXCJkYXRhL3Jhd19kYXRhL3Njb3RsYW5kX2hlYWx0aF9zdXJ2ZXkuY3N2XCIpKSAlPiVcbiAgY2xlYW5fbmFtZXMoKVxuYGBgIn0= -->
+<pre class="r"><code>  scotland_health_survey &lt;- read_csv(here(&quot;data/raw_data/scotland_health_survey.csv&quot;)) %&gt;%
   clean_names()</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiXG7ilIDilIAgQ29sdW1uIHNwZWNpZmljYXRpb24g4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSAXG5jb2xzKFxuICBGZWF0dXJlQ29kZSA9IGNvbF9jaGFyYWN0ZXIoKSxcbiAgRGF0ZUNvZGUgPSBjb2xfZG91YmxlKCksXG4gIE1lYXN1cmVtZW50ID0gY29sX2NoYXJhY3RlcigpLFxuICBVbml0cyA9IGNvbF9jaGFyYWN0ZXIoKSxcbiAgVmFsdWUgPSBjb2xfZG91YmxlKCksXG4gIGBTY290dGlzaCBIZWFsdGggU3VydmV5IEluZGljYXRvcmAgPSBjb2xfY2hhcmFjdGVyKCksXG4gIFNleCA9IGNvbF9jaGFyYWN0ZXIoKVxuKVxuIn0= -->
 <pre><code>
-&lt;!-- rnb-source-end --&gt;
-
-&lt;!-- rnb-output-begin eyJkYXRhIjoiXG7ilIDilIAgQ29sdW1uIHNwZWNpZmljYXRpb24g4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSAXG5jb2xzKFxuICBGZWF0dXJlQ29kZSA9IGNvbF9jaGFyYWN0ZXIoKSxcbiAgRGF0ZUNvZGUgPSBjb2xfZG91YmxlKCksXG4gIE1lYXN1cmVtZW50ID0gY29sX2NoYXJhY3RlcigpLFxuICBVbml0cyA9IGNvbF9jaGFyYWN0ZXIoKSxcbiAgVmFsdWUgPSBjb2xfZG91YmxlKCksXG4gIGBTY290dGlzaCBIZWFsdGggU3VydmV5IEluZGljYXRvcmAgPSBjb2xfY2hhcmFjdGVyKCksXG4gIFNleCA9IGNvbF9jaGFyYWN0ZXIoKVxuKVxuIn0= --&gt;
-</code></pre>
-<p>── Column specification ────────────────────────────────────────────────────────────────── cols( FeatureCode = col_character(), DateCode = col_double(), Measurement = col_character(), Units = col_character(), Value = col_double(), <code>Scottish Health Survey Indicator</code> = col_character(), Sex = col_character() )</p>
-<pre><code>
-
-
-&lt;!-- rnb-output-end --&gt;
-
-&lt;!-- rnb-chunk-end --&gt;
-
-
-&lt;!-- rnb-text-begin --&gt;
-
-
-
-&lt;!-- rnb-text-end --&gt;
-
-
-&lt;!-- rnb-chunk-begin --&gt;
-
-
-&lt;!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxuc2NvdGxhbmRfaGVhbHRoX3N1cnZleV9jbGVhbiA8LSBzY290bGFuZF9oZWFsdGhfc3VydmV5ICU+JSBcbiAgZmlsdGVyKHNjb3R0aXNoX2hlYWx0aF9zdXJ2ZXlfaW5kaWNhdG9yICVpbiUgYyhcXEFueSBjYXJkaW92YXNjdWxhciBjb25kaXRpb246IEhhcyBhIGNhcmRpb3Zhc2N1bGFyIGNvbmRpdGlvblxcLCBcXEFueSBjYXJkaW92YXNjdWxhciBjb25kaXRpb246IE5vIGNhcmRpb3Zhc2N1bGFyIGNvbmRpdGlvblxcLCBcXExpZmUgc2F0aXNmYWN0aW9uOiBBYm92ZSB0aGUgbW9kZSAoOSB0byAxMC1FeHRyZW1lbHkgc2F0aXNmaWVkKVxcLCBcXExpZmUgc2F0aXNmYWN0aW9uOiBCZWxvdyB0aGUgbW9kZSAoMC1FeHRyZW1lbHkgZGlzc2F0aXNmaWVkIHRvIDcpXFwsIFxcTGlmZSBzYXRpc2ZhY3Rpb246IE1vZGUgKDgpXFwsIFxcT2Jlc2l0eTogTm90IG9iZXNlXFwsIFxcT2Jlc2l0eTogT2Jlc2VcXCwgXFxPdmVyd2VpZ2h0OiBOb3Qgb3ZlcndlaWdodCBvciBvYmVzZVxcLCBcXE92ZXJ3ZWlnaHQ6IE92ZXJ3ZWlnaHQgKGluY2x1ZGluZyBvYmVzZSlcXCwgXFxPdmVyd2VpZ2h0OiBPdmVyd2VpZ2h0IChpbmNsdWRpbmcgb2Jlc2UpXFwsIFxcU3VtbWFyeSBhY3Rpdml0eSBsZXZlbHM6IExvdyBhY3Rpdml0eVxcLCBcXFN1bW1hcnkgYWN0aXZpdHkgbGV2ZWxzOiBNZWV0cyByZWNvbW1lbmRhdGlvbnNcXCwgXFxTdW1tYXJ5IGFjdGl2aXR5IGxldmVsczogU29tZSBhY3Rpdml0eVxcLCBcXFN1bW1hcnkgYWN0aXZpdHkgbGV2ZWxzOiBWZXJ5IGxvdyBhY3Rpdml0eVxcKSxcbiAgICAgICAgIG1lYXN1cmVtZW50ID09IFxcUGVyY2VudFxcKVxuYGBgXG5gYGAifQ== --&gt;
-
-```r
-```r
-scotland_health_survey_clean &lt;- scotland_health_survey %&gt;% 
-  filter(scottish_health_survey_indicator %in% c(\Any cardiovascular condition: Has a cardiovascular condition\, \Any cardiovascular condition: No cardiovascular condition\, \Life satisfaction: Above the mode (9 to 10-Extremely satisfied)\, \Life satisfaction: Below the mode (0-Extremely dissatisfied to 7)\, \Life satisfaction: Mode (8)\, \Obesity: Not obese\, \Obesity: Obese\, \Overweight: Not overweight or obese\, \Overweight: Overweight (including obese)\, \Overweight: Overweight (including obese)\, \Summary activity levels: Low activity\, \Summary activity levels: Meets recommendations\, \Summary activity levels: Some activity\, \Summary activity levels: Very low activity\),
-         measurement == \Percent\)</code></pre>
-<pre><code>
-&lt;!-- rnb-source-end --&gt;
-
-&lt;!-- rnb-chunk-end --&gt;
-
-
-&lt;!-- rnb-text-begin --&gt;
-
-
-
-&lt;!-- rnb-text-end --&gt;
-
-
-&lt;!-- rnb-chunk-begin --&gt;
-
-
-&lt;!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxud3JpdGVfY3N2KHNjb3RsYW5kX2hlYWx0aF9zdXJ2ZXlfY2xlYW4sIFxcLi4vZGF0YS9jbGVhbl9kYXRhL3Njb3RsYW5kX2hlYWx0aF9zdXJ2ZXlfY2xlYW4uY3N2XFwpXG5gYGBcbmBgYCJ9 --&gt;
-
-```r
-```r
-write_csv(scotland_health_survey_clean, \../data/clean_data/scotland_health_survey_clean.csv\)</code></pre>
-<pre><code>
-&lt;!-- rnb-source-end --&gt;
-
-&lt;!-- rnb-chunk-end --&gt;
-
-
-&lt;!-- rnb-text-begin --&gt;
-
-
-
-
-&lt;!-- rnb-text-end --&gt;
-
-
-&lt;!-- rnb-chunk-begin --&gt;
-
-
-&lt;!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZ3JlZW5zcGFjZSA8LSByZWFkX2NzdihcImdyZWVuc3BhY2UuY3N2XCIpICU+JVxuICBjbGVhbl9uYW1lcygpICU+JVxuICBmaWx0ZXIobWVhc3VyZW1lbnQgPT0gXCJQZXJjZW50XCIpICU+JVxuICByZW5hbWUoXCJ2YWx1ZV9wZXJjZW50XCIgPSBcInZhbHVlXCIsIFxuICAgICAgICAgXCJhcmVhX2NvZGVcIiA9IFwiZmVhdHVyZV9jb2RlXCIpICU+JVxuICBzZWxlY3QoLVwibWVhc3VyZW1lbnRcIiwgLVwidW5pdHNcIilcbiAgXG5gYGAifQ== --&gt;
-
-```r
-greenspace &lt;- read_csv(&quot;greenspace.csv&quot;) %&gt;%
+── Column specification ──────────────────────────────────────────────────────────────────
+cols(
+  FeatureCode = col_character(),
+  DateCode = col_double(),
+  Measurement = col_character(),
+  Units = col_character(),
+  Value = col_double(),
+  `Scottish Health Survey Indicator` = col_character(),
+  Sex = col_character()
+)</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc2NvdGxhbmRfaGVhbHRoX3N1cnZleV9jbGVhbiA8LSBzY290bGFuZF9oZWFsdGhfc3VydmV5ICU+JSBcbiAgZmlsdGVyKHNjb3R0aXNoX2hlYWx0aF9zdXJ2ZXlfaW5kaWNhdG9yICVpbiUgYyhcIkFueSBjYXJkaW92YXNjdWxhciBjb25kaXRpb246IEhhcyBhIGNhcmRpb3Zhc2N1bGFyIGNvbmRpdGlvblwiLCBcIkFueSBjYXJkaW92YXNjdWxhciBjb25kaXRpb246IE5vIGNhcmRpb3Zhc2N1bGFyIGNvbmRpdGlvblwiLCBcIkxpZmUgc2F0aXNmYWN0aW9uOiBBYm92ZSB0aGUgbW9kZSAoOSB0byAxMC1FeHRyZW1lbHkgc2F0aXNmaWVkKVwiLCBcIkxpZmUgc2F0aXNmYWN0aW9uOiBCZWxvdyB0aGUgbW9kZSAoMC1FeHRyZW1lbHkgZGlzc2F0aXNmaWVkIHRvIDcpXCIsIFwiTGlmZSBzYXRpc2ZhY3Rpb246IE1vZGUgKDgpXCIsIFwiT2Jlc2l0eTogTm90IG9iZXNlXCIsIFwiT2Jlc2l0eTogT2Jlc2VcIiwgXCJPdmVyd2VpZ2h0OiBOb3Qgb3ZlcndlaWdodCBvciBvYmVzZVwiLCBcIk92ZXJ3ZWlnaHQ6IE92ZXJ3ZWlnaHQgKGluY2x1ZGluZyBvYmVzZSlcIiwgXCJPdmVyd2VpZ2h0OiBPdmVyd2VpZ2h0IChpbmNsdWRpbmcgb2Jlc2UpXCIsIFwiU3VtbWFyeSBhY3Rpdml0eSBsZXZlbHM6IExvdyBhY3Rpdml0eVwiLCBcIlN1bW1hcnkgYWN0aXZpdHkgbGV2ZWxzOiBNZWV0cyByZWNvbW1lbmRhdGlvbnNcIiwgXCJTdW1tYXJ5IGFjdGl2aXR5IGxldmVsczogU29tZSBhY3Rpdml0eVwiLCBcIlN1bW1hcnkgYWN0aXZpdHkgbGV2ZWxzOiBWZXJ5IGxvdyBhY3Rpdml0eVwiKSxcbiAgICAgICAgIG1lYXN1cmVtZW50ID09IFwiUGVyY2VudFwiKVxuYGBgIn0= -->
+<pre class="r"><code>scotland_health_survey_clean &lt;- scotland_health_survey %&gt;% 
+  filter(scottish_health_survey_indicator %in% c(&quot;Any cardiovascular condition: Has a cardiovascular condition&quot;, &quot;Any cardiovascular condition: No cardiovascular condition&quot;, &quot;Life satisfaction: Above the mode (9 to 10-Extremely satisfied)&quot;, &quot;Life satisfaction: Below the mode (0-Extremely dissatisfied to 7)&quot;, &quot;Life satisfaction: Mode (8)&quot;, &quot;Obesity: Not obese&quot;, &quot;Obesity: Obese&quot;, &quot;Overweight: Not overweight or obese&quot;, &quot;Overweight: Overweight (including obese)&quot;, &quot;Overweight: Overweight (including obese)&quot;, &quot;Summary activity levels: Low activity&quot;, &quot;Summary activity levels: Meets recommendations&quot;, &quot;Summary activity levels: Some activity&quot;, &quot;Summary activity levels: Very low activity&quot;),
+         measurement == &quot;Percent&quot;)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxud3JpdGVfY3N2KHNjb3RsYW5kX2hlYWx0aF9zdXJ2ZXlfY2xlYW4sIFwiLi4vZGF0YS9jbGVhbl9kYXRhL3Njb3RsYW5kX2hlYWx0aF9zdXJ2ZXlfY2xlYW4uY3N2XCIpXG5gYGAifQ== -->
+<pre class="r"><code>write_csv(scotland_health_survey_clean, &quot;../data/clean_data/scotland_health_survey_clean.csv&quot;)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZ3JlZW5zcGFjZSA8LSByZWFkX2NzdihcImdyZWVuc3BhY2UuY3N2XCIpICU+JVxuICBjbGVhbl9uYW1lcygpICU+JVxuICBmaWx0ZXIobWVhc3VyZW1lbnQgPT0gXCJQZXJjZW50XCIpICU+JVxuICByZW5hbWUoXCJ2YWx1ZV9wZXJjZW50XCIgPSBcInZhbHVlXCIsIFxuICAgICAgICAgXCJhcmVhX2NvZGVcIiA9IFwiZmVhdHVyZV9jb2RlXCIpICU+JVxuICBzZWxlY3QoLVwibWVhc3VyZW1lbnRcIiwgLVwidW5pdHNcIilcbmBgYCJ9 -->
+<pre class="r"><code>greenspace &lt;- read_csv(&quot;greenspace.csv&quot;) %&gt;%
   clean_names() %&gt;%
   filter(measurement == &quot;Percent&quot;) %&gt;%
   rename(&quot;value_percent&quot; = &quot;value&quot;, 
          &quot;area_code&quot; = &quot;feature_code&quot;) %&gt;%
-  select(-&quot;measurement&quot;, -&quot;units&quot;)
-  </code></pre>
+  select(-&quot;measurement&quot;, -&quot;units&quot;)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiRXJyb3I6ICdncmVlbnNwYWNlLmNzdicgZG9lcyBub3QgZXhpc3QgaW4gY3VycmVudCB3b3JraW5nIGRpcmVjdG9yeSAoJy9Vc2Vycy9iYXJyeW9kZWEvaGVhbHRoX3Byb2plY3QvaGVhbHRoX2FwcC9zY3JpcHRzJykuXG4ifQ== -->
+<pre><code>Error: &#39;greenspace.csv&#39; does not exist in current working directory (&#39;/Users/barryodea/health_project/health_app/scripts&#39;).</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuY291bmNpbF9uYW1lcyA8LSByZWFkX2NzdihoZXJlKFwiY291bmNpbF9hcmVhX25hbWVzLmNzdlwiKSlcbmBgYCJ9 -->
+<pre class="r"><code>council_names &lt;- read_csv(here(&quot;council_area_names.csv&quot;))</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiRXJyb3I6ICcvVXNlcnMvYmFycnlvZGVhL2hlYWx0aF9wcm9qZWN0L2hlYWx0aF9hcHAvY291bmNpbF9hcmVhX25hbWVzLmNzdicgZG9lcyBub3QgZXhpc3QuXG4ifQ== -->
+<pre><code>Error: &#39;/Users/barryodea/health_project/health_app/council_area_names.csv&#39; does not exist.</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<div id="reading-in-area-code-and-name-detail" class="section level1">
+<h1>reading in area code and name detail</h1>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIGFyZWFfbmFtZXMgPC0gcmVhZF9jc3YoXCIuLi9kYXRhL2NsZWFuX2RhdGEvY291bmNpbCBjb2Rlcy5jc3ZcIikgJT4lIFxuICAgIGNsZWFuX25hbWVzKCkgJT4lIFxuICAgIHJlbmFtZShhcmVhX2NvZGUgPSBjYSlcbmBgYCJ9 -->
+<pre class="r"><code> area_names &lt;- read_csv(&quot;../data/clean_data/council codes.csv&quot;) %&gt;% 
+    clean_names() %&gt;% 
+    rename(area_code = ca)</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuaGVhbHRoeV9saWZlX2V4cGVjdGFuY3kgPC0gcmVhZF9jc3YoXCJoZWFsdGh5X2xpZmVfZXhwZWN0YW5jeS5jc3ZcIikgJT4lXG4gIGNsZWFuX25hbWVzKCkgJT4lXG4gIGZpbHRlcihtZWFzdXJlbWVudCA9PSBcIkNvdW50XCIsXG4gICAgICAgICBkYXRlX2NvZGUgPT0gXCIyMDE2LTIwMThcIikgJT4lXG4gIHJlbmFtZShcInllYXJzX3RvX2xpdmVcIiA9IFwidmFsdWVcIikgJT4lXG4gIHNlbGVjdCgtXCJtZWFzdXJlbWVudFwiLCAtXCJ1bml0c1wiLCAtXCJmZWF0dXJlX2NvZGVcIilcbiAgXG5gYGAifQ== -->
-<pre class="r"><code>healthy_life_expectancy &lt;- read_csv(&quot;healthy_life_expectancy.csv&quot;) %&gt;%
-  clean_names() %&gt;%
-  filter(measurement == &quot;Count&quot;,
-         date_code == &quot;2016-2018&quot;) %&gt;%
-  rename(&quot;years_to_live&quot; = &quot;value&quot;) %&gt;%
-  select(-&quot;measurement&quot;, -&quot;units&quot;, -&quot;feature_code&quot;)
-  </code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlmZV9leHBlY3RhbmN5IDwtIHJlYWRfY3N2KFwibGlmZV9leHBlY3RhbmN5LmNzdlwiKSAlPiVcbiAgY2xlYW5fbmFtZXMoKSAlPiVcbiAgZmlsdGVyKG1lYXN1cmVtZW50ID09IFwiQ291bnRcIikgJT4lXG4gIHJlbmFtZShcInllYXJzX3RvX2xpdmVcIiA9IFwidmFsdWVcIikgJT4lXG4gIHNlbGVjdCgtXCJtZWFzdXJlbWVudFwiLCAtXCJ1bml0c1wiLCAtIFwiZmVhdHVyZV9jb2RlXCIpXG4gIFxuYGBgIn0= -->
-<pre class="r"><code>life_expectancy &lt;- read_csv(&quot;life_expectancy.csv&quot;) %&gt;%
-  clean_names() %&gt;%
-  filter(measurement == &quot;Count&quot;) %&gt;%
-  rename(&quot;years_to_live&quot; = &quot;value&quot;) %&gt;%
-  select(-&quot;measurement&quot;, -&quot;units&quot;, - &quot;feature_code&quot;)
-  </code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuY291bmNpbF9uYW1lcyA8LSByZWFkX2NzdihcImNvdW5jaWxfYXJlYV9uYW1lcy5jc3ZcIilcblxuICAgZ3JlZW5zcGFjZSA8LSBjb3VuY2lsX25hbWVzICU+JSBcbiAgc2VsZWN0KGFyZWFfY29kZSwgY2FfbmFtZSkgJT4lIFxuICBkaXN0aW5jdCgpICU+JSBcbiAgcmlnaHRfam9pbihncmVlbnNwYWNlLCBieSA9IFwiYXJlYV9jb2RlXCIpXG5gYGAifQ== -->
-<pre class="r"><code>council_names &lt;- read_csv(&quot;council_area_names.csv&quot;)
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuY291bmNpbF9jb2RlcyA8LSBhcmVhX25hbWVzICU+JVxuICBzZWxlY3QoYXJlYV9jb2RlLCBoYl9uYW1lKVxuXG5oZWFsdGhfYm9hcmRfY29kZXMgPC0gYXJlYV9uYW1lcyAlPiUgXG4gIHNlbGVjdChoYiwgaGJfbmFtZSkgJT4lIFxuICByZW5hbWUoYXJlYV9jb2RlID0gaGIpXG5cbmhlYWx0aF9ib2FyZF9uYW1lcyA8LSBiaW5kX3Jvd3MoY291bmNpbF9jb2RlcywgaGVhbHRoX2JvYXJkX2NvZGVzKSAlPiUgXG4gIGRpc3RpbmN0KClcblxuYGBgIn0= -->
+<pre class="r"><code>council_codes &lt;- area_names %&gt;%
+  select(area_code, hb_name)
 
-   greenspace &lt;- council_names %&gt;% 
-  select(area_code, ca_name) %&gt;% 
-  distinct() %&gt;% 
-  right_join(greenspace, by = &quot;area_code&quot;)</code></pre>
+health_board_codes &lt;- area_names %&gt;% 
+  select(hb, hb_name) %&gt;% 
+  rename(area_code = hb)
+
+health_board_names &lt;- bind_rows(council_codes, health_board_codes) %&gt;% 
+  distinct()
+</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxud3JpdGVfY3N2KGxpZmVfZXhwZWN0YW5jeSwgXCIuLi9EZXNrdG9wL2NvZGVjbGFuL2hlYWx0aF9wcm9qZWN0L2hlYWx0aF9hcHAvZGF0YS9jbGVhbl9kYXRhL2xpZmVfZXhwZWN0YW5jeS5jc3ZcIilcbndyaXRlX2NzdihoZWFsdGh5X2xpZmVfZXhwZWN0YW5jeSwgXCIuLi9EZXNrdG9wL2NvZGVjbGFuL2hlYWx0aF9wcm9qZWN0L2hlYWx0aF9hcHAvZGF0YS9jbGVhbl9kYXRhL2hlYWx0aHlfbGlmZV9leHBlY3RhbmN5LmNzdlwiKVxuYGBgIn0= -->
-<pre class="r"><code>write_csv(life_expectancy, &quot;../Desktop/codeclan/health_project/health_app/data/clean_data/life_expectancy.csv&quot;)
-write_csv(healthy_life_expectancy, &quot;../Desktop/codeclan/health_project/health_app/data/clean_data/healthy_life_expectancy.csv&quot;)</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxud3JpdGVfY3N2KGhlYWx0aF9ib2FyZF9uYW1lcywgXCIuLi9kYXRhL2NsZWFuX2RhdGEvaGVhbHRoX2JvYXJkX25hbWVzLmNzdlwiKVxuYGBgIn0= -->
+<pre class="r"><code>write_csv(health_board_names, &quot;../data/clean_data/health_board_names.csv&quot;)</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc2NvdGxhbmRfaGVhbHRoX3N1cnZleV9sb2NhbCA8LSByZWFkX2NzdihoZXJlKFwiZGF0YS9yYXdfZGF0YS9zY290bGFuZCBoZWFsdGggc3VydmV5IGxvY2FsIGxldmVsLmNzdlwiKSkgJT4lIFxuICBjbGVhbl9uYW1lcygpXG5gYGAifQ== -->
+<pre class="r"><code>scotland_health_survey_local &lt;- read_csv(here(&quot;data/raw_data/scotland health survey local level.csv&quot;)) %&gt;% 
+  clean_names()</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiXG7ilIDilIAgQ29sdW1uIHNwZWNpZmljYXRpb24g4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSAXG5jb2xzKFxuICBGZWF0dXJlQ29kZSA9IGNvbF9jaGFyYWN0ZXIoKSxcbiAgRGF0ZUNvZGUgPSBjb2xfY2hhcmFjdGVyKCksXG4gIE1lYXN1cmVtZW50ID0gY29sX2NoYXJhY3RlcigpLFxuICBVbml0cyA9IGNvbF9jaGFyYWN0ZXIoKSxcbiAgVmFsdWUgPSBjb2xfZG91YmxlKCksXG4gIGBTY290dGlzaCBIZWFsdGggU3VydmV5IEluZGljYXRvcmAgPSBjb2xfY2hhcmFjdGVyKCksXG4gIFNleCA9IGNvbF9jaGFyYWN0ZXIoKVxuKVxuIn0= -->
+<pre><code>
+── Column specification ─────────────────────────────────────────────────────────────────
+cols(
+  FeatureCode = col_character(),
+  DateCode = col_character(),
+  Measurement = col_character(),
+  Units = col_character(),
+  Value = col_double(),
+  `Scottish Health Survey Indicator` = col_character(),
+  Sex = col_character()
+)</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInRibF9kZiIsInRibCIsImRhdGEuZnJhbWUiXSwibnJvdyI6MzEsIm5jb2wiOjEsInN1bW1hcnkiOnsiQSB0aWJibGUiOlsiMzEgeCAxIl19fSwicmRmIjoiSDRzSUFBQUFBQUFBQTJXVFgwNkVNQkRHQndRTkpKcE5QSUFuZ0VETDdzSzc4UUQrU2ZiTlZFQWxZdGtBRzMzMHFsNWtjV0NMbTN4TDB0TCtPdlBOVERxOXY5MUlmK01UMFJrNUZzOHVMOGw5ZXJ3TFVpTEg1bzFGRG5uai81dVByeWRBdE9CeFl3NjhoMWhFNDdkQ2tBS0lKWUkxQUJFalFCZUJVY1NKQm9ZVkdRQ0pvakpCZ0ZFU2pKS2c2REw2QjFFNkZaY2hXQ05ZQWhBSkFCbWpSWXBBSU1BOEJFYUpWMmlCUUtLb1BCRTlGcGNkTGx0Q3Y3aGFmWmFkNlpVWmVxb3QxWFBlRkNWWWUyM3pGYzRlbHp6c0g1NkdZZmhGMmJ4V0hjcjZoZXBWK05xeVArLzI0SExSYlB1cTBleGtqLzNyZ3JQVkFsanM5SmhKRWVUdk8vMFI4RTF6Qk5QNFpOS3pwZ2R3WEZ1SG1QWmd0RnlqZFY3cXQwcVhjL0sxZWlscnM3bmlrcWVLdzIxYjZYNHVoV2tYOWsydlpqcy9iK3FaVE1YUi9nL2o4aFh4dHdNQUFBPT0ifQ== -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["area_code"],"name":[1],"type":["chr"],"align":["left"]}],"data":[{"1":"S12000006"},{"1":"S12000008"},{"1":"S12000013"},{"1":"S12000017"},{"1":"S12000021"},{"1":"S12000023"},{"1":"S12000026"},{"1":"S12000027"},{"1":"S12000028"},{"1":"S12000029"},{"1":"S12000033"},{"1":"S12000034"},{"1":"S12000036"},{"1":"S12000047"},{"1":"S12000049"},{"1":"S12000050"},{"1":"S08000019"},{"1":"S08000017"},{"1":"S08000015"},{"1":"S08000024"},{"1":"S08000031"},{"1":"S08000028"},{"1":"S08000022"},{"1":"S08000020"},{"1":"S08000025"},{"1":"S08000016"},{"1":"S08000026"},{"1":"S08000032"},{"1":"S08000030"},{"1":"S08000029"},{"1":"S92000003"}],"options":{"columns":{"min":{},"max":[10],"total":[1]},"rows":{"min":[10],"max":[10],"total":[31]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+</div>
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiZGF0YSBjbGVhbmluZyBmb3Igb3ZlcnZpZXciCm91dHB1dDogaHRtbF9ub3RlYm9vawotLS0KCmBgYHtyfQpsaWJyYXJ5KHRpZHl2ZXJzZSkKbGlicmFyeShqYW5pdG9yKQpgYGAKCmBgYHtyfQpzY290bGFuZF9oZWFsdGhfc3VydmV5IDwtIHJlYWRfY3N2KCJkYXRhL3Jhd19kYXRhL3Njb3RsYW5kX2hlYWx0aF9zdXJ2ZXkuY3N2IikgJT4lIAogIGNsZWFuX25hbWVzKCkKYGBgCgpgYGB7cn0Kc2NvdGxhbmRfaGVhbHRoX3N1cnZleV9jbGVhbiA8LSBzY290bGFuZF9oZWFsdGhfc3VydmV5ICU+JSAKICBmaWx0ZXIoc2NvdHRpc2hfaGVhbHRoX3N1cnZleV9pbmRpY2F0b3IgJWluJSBjKCJBbnkgY2FyZGlvdmFzY3VsYXIgY29uZGl0aW9uOiBIYXMgYSBjYXJkaW92YXNjdWxhciBjb25kaXRpb24iLCAiQW55IGNhcmRpb3Zhc2N1bGFyIGNvbmRpdGlvbjogTm8gY2FyZGlvdmFzY3VsYXIgY29uZGl0aW9uIiwgIkxpZmUgc2F0aXNmYWN0aW9uOiBBYm92ZSB0aGUgbW9kZSAoOSB0byAxMC1FeHRyZW1lbHkgc2F0aXNmaWVkKSIsICJMaWZlIHNhdGlzZmFjdGlvbjogQmVsb3cgdGhlIG1vZGUgKDAtRXh0cmVtZWx5IGRpc3NhdGlzZmllZCB0byA3KSIsICJMaWZlIHNhdGlzZmFjdGlvbjogTW9kZSAoOCkiLCAiT2Jlc2l0eTogTm90IG9iZXNlIiwgIk9iZXNpdHk6IE9iZXNlIiwgIk92ZXJ3ZWlnaHQ6IE5vdCBvdmVyd2VpZ2h0IG9yIG9iZXNlIiwgIk92ZXJ3ZWlnaHQ6IE92ZXJ3ZWlnaHQgKGluY2x1ZGluZyBvYmVzZSkiLCAiT3ZlcndlaWdodDogT3ZlcndlaWdodCAoaW5jbHVkaW5nIG9iZXNlKSIsICJTdW1tYXJ5IGFjdGl2aXR5IGxldmVsczogTG93IGFjdGl2aXR5IiwgIlN1bW1hcnkgYWN0aXZpdHkgbGV2ZWxzOiBNZWV0cyByZWNvbW1lbmRhdGlvbnMiLCAiU3VtbWFyeSBhY3Rpdml0eSBsZXZlbHM6IFNvbWUgYWN0aXZpdHkiLCAiU3VtbWFyeSBhY3Rpdml0eSBsZXZlbHM6IFZlcnkgbG93IGFjdGl2aXR5IiksCiAgICAgICAgIG1lYXN1cmVtZW50ID09ICJQZXJjZW50IikKYGBgCgpgYGB7cn0Kd3JpdGVfY3N2KHNjb3RsYW5kX2hlYWx0aF9zdXJ2ZXlfY2xlYW4sICIuLi9kYXRhL2NsZWFuX2RhdGEvc2NvdGxhbmRfaGVhbHRoX3N1cnZleV9jbGVhbi5jc3YiKQpgYGAKCgpgYGB7cn0KZ3JlZW5zcGFjZSA8LSByZWFkX2NzdigiZ3JlZW5zcGFjZS5jc3YiKSAlPiUKICBjbGVhbl9uYW1lcygpICU+JQogIGZpbHRlcihtZWFzdXJlbWVudCA9PSAiUGVyY2VudCIpICU+JQogIHJlbmFtZSgidmFsdWVfcGVyY2VudCIgPSAidmFsdWUiLCAKICAgICAgICAgImFyZWFfY29kZSIgPSAiZmVhdHVyZV9jb2RlIikgJT4lCiAgc2VsZWN0KC0ibWVhc3VyZW1lbnQiLCAtInVuaXRzIikKICAKYGBgCgoKYGBge3J9CmhlYWx0aHlfbGlmZV9leHBlY3RhbmN5IDwtIHJlYWRfY3N2KCJoZWFsdGh5X2xpZmVfZXhwZWN0YW5jeS5jc3YiKSAlPiUKICBjbGVhbl9uYW1lcygpICU+JQogIGZpbHRlcihtZWFzdXJlbWVudCA9PSAiQ291bnQiLAogICAgICAgICBkYXRlX2NvZGUgPT0gIjIwMTYtMjAxOCIpICU+JQogIHJlbmFtZSgieWVhcnNfdG9fbGl2ZSIgPSAidmFsdWUiKSAlPiUKICBzZWxlY3QoLSJtZWFzdXJlbWVudCIsIC0idW5pdHMiLCAtImZlYXR1cmVfY29kZSIpCiAgCmBgYAoKCmBgYHtyfQpsaWZlX2V4cGVjdGFuY3kgPC0gcmVhZF9jc3YoImxpZmVfZXhwZWN0YW5jeS5jc3YiKSAlPiUKICBjbGVhbl9uYW1lcygpICU+JQogIGZpbHRlcihtZWFzdXJlbWVudCA9PSAiQ291bnQiKSAlPiUKICByZW5hbWUoInllYXJzX3RvX2xpdmUiID0gInZhbHVlIikgJT4lCiAgc2VsZWN0KC0ibWVhc3VyZW1lbnQiLCAtInVuaXRzIiwgLSAiZmVhdHVyZV9jb2RlIikKICAKYGBgCgoKYGBge3J9CmNvdW5jaWxfbmFtZXMgPC0gcmVhZF9jc3YoImNvdW5jaWxfYXJlYV9uYW1lcy5jc3YiKQoKICAgZ3JlZW5zcGFjZSA8LSBjb3VuY2lsX25hbWVzICU+JSAKICBzZWxlY3QoYXJlYV9jb2RlLCBjYV9uYW1lKSAlPiUgCiAgZGlzdGluY3QoKSAlPiUgCiAgcmlnaHRfam9pbihncmVlbnNwYWNlLCBieSA9ICJhcmVhX2NvZGUiKQpgYGAKCmBgYHtyfQp3cml0ZV9jc3YobGlmZV9leHBlY3RhbmN5LCAiLi4vRGVza3RvcC9jb2RlY2xhbi9oZWFsdGhfcHJvamVjdC9oZWFsdGhfYXBwL2RhdGEvY2xlYW5fZGF0YS9saWZlX2V4cGVjdGFuY3kuY3N2IikKd3JpdGVfY3N2KGhlYWx0aHlfbGlmZV9leHBlY3RhbmN5LCAiLi4vRGVza3RvcC9jb2RlY2xhbi9oZWFsdGhfcHJvamVjdC9oZWFsdGhfYXBwL2RhdGEvY2xlYW5fZGF0YS9oZWFsdGh5X2xpZmVfZXhwZWN0YW5jeS5jc3YiKQpgYGAKCgoK</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiZGF0YSBjbGVhbmluZyBmb3Igb3ZlcnZpZXciCm91dHB1dDogaHRtbF9ub3RlYm9vawotLS0KCmBgYHtyfQpsaWJyYXJ5KHRpZHl2ZXJzZSkKbGlicmFyeShqYW5pdG9yKQpsaWJyYXJ5KGhlcmUpCmBgYAoKYGBge3J9CiAgc2NvdGxhbmRfaGVhbHRoX3N1cnZleSA8LSByZWFkX2NzdihoZXJlKCIuLi9kYXRhL3Jhd19kYXRhL3Njb3RsYW5kX2hlYWx0aF9zdXJ2ZXkuY3N2IikpICU+JQogIGNsZWFuX25hbWVzKCkKYGBgCgpgYGB7cn0Kc2NvdGxhbmRfaGVhbHRoX3N1cnZleV9jbGVhbiA8LSBzY290bGFuZF9oZWFsdGhfc3VydmV5ICU+JSAKICBmaWx0ZXIoc2NvdHRpc2hfaGVhbHRoX3N1cnZleV9pbmRpY2F0b3IgJWluJSBjKCJBbnkgY2FyZGlvdmFzY3VsYXIgY29uZGl0aW9uOiBIYXMgYSBjYXJkaW92YXNjdWxhciBjb25kaXRpb24iLCAiQW55IGNhcmRpb3Zhc2N1bGFyIGNvbmRpdGlvbjogTm8gY2FyZGlvdmFzY3VsYXIgY29uZGl0aW9uIiwgIkxpZmUgc2F0aXNmYWN0aW9uOiBBYm92ZSB0aGUgbW9kZSAoOSB0byAxMC1FeHRyZW1lbHkgc2F0aXNmaWVkKSIsICJMaWZlIHNhdGlzZmFjdGlvbjogQmVsb3cgdGhlIG1vZGUgKDAtRXh0cmVtZWx5IGRpc3NhdGlzZmllZCB0byA3KSIsICJMaWZlIHNhdGlzZmFjdGlvbjogTW9kZSAoOCkiLCAiT2Jlc2l0eTogTm90IG9iZXNlIiwgIk9iZXNpdHk6IE9iZXNlIiwgIk92ZXJ3ZWlnaHQ6IE5vdCBvdmVyd2VpZ2h0IG9yIG9iZXNlIiwgIk92ZXJ3ZWlnaHQ6IE92ZXJ3ZWlnaHQgKGluY2x1ZGluZyBvYmVzZSkiLCAiT3ZlcndlaWdodDogT3ZlcndlaWdodCAoaW5jbHVkaW5nIG9iZXNlKSIsICJTdW1tYXJ5IGFjdGl2aXR5IGxldmVsczogTG93IGFjdGl2aXR5IiwgIlN1bW1hcnkgYWN0aXZpdHkgbGV2ZWxzOiBNZWV0cyByZWNvbW1lbmRhdGlvbnMiLCAiU3VtbWFyeSBhY3Rpdml0eSBsZXZlbHM6IFNvbWUgYWN0aXZpdHkiLCAiU3VtbWFyeSBhY3Rpdml0eSBsZXZlbHM6IFZlcnkgbG93IGFjdGl2aXR5IiksCiAgICAgICAgIG1lYXN1cmVtZW50ID09ICJQZXJjZW50IikKYGBgCgpgYGB7cn0Kd3JpdGVfY3N2KHNjb3RsYW5kX2hlYWx0aF9zdXJ2ZXlfY2xlYW4sICIuLi9kYXRhL2NsZWFuX2RhdGEvc2NvdGxhbmRfaGVhbHRoX3N1cnZleV9jbGVhbi5jc3YiKQpgYGAKCgpgYGB7cn0KZ3JlZW5zcGFjZSA8LSByZWFkX2NzdigiZ3JlZW5zcGFjZS5jc3YiKSAlPiUKICBjbGVhbl9uYW1lcygpICU+JQogIGZpbHRlcihtZWFzdXJlbWVudCA9PSAiUGVyY2VudCIpICU+JQogIHJlbmFtZSgidmFsdWVfcGVyY2VudCIgPSAidmFsdWUiLCAKICAgICAgICAgImFyZWFfY29kZSIgPSAiZmVhdHVyZV9jb2RlIikgJT4lCiAgc2VsZWN0KC0ibWVhc3VyZW1lbnQiLCAtInVuaXRzIikKICAKYGBgCgoKYGBge3J9CmhlYWx0aHlfbGlmZV9leHBlY3RhbmN5IDwtIHJlYWRfY3N2KCJoZWFsdGh5X2xpZmVfZXhwZWN0YW5jeS5jc3YiKSAlPiUKICBjbGVhbl9uYW1lcygpICU+JQogIGZpbHRlcihtZWFzdXJlbWVudCA9PSAiQ291bnQiLAogICAgICAgICBkYXRlX2NvZGUgPT0gIjIwMTYtMjAxOCIpICU+JQogIHJlbmFtZSgieWVhcnNfdG9fbGl2ZSIgPSAidmFsdWUiKSAlPiUKICBzZWxlY3QoLSJtZWFzdXJlbWVudCIsIC0idW5pdHMiLCAtImZlYXR1cmVfY29kZSIpCiAgCmBgYAoKCmBgYHtyfQpsaWZlX2V4cGVjdGFuY3kgPC0gcmVhZF9jc3YoImxpZmVfZXhwZWN0YW5jeS5jc3YiKSAlPiUKICBjbGVhbl9uYW1lcygpICU+JQogIGZpbHRlcihtZWFzdXJlbWVudCA9PSAiQ291bnQiKSAlPiUKICByZW5hbWUoInllYXJzX3RvX2xpdmUiID0gInZhbHVlIikgJT4lCiAgc2VsZWN0KC0ibWVhc3VyZW1lbnQiLCAtInVuaXRzIiwgLSAiZmVhdHVyZV9jb2RlIikKICAKYGBgCgoKYGBge3J9CmNvdW5jaWxfbmFtZXMgPC0gcmVhZF9jc3YoImNvdW5jaWxfYXJlYV9uYW1lcy5jc3YiKQoKICAgZ3JlZW5zcGFjZSA8LSBjb3VuY2lsX25hbWVzICU+JSAKICBzZWxlY3QoYXJlYV9jb2RlLCBjYV9uYW1lKSAlPiUgCiAgZGlzdGluY3QoKSAlPiUgCiAgcmlnaHRfam9pbihncmVlbnNwYWNlLCBieSA9ICJhcmVhX2NvZGUiKQpgYGAKCmBgYHtyfQp3cml0ZV9jc3YobGlmZV9leHBlY3RhbmN5LCAiLi4vRGVza3RvcC9jb2RlY2xhbi9oZWFsdGhfcHJvamVjdC9oZWFsdGhfYXBwL2RhdGEvY2xlYW5fZGF0YS9saWZlX2V4cGVjdGFuY3kuY3N2IikKd3JpdGVfY3N2KGhlYWx0aHlfbGlmZV9leHBlY3RhbmN5LCAiLi4vRGVza3RvcC9jb2RlY2xhbi9oZWFsdGhfcHJvamVjdC9oZWFsdGhfYXBwL2RhdGEvY2xlYW5fZGF0YS9oZWFsdGh5X2xpZmVfZXhwZWN0YW5jeS5jc3YiKQpgYGAKCgojIHJlYWRpbmcgaW4gYXJlYSBjb2RlIGFuZCBuYW1lIGRldGFpbApgYGB7cn0KIGFyZWFfbmFtZXMgPC0gcmVhZF9jc3YoIi4uL2RhdGEvY2xlYW5fZGF0YS9jb3VuY2lsIGNvZGVzLmNzdiIpICU+JSAKICAgIGNsZWFuX25hbWVzKCkgJT4lIAogICAgcmVuYW1lKGFyZWFfY29kZSA9IGNhKQpgYGAKCgpgYGB7cn0KY291bmNpbF9jb2RlcyA8LSBhcmVhX25hbWVzICU+JQogIHNlbGVjdChhcmVhX2NvZGUsIGhiX25hbWUpCgpoZWFsdGhfYm9hcmRfY29kZXMgPC0gYXJlYV9uYW1lcyAlPiUgCiAgc2VsZWN0KGhiLCBoYl9uYW1lKSAlPiUgCiAgcmVuYW1lKGFyZWFfY29kZSA9IGhiKQoKaGVhbHRoX2JvYXJkX25hbWVzIDwtIGJpbmRfcm93cyhjb3VuY2lsX2NvZGVzLCBoZWFsdGhfYm9hcmRfY29kZXMpICU+JSAKICBkaXN0aW5jdCgpCgpgYGAKCmBgYHtyfQp3cml0ZV9jc3YoaGVhbHRoX2JvYXJkX25hbWVzLCAiLi4vZGF0YS9jbGVhbl9kYXRhL2hlYWx0aF9ib2FyZF9uYW1lcy5jc3YiKQpgYGAKCgoKYGBge3J9CnNjb3RsYW5kX2hlYWx0aF9zdXJ2ZXlfbG9jYWwgPC0gcmVhZF9jc3YoaGVyZSgiZGF0YS9yYXdfZGF0YS9zY290bGFuZCBoZWFsdGggc3VydmV5IGxvY2FsIGxldmVsLmNzdiIpKSAlPiUgCiAgY2xlYW5fbmFtZXMoKQpgYGAKCgoKYGBge3J9CgpzY290bGFuZF9oZWFsdGhfc3VydmV5X2xvY2FsIDwtIHNjb3RsYW5kX2hlYWx0aF9zdXJ2ZXlfbG9jYWwgJT4lIAogIHJlbmFtZShhcmVhX2NvZGUgPSBmZWF0dXJlX2NvZGUpCgpoZWFsdGhfc3VydmV5X2xvY2FsX2NsZWFuIDwtIGhlYWx0aF9ib2FyZF9uYW1lcyAlPiUgCiAgc2VsZWN0KGFyZWFfY29kZSwgaGJfbmFtZSkgJT4lIAogIGRpc3RpbmN0KCkgJT4lIAogIHJpZ2h0X2pvaW4oc2NvdGxhbmRfaGVhbHRoX3N1cnZleV9sb2NhbCwgYnkgPSAiYXJlYV9jb2RlIikKCmhlYWx0aF9zdXJ2ZXlfbG9jYWxfY2xlYW4gJT4lIAogIGZpbHRlcihpcy5uYShoYl9uYW1lKSkgJT4lIAogIGRpc3RpbmN0KGFyZWFfY29kZSkKYGBgCgo=</div>
 
 
 
