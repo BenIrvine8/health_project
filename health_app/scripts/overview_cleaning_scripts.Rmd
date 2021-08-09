@@ -45,7 +45,7 @@ scotland_health_survey_local_clean %>%
 # Greenspace cleaning
 
 ```{r}
-greenspace <- read_csv(here("data/raw_data/greenspace.csv")) %>%
+greenspace_clean <- read_csv(here("data/raw_data/greenspace.csv")) %>%
   clean_names() %>%
   filter(measurement == "Percent") %>%
   rename("value_percent" = "value", 
@@ -58,42 +58,44 @@ greenspace <- read_csv(here("data/raw_data/greenspace.csv")) %>%
 # Healthy life expectancy
 
 ```{r}
-healthy_life_expectancy <- read_csv(here("data/raw_data/healthy_life_expectancy.csv")) %>%
+healthy_life_expectancy_clean <- read_csv(here("data/raw_data/healthy_life_expectancy.csv")) %>%
   clean_names() %>%
   filter(measurement == "Count",
          date_code == "2016-2018") %>%
   rename("years_to_live" = "value") %>%
-  select(-"measurement", -"units", -"feature_code")
+  select(-"measurement", -"units")
   
 ```
 
 
 # Life expectancy
 ```{r}
-life_expectancy <- read_csv(here("data/raw_data/life_expectancy.csv")) %>%
+life_expectancy_clean <- read_csv(here("data/raw_data/life_expectancy.csv")) %>%
   clean_names() %>%
   filter(measurement == "Count") %>%
   rename("years_to_live" = "value") %>%
-  select(-"measurement", -"units", - "feature_code")
+  select(-"measurement", -"units")
   
 ```
 
 
-# council names
+# health board names
 ```{r}
-council_names <- read_csv(here("data/clean_data/council_area_names.csv"))
+health_names <- read_csv(here("data/clean_data/health_board_names.csv"))
 
-   greenspace <- council_names %>% 
-  select(area_code, ca_name) %>% 
+ greenspace_health_names <- health_names %>% 
+  select(area_code, hb_name) %>% 
   distinct() %>% 
-  right_join(greenspace, by = "area_code")
+  right_join(greenspace_clean, by = "area_code")
+ 
+ write_csv(greenspace_health_names, here("data/clean_data/greenspace_health_names.csv"))
 ```
 
 
 # writing life expectancy file
 ```{r}
-write_csv(life_expectancy, here("data/clean_data/life_expectancy.csv"))
-write_csv(healthy_life_expectancy, here("data/clean_data/healthy_life_expectancy.csv"))
+write_csv(life_expectancy_clean, here("data/clean_data/life_expectancy_clean.csv"))
+write_csv(healthy_life_expectancy_clean, here("data/clean_data/healthy_life_expectancy_clean.csv"))
 ```
 
 
