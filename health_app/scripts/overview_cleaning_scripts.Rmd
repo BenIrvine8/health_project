@@ -24,3 +24,51 @@ write_csv(scotland_health_survey_clean, "../data/clean_data/scotland_health_surv
 ```
 
 
+```{r}
+greenspace <- read_csv("greenspace.csv") %>%
+  clean_names() %>%
+  filter(measurement == "Percent") %>%
+  rename("value_percent" = "value", 
+         "area_code" = "feature_code") %>%
+  select(-"measurement", -"units")
+  
+```
+
+
+```{r}
+healthy_life_expectancy <- read_csv("healthy_life_expectancy.csv") %>%
+  clean_names() %>%
+  filter(measurement == "Count",
+         date_code == "2016-2018") %>%
+  rename("years_to_live" = "value") %>%
+  select(-"measurement", -"units", -"feature_code")
+  
+```
+
+
+```{r}
+life_expectancy <- read_csv("life_expectancy.csv") %>%
+  clean_names() %>%
+  filter(measurement == "Count") %>%
+  rename("years_to_live" = "value") %>%
+  select(-"measurement", -"units", - "feature_code")
+  
+```
+
+
+```{r}
+council_names <- read_csv("council_area_names.csv")
+
+   greenspace <- council_names %>% 
+  select(area_code, ca_name) %>% 
+  distinct() %>% 
+  right_join(greenspace, by = "area_code")
+```
+
+```{r}
+write_csv(life_expectancy, "../Desktop/codeclan/health_project/health_app/data/clean_data/life_expectancy.csv")
+write_csv(healthy_life_expectancy, "../Desktop/codeclan/health_project/health_app/data/clean_data/healthy_life_expectancy.csv")
+```
+
+
+
