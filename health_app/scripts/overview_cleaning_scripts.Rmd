@@ -9,6 +9,12 @@ library(janitor)
 library(here)
 ```
 
+# reading in area code and name detail
+```{r}
+ area_names <- read_csv("../data/clean_data/council codes.csv") %>% 
+    clean_names() %>% 
+    rename(area_code = ca)
+```
 # Scottish Health Survey Overview
 
 ```{r}
@@ -36,10 +42,7 @@ write_csv(scotland_health_survey_clean, here("data/clean_data/scotland_health_su
 ```
 
 
-```{r}
-scotland_health_survey_local_clean %>% 
-  filter(str_detect(area_code, pattern = "S08"))
-```
+
 
 
 # Greenspace cleaning
@@ -50,7 +53,9 @@ greenspace_clean <- read_csv(here("data/raw_data/greenspace.csv")) %>%
   filter(measurement == "Percent") %>%
   rename("value_percent" = "value", 
          "area_code" = "feature_code") %>%
-  select(-"measurement", -"units")
+  select(-"measurement", -"units") %>%
+   filter(!str_detect(area_code, pattern = "S08")) %>% 
+        replace_na(list(ca_name =  "Scotland"))
   
 ```
 
@@ -62,8 +67,11 @@ healthy_life_expectancy_clean <- read_csv(here("data/raw_data/healthy_life_expec
   clean_names() %>%
   filter(measurement == "Count",
          date_code == "2016-2018") %>%
-  rename("years_to_live" = "value") %>%
-  select(-"measurement", -"units")
+  rename("years_to_live" = "value",
+         "area_code" = "feature_code") %>%
+  select(-"measurement", -"units")  %>%
+  filter(!str_detect(area_code, pattern = "S08")) %>% 
+        replace_na(list(ca_name =  "Scotland"))
   
 ```
 
@@ -73,22 +81,23 @@ healthy_life_expectancy_clean <- read_csv(here("data/raw_data/healthy_life_expec
 life_expectancy_clean <- read_csv(here("data/raw_data/life_expectancy.csv")) %>%
   clean_names() %>%
   filter(measurement == "Count") %>%
-  rename("years_to_live" = "value") %>%
-  select(-"measurement", -"units")
+  rename("years_to_live" = "value",
+         "area_code" = "feature_code") %>%
+  select(-"measurement", -"units")  %>%
+  filter(!str_detect(area_code, pattern = "S08")) %>% 
+        replace_na(list(ca_name =  "Scotland"))
   
 ```
 
 
-# health board names
+# council names
 ```{r}
-health_names <- read_csv(here("data/clean_data/health_board_names.csv"))
-
- greenspace_health_names <- health_names %>% 
-  select(area_code, hb_name) %>% 
+ greenspace_council_names <- area_names %>% 
+  select(area_code, ca_name) %>% 
   distinct() %>% 
   right_join(greenspace_clean, by = "area_code")
  
- write_csv(greenspace_health_names, here("data/clean_data/greenspace_health_names.csv"))
+ write_csv(greenspace_council_names, here("data/clean_data/greenspace_council_names.csv"))
 ```
 
 
@@ -99,12 +108,7 @@ write_csv(healthy_life_expectancy_clean, here("data/clean_data/healthy_life_expe
 ```
 
 
-# reading in area code and name detail
-```{r}
- area_names <- read_csv("../data/clean_data/council codes.csv") %>% 
-    clean_names() %>% 
-    rename(area_code = ca)
-```
+
 
 
 ```{r}
@@ -159,13 +163,5 @@ scotland_health_survey_local_clean <- scotland_health_survey_local_clean %>%
   arrange(area_code, year, scottish_health_survey_indicator, sex)
 
 write_csv(scotland_health_survey_local_clean, here("data/clean_data/scotland_health_survey_local_clean.csv"))
-
-
-
-```
-
-```{r}
-scotland_health_survey_local_clean %>% 
-  filter(is.na(ca_name))
 ```
 
