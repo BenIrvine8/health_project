@@ -5,11 +5,11 @@ output: html_notebook
 
 ```{r}
 library(tidyverse)
-
+library(here)
 ```
 
 ```{r}
-life <- read_csv("data/clean_data/life_expectancy.csv")
+life <- read_csv(here("data/clean_data/life_expectancy_clean.csv"))
 ```
 
 ```{r}
@@ -28,7 +28,8 @@ life %>%
   filter(age == "0 years",
          date_code == "2016-2018",
          simd_quintiles == "All",
-         urban_rural_classification == "All") %>% 
+         urban_rural_classification == "All",
+          str_detect(feature_code, "^S92")) %>% 
   ggplot() +
   aes(x = sex, y = years_to_live) +
   geom_col() +
@@ -48,11 +49,13 @@ life %>%
   filter(sex == "Male",
          date_code == "2016-2018",
          simd_quintiles == "All",
-         urban_rural_classification == "All") %>% 
+         urban_rural_classification == "All",
+         str_detect(feature_code, "^S92")) %>% 
   ggplot() +
   aes(x = age, y = years_to_live) +
   scale_y_continuous() +
-  geom_col()
+  geom_col() +
+  theme(axis.text = element_text(angle = 90))
 ```
 
 
