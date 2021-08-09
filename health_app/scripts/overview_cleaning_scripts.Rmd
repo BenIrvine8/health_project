@@ -76,8 +76,8 @@ council_names <- read_csv(here("data/clean_data/council_area_names.csv"))
 
 # writing life expectancy file
 ```{r}
-write_csv(life_expectancy, "Desktop/codeclan/health_project/health_app/data/clean_data/life_expectancy.csv")
-write_csv(healthy_life_expectancy, "Desktop/codeclan/health_project/health_app/data/clean_data/healthy_life_expectancy.csv")
+write_csv(life_expectancy, here("data/clean_data/life_expectancy.csv"))
+write_csv(healthy_life_expectancy, here("data/clean_data/healthy_life_expectancy.csv"))
 ```
 
 
