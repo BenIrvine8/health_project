@@ -26,7 +26,7 @@ write_csv(scotland_health_survey_clean, "../data/clean_data/scotland_health_surv
 
 
 ```{r}
-greenspace <- read_csv("greenspace.csv") %>%
+greenspace <- read_csv(here("data/raw_data/greenspace.csv")) %>%
   clean_names() %>%
   filter(measurement == "Percent") %>%
   rename("value_percent" = "value", 
@@ -37,7 +37,7 @@ greenspace <- read_csv("greenspace.csv") %>%
 
 
 ```{r}
-healthy_life_expectancy <- read_csv("healthy_life_expectancy.csv") %>%
+healthy_life_expectancy <- read_csv(here("data/raw_data/healthy_life_expectancy.csv")) %>%
   clean_names() %>%
   filter(measurement == "Count",
          date_code == "2016-2018") %>%
@@ -48,7 +48,7 @@ healthy_life_expectancy <- read_csv("healthy_life_expectancy.csv") %>%
 
 
 ```{r}
-life_expectancy <- read_csv("life_expectancy.csv") %>%
+life_expectancy <- read_csv(here("data/raw_data/life_expectancy.csv")) %>%
   clean_names() %>%
   filter(measurement == "Count") %>%
   rename("years_to_live" = "value") %>%
@@ -58,7 +58,7 @@ life_expectancy <- read_csv("life_expectancy.csv") %>%
 
 
 ```{r}
-council_names <- read_csv("council_area_names.csv")
+council_names <- read_csv(here("data/clean_data/council_area_names.csv"))
 
    greenspace <- council_names %>% 
   select(area_code, ca_name) %>% 
