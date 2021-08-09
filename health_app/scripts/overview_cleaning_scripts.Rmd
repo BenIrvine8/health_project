@@ -73,14 +73,16 @@ life_expectancy_clean <- read_csv(here("data/raw_data/life_expectancy.csv")) %>%
 ```
 
 
-# council names
+# health board names
 ```{r}
-council_names <- read_csv(here("data/clean_data/council_area_names.csv"))
+health_names <- read_csv(here("data/clean_data/health_board_names.csv"))
 
-   greenspace_council_names <- council_names %>% 
-  select(area_code, ca_name) %>% 
+ greenspace_health_names <- health_names %>% 
+  select(area_code, hb_name) %>% 
   distinct() %>% 
   right_join(greenspace_clean, by = "area_code")
+ 
+ write_csv(greenspace_health_names, here("data/clean_data/greenspace_health_names.csv"))
 ```
 
 
