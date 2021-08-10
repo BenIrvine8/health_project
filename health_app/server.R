@@ -34,6 +34,23 @@ server <- function(input, output) {
             theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
             scale_fill_manual(values = c("Scotland" = "darkgreen"
             ))
-        
     })
+     # Green space Line Graph 
+      output$greenspaceline <- renderPlot({
+        greenspace %>%
+          filter(gender == "All",
+                 age == input$age_input,
+                 distance_to_nearest_green_or_blue_space == input$distance_input,
+                 urban_rural_classification == "All",
+                 simd_quintiles == "All",
+                 type_of_tenure ==  "All",
+                 household_type == "All",
+                 ethnicity == "All",
+                 ca_name == input$council_input) %>%
+          ggplot() +
+          aes(x = date_code, y = value_percent) +
+          geom_line() +
+          geom_point()
+          })
+   
 }
