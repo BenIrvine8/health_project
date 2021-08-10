@@ -63,5 +63,22 @@ server <- function(input, output) {
           geom_line() +
           geom_point()
           })
+      
+      #Green space Geospatial Graph
+      output$greenspacemap <- renderPlot({
+        greenspace_la_geo %>% 
+          filter(date_code == input$year_input,
+                 distance_to_nearest_green_or_blue_space == input$distance_input,
+                 age == input$age_input, 
+                 gender == "All",
+                 urban_rural_classification == "All",
+                 simd_quintiles == "All",
+                 type_of_tenure == "All",
+                 household_type == "All",
+                 ethnicity == "All") %>% 
+          ggplot() +
+          geom_sf(aes(fill = value_percent), colour = "black") +
+          theme_minimal()
+      })
 
 }

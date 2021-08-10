@@ -39,24 +39,22 @@ shinyUI(navbarPage("Scottish Public Health",
 
           tabPanel("Focus",
                    fluidRow(
-                     column(4,
-
-                            selectInput("council_input",
-                                        "Local Authority",
-                                        choices = unique(greenspace$ca_name)),
-                               selectInput("age_input",
-                                           "Age Group",
-                                           choices = unique(greenspace$age)),
-                               selectInput("distance_input",
+                     column(3,
+                            selectInput("year_input",
+                                        "Year",
+                                        choices = unique(greenspace$date_code)),
+                            selectInput("age_input",
+                                        "Age Group",
+                                        choices = unique(greenspace$age)),
+                            selectInput("distance_input",
                                         "Reported distance to Green Space",
                                         choices = unique(greenspace$distance_to_nearest_green_or_blue_space)),
-
+                            ),
+                     column(4, plotOutput("greenspacemap", width = "600", height = "600")),
+                     column(2, selectInput("council_input","Local Authority",
+                                           choices = unique(greenspace$ca_name))),
+                     column(3, plotOutput("greenspaceline")),
                        ),
-                     column(8, plotOutput("greenspaceline"))
-                    ),
-
-
-
 
 
           tabPanel("SMID"),
