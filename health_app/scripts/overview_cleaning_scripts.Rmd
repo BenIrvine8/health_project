@@ -190,13 +190,11 @@ summary_stat_scotland_health_2016_2019 <- raw_scotland_health_survey_local %>%
     measurement == "Percent" | 
     measurement == "95% Lower Confidence Limit" | 
     measurement == "95% Upper Confidence Limit") %>% 
-  mutate(
-    proportion = as.numeric(value)/100
-  )
+pivot_wider(names_from = measurement, values_from = value)
   
 summary_stat_scotland_health_2016_2019 <- summary_stat_scotland_health_2016_2019 %>% 
   rename(year = date_code) %>% 
-  select(scottish_health_survey_indicator, sex, measurement, proportion)
+  select(scottish_health_survey_indicator, sex, "Percent", "95% Lower Confidence Limit", "95% Upper Confidence Limit")
 
 write_csv(summary_stat_scotland_health_2016_2019, here("data/clean_data/summary_stat_scotland_health_2016_2019.csv"))
 ```
