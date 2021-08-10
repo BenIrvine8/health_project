@@ -2,32 +2,67 @@
 # This is the user-interface definition of a Shiny web application. You can
 # run the application by clicking 'Run App' above.
 #
-# Find out more about building applications with Shiny here:
-#
-#    http://shiny.rstudio.com/
-#
 
 library(shiny)
 
-# Define UI for application that draws a histogram
-shinyUI(fluidPage(
-
-    # Application title
-    titlePanel("Old Faithful Geyser Data"),
-
-    # Sidebar with a slider input for number of bins
-    sidebarLayout(
-        sidebarPanel(
-            sliderInput("bins",
-                        "Number of bins:",
-                        min = 1,
-                        max = 50,
-                        value = 30)
+# Define UI for health application
+shinyUI(navbarPage("Scottish Public Health",
+          tabPanel("Scottish Health Survey Overview",
+          fluidRow(
+            column(3, selectInput("gender_input",
+                                  "Select gender",
+                                  choices = unique(scottish_survey$sex)),
+                   
+                   
+                   selectInput("indicator_input",
+                               "Select indicator",
+                               choices = unique(scottish_survey$scottish_health_survey_indicator))
+            ),
+            
+            column(9, plotOutput("trendPlot",width = "800"))
+            
+          ),
+          mainPanel(
+            fluidRow(
+              column(4, selectInput("sex_input",
+                                    "Select gender",
+                                    choices = unique(scottish_survey_local$sex)),
+                     
+                     selectInput("indic_input",
+                                 "Select indicator",
+                                 choices = unique(scottish_survey_local$scottish_health_survey_indicator))),
+              
+              column(8, plotOutput("localPlot", width = "800")),
+            )
+          )
         ),
+          
+          tabPanel("Focus", 
+                   fluidRow(
+                     column(4, 
+                            
+                            selectInput("council_input",
+                                        "Local Authority",
+                                        choices = unique(greenspace$ca_name)),
+                               selectInput("age_input",
+                                           "Age Group",
+                                           choices = unique(greenspace$age)),
+                               selectInput("distance_input",
+                                        "Reported distance to Green Space",
+                                        choices = unique(greenspace$distance_to_nearest_green_or_blue_space)),
+                               
+                       ),
+                     column(8, plotOutput("greenspaceline"))
+                    ),
+        
+        
+        
+        
+        
+          tabPanel("SMID"),
+          tabPanel("Download")
+                   )
+)
+)
 
-        # Show a plot of the generated distribution
-        mainPanel(
-            plotOutput("distPlot")
-        )
-    )
-))
+
