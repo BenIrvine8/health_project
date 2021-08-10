@@ -10,10 +10,13 @@ library(here)
 
 ```{r}
 life <- read_csv(here("data/clean_data/life_expectancy_clean.csv"))
+healthy_life <- read_csv(here("data/clean_data/healthy_life_expectancy_clean.csv"))
+
 ```
 
 ```{r}
 view(life)
+view(healthy_life)
 glimpse(life)
 ```
 
@@ -23,13 +26,20 @@ distinct(.data = life, simd_quintiles) # character 5 categories
 distinct(.data = life, urban_rural_classification) # character 7 categories
 ```
 ```{r}
+# reformatting and sorting the age categories
+life <- life %>% 
+  mutate(age_new = str_remove(age, " years"))
+```
+
+
+```{r}
 # life expectancy at zero years
 life %>% 
   filter(age == "0 years",
          date_code == "2016-2018",
          simd_quintiles == "All",
          urban_rural_classification == "All",
-          str_detect(feature_code, "^S92")) %>% 
+          str_detect(area_code, "^S92")) %>% 
   ggplot() +
   aes(x = sex, y = years_to_live) +
   geom_col() +
@@ -39,23 +49,28 @@ life %>%
     y = "Life expectancy (years) at birth",
     title = "Life expectancy in Scotland in 2016\n",
     subtitle = "Data from the Scottish Government\n")
-
 ```
 
 
 ```{r}
 # bar graph of male life expectancy, with age on the x axis, years to live on y axis
+
+
 life %>% 
-  filter(sex == "Male",
+  filter(sex != "All",
          date_code == "2016-2018",
          simd_quintiles == "All",
          urban_rural_classification == "All",
-         str_detect(feature_code, "^S92")) %>% 
+         str_detect(area_code, "^S92")) %>% 
   ggplot() +
-  aes(x = age, y = years_to_live) +
-  scale_y_continuous() +
-  geom_col() +
-  theme(axis.text = element_text(angle = 90))
+  aes(x = reorder(age_new, desc(years_to_live)), y = years_to_live, fill = sex) +
+  geom_col(position = "dodge") +
+  theme(axis.text = element_text(angle = 90)) +
+  labs(
+    x = "\nage (years)",
+    y = "years to live",
+    title = "Life expectancy in Scotland in 2016\n",
+    subtitle = "Data from the Scottish Government\n")
 ```
 
 
