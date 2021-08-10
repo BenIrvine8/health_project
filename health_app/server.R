@@ -92,5 +92,46 @@ server <- function(input, output) {
           geom_sf(aes(fill = percentage), colour = "black") +
           theme_minimal()
       })
+      
+      #Summary Stats tables
+      output$greenspace_stats_table <- DT::renderDataTable({
+        greenspace %>% 
+          group_by(distance_to_nearest_green_or_blue_space) %>% 
+          filter(
+            date_code >= 2016,
+            str_detect(area_code, "^S92"),
+            age == input$age_table_input, 
+            gender == "All",
+            urban_rural_classification == "All",
+            simd_quintiles == "All",
+            type_of_tenure == "All",
+            household_type == "All",
+            ethnicity == "All") %>% 
+          summarise("Median percent" = median(value_percent),
+                    "Mean percent" = mean(value_percent),
+                    "Std deviation" = round(sd(value_percent), digits = 2)) %>% 
+          rename("Distance to Green or Blue space" = 
+                   distance_to_nearest_green_or_blue_space) %>% 
+          select("Distance to Green or Blue space", "Median percent", 
+                 "Mean percent", "Std deviation") %>% 
+          DT::datatable(
+            caption = paste0(
+              "Summary of Distance to Green or Blue Space for Scotland 2016-2019 for ",
+              input$age_table_input),
+            options = list(dom = "t"), style = "bootstrap") 
+      })
+      
+      output$indicator_stats_table <- DT::renderDataTable({
+        summary_stat_scotland_health_2016_2019 %>% 
+          filter(scottish_health_survey_indicator == input$indic_table_input,
+            sex == "All") %>% 
+          DT::datatable(
+            caption = paste0(
+              "Health Survey Indicators for Scotland 2016-2019: ", 
+              input$indic_table_input),
+            options = list(dom = "t"), style = "bootstrap")           
+      })
+      
+      
 
 }

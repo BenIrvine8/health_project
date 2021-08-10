@@ -57,11 +57,22 @@ shinyUI(navbarPage("Scottish Public Health",
           ),
           tabPanel("Summary and statistics",
                    fluidRow(
-                     column(12,
-                       
-                     )
-                   )),
-          tabPanel("")
+                     column(4,
+                            selectInput("age_table_input",
+                                        "Age Group",
+                                        choices = unique(greenspace$age)),
+                            selectInput("indic_table_input",
+                                        "Select indicator",
+                                        choices = unique(scottish_survey_local$scottish_health_survey_indicator)),
+                     ),
+                     column(6, DT::dataTableOutput("greenspace_stats_table"))
+                     ),
+                   fluidRow(
+                     column(4,),
+                     column(6, DT::dataTableOutput("indicator_stats_table"))
                    )
-)
+                   ),
+          tabPanel("")
+          )
+        )
 
