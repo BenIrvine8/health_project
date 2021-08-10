@@ -1,4 +1,4 @@
-area_code,date_code,years_to_live,sex,age,simd_quintiles,urban_rural_classification
+area_code,date_code,years_of_quality_life,sex,age,simd_quintiles,urban_rural_classification
 S12000008,2016-2018,40.03,Male,20-24 years,All,All
 S12000008,2016-2018,20.01,Male,45-49 years,All,All
 S12000008,2016-2018,0.82,Male,90 years,All,All

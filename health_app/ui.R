@@ -7,7 +7,7 @@ library(shiny)
 
 # Define UI for health application
 shinyUI(navbarPage("Scottish Public Health",
-          tabPanel("Scottish Health Survey Overview"),
+          tabPanel("Scottish Health Survey Overview",
           fluidRow(
             column(3, selectInput("gender_input",
                                   "Select gender",
@@ -34,13 +34,35 @@ shinyUI(navbarPage("Scottish Public Health",
               
               column(8, plotOutput("localPlot", width = "800")),
             )
-          ),
+          )
+        ),
           
-          tabPanel("Focus"),
+          tabPanel("Focus", 
+                   fluidRow(
+                     column(4, 
+                            
+                            selectInput("council_input",
+                                        "Local Authority",
+                                        choices = unique(greenspace$ca_name)),
+                               selectInput("age_input",
+                                           "Age Group",
+                                           choices = unique(greenspace$age)),
+                               selectInput("distance_input",
+                                        "Reported distance to Green Space",
+                                        choices = unique(greenspace$distance_to_nearest_green_or_blue_space)),
+                               
+                       ),
+                     column(8, plotOutput("greenspaceline"))
+                    ),
+        
+        
+        
+        
+        
           tabPanel("SMID"),
           tabPanel("Download")
                    )
 )
-
+)
 
 
