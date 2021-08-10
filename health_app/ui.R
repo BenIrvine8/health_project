@@ -22,7 +22,6 @@ shinyUI(navbarPage("Scottish Public Health",
             column(9, plotOutput("trendPlot",width = "800"))
 
           ),
-          mainPanel(
             fluidRow(
               column(4, selectInput("sex_input",
                                     "Select gender",
@@ -34,7 +33,6 @@ shinyUI(navbarPage("Scottish Public Health",
 
               column(8, plotOutput("localPlot", width = "800")),
             )
-          )
           ),
 
           tabPanel("Focus",
@@ -49,20 +47,21 @@ shinyUI(navbarPage("Scottish Public Health",
                             selectInput("distance_input",
                                         "Reported distance to Green Space",
                                         choices = unique(greenspace$distance_to_nearest_green_or_blue_space)),
+                            selectInput("map_indic_input",
+                                        "Select indicator",
+                                        choices = unique(scottish_survey_local$scottish_health_survey_indicator)),
                             ),
-                     column(4, plotOutput("greenspacemap", width = "600", height = "600")),
-                     column(4, plotOutput("greenspaceline", width = "500", height = "600")),
-                       ),
-                   
+                     column(4, plotOutput("greenspacemap", width = "575", height = "575")),
+                     column(4, plotOutput("indicatormap", width = "575", height = "575")),
+                       )
+          ),
+          tabPanel("Summary and statistics",
                    fluidRow(
-                     column (9),
-                     column (3, selectInput("council_input","Local Authority",
-                                            choices = unique(greenspace$ca_name)))
-                   ),
-
-
-          tabPanel("SMID"),
-          tabPanel("Download")
+                     column(12,
+                       
+                     )
+                   )),
+          tabPanel("")
                    )
 )
-)
+

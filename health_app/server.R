@@ -67,9 +67,10 @@ server <- function(input, output) {
       #Green space Geospatial Graph
       output$greenspacemap <- renderPlot({
         greenspace_la_geo %>% 
-          filter(date_code == input$year_input,
-                 distance_to_nearest_green_or_blue_space == input$distance_input,
-                 age == input$age_input, 
+          filter(date_code == input$year_input |is.na(date_code),
+                 distance_to_nearest_green_or_blue_space == input$distance_input
+                   |is.na(distance_to_nearest_green_or_blue_space),
+                 age == input$age_input |is.na(age), 
                  gender == "All",
                  urban_rural_classification == "All",
                  simd_quintiles == "All",
@@ -78,6 +79,17 @@ server <- function(input, output) {
                  ethnicity == "All") %>% 
           ggplot() +
           geom_sf(aes(fill = value_percent), colour = "black") +
+          theme_minimal()
+      })
+      
+      #Scottish survey local Geospatial Graph
+      output$indicatormap <- renderPlot({
+        scottish_survey_la_geo %>%   
+          filter(scottish_health_survey_indicator == input$map_indic_input | 
+                                              is.na(scottish_health_survey_indicator),
+                                            sex == "All" | is.na(sex)) %>% 
+          ggplot() +
+          geom_sf(aes(fill = percentage), colour = "black") +
           theme_minimal()
       })
 
