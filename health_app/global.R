@@ -4,6 +4,7 @@ library(tidyverse)
 library(janitor)
 library(here)
 library(ggthemes)
+library(sf)
 
 # read in survey data
 scottish_survey <- read.csv(here("data/clean_data/scotland_health_survey_clean.csv"))
