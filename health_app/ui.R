@@ -51,10 +51,14 @@ shinyUI(navbarPage("Scottish Public Health",
                                         choices = unique(greenspace$distance_to_nearest_green_or_blue_space)),
                             ),
                      column(4, plotOutput("greenspacemap", width = "600", height = "600")),
-                     column(2, selectInput("council_input","Local Authority",
-                                           choices = unique(greenspace$ca_name))),
-                     column(3, plotOutput("greenspaceline")),
+                     column(4, plotOutput("greenspaceline", width = "500", height = "600")),
                        ),
+                   
+                   fluidRow(
+                     column (9),
+                     column (3, selectInput("council_input","Local Authority",
+                                            choices = unique(greenspace$ca_name)))
+                   ),
 
 
           tabPanel("SMID"),
