@@ -22,3 +22,7 @@ la_zones <- st_read(here::here("data/raw_data/Local_Authority_Boundaries_-_Scotl
 #use merge health data to shape file
 greenspace_la_geo <- la_zones %>%
   merge(greenspace_la, by.x = "code", by.y = "area_code")
+
+# filter scottish survey local
+scottish_survey_local <- scottish_survey_local %>% 
+  filter(scottish_health_survey_indicator %in% c("Any cardiovascular condition: Has a cardiovascular condition", "Life satisfaction: Below the mode (0-Extremely dissatisfied to 7)", "Obesity: Obese", "Overweight: Overweight (including obese)", "Summary activity levels: Low activity", "Summary activity levels: Very low activity"))

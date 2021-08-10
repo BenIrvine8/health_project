@@ -22,10 +22,13 @@ shinyUI(navbarPage("Scottish Public Health",
             column(9, plotOutput("trendPlot",width = "800"))
 
           ),
+          
+          br(),
+          br(),
             
-          mainPanel(
+          
             fluidRow(
-              column(4, selectInput("sex_input",
+              column(3, selectInput("sex_input",
                                     "Select gender",
                                     choices = unique(scottish_survey_local$sex)),
 
@@ -33,9 +36,9 @@ shinyUI(navbarPage("Scottish Public Health",
                                  "Select indicator",
                                  choices = unique(scottish_survey_local$scottish_health_survey_indicator))),
 
-              column(8, plotOutput("localPlot", width = "800")),
+              column(9, plotOutput("localPlot", width = "800")),
             )
-          )
+          
           ),
 
           tabPanel("Focus",

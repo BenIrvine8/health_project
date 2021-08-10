@@ -38,14 +38,14 @@ server <- function(input, output) {
     output$localPlot <- renderPlot({
         scottish_survey_local %>%
             filter(sex == input$sex_input,
-                   scottish_health_survey_indicator == input$indic_input) %>%
+                   scottish_health_survey_indicator == input$indic_input)%>%
             group_by(scottish_health_survey_indicator, sex) %>%
             mutate(scotland_percent = mean(percentage)) %>%
             ggplot() +
             aes(x= ca_name, y = percentage, fill = case_when(
                 ca_name == "Scotland" ~ "Scotland",
-                percentage > scotland_percent ~ "Above Scotland",
                 percentage < scotland_percent ~ "Below Scotland",
+                percentage > scotland_percent ~ "Above Scotland"
                 )) +
             geom_col() +
             theme_wsj() +
