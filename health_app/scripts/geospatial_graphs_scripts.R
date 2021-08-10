@@ -35,30 +35,24 @@ greenspace_council_names_only_zones %>%
   geom_sf(aes(fill = value_percent), colour = "black") +
   theme_minimal()
 
-
-
 # health_survey_local data ------------------------------------------------
 
 #read in scotland_health_survey_local_clean
 scotland_health_survey_local_clean <- read_csv(
   here::here("data/clean_data/scotland_health_survey_local_clean.csv")) %>% 
-  filter(str_detect(area_code, "^S120"))
+  filter(str_detect(area_code, "^S120")) 
 
-head(scotland_health_survey_local_clean)
-
-#use merge to merge health data to shape file
+#use merge to merge health data to shape file, keep all columns
 scotland_health_survey_local_clean_zones <- la_zones %>% 
-  merge(scotland_health_survey_local_clean, by.x = "code", by.y = "area_code")
+  merge(scotland_health_survey_local_clean, by.x = "code", by.y = "area_code", all = TRUE)
 
-#only 12 area codes?!
-scotland_health_survey_local_clean %>% 
-  distinct(area_code)
-#yes not enough data. add "dummy" geospatial coordinates so can keep map with other areas as white.
 
 #plot geospatial graph with example filters
+#need to filter for NA columns to keep empty council/la zones
 scotland_health_survey_local_clean_zones %>% 
-  filter(scottish_health_survey_indicator == "Life satisfaction: Mode (8)",
-         sex == "All") %>% 
+  filter(scottish_health_survey_indicator == "Life satisfaction: Mode (8)" | 
+           is.na(scottish_health_survey_indicator),
+         sex == "All" | is.na(sex)) %>% 
   ggplot() +
   geom_sf(aes(fill = percentage), colour = "black") +
   theme_minimal()
