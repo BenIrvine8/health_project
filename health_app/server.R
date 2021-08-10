@@ -118,18 +118,23 @@ server <- function(input, output) {
             caption = paste0(
               "Summary of Distance to Green or Blue Space for Scotland 2016-2019 for ",
               input$age_table_input),
-            options = list(dom = "t"), style = "bootstrap") 
+            options = list(dom = "t"),
+            rownames = FALSE,
+            style = "bootstrap") 
       })
       
       output$indicator_stats_table <- DT::renderDataTable({
-        summary_stat_scotland_health_2016_2019 %>% 
+        scottish_survey_local_stats %>% 
           filter(scottish_health_survey_indicator == input$indic_table_input,
-            sex == "All") %>% 
+            sex == "All") %>%
+          select("Percent", "95% Lower Confidence Limit", "95% Upper Confidence Limit") %>% 
           DT::datatable(
             caption = paste0(
               "Health Survey Indicators for Scotland 2016-2019: ", 
               input$indic_table_input),
-            options = list(dom = "t"), style = "bootstrap")           
+            options = list(dom = "t"),
+            rownames = FALSE,
+            style = "bootstrap")           
       })
       
       

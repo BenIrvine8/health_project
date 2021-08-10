@@ -40,13 +40,13 @@ shinyUI(navbarPage("Scottish Public Health",
                      column(3,
                             selectInput("year_input",
                                         "Year",
-                                        choices = unique(greenspace$date_code)),
+                                        choices = sort(unique(greenspace$date_code), decreasing = TRUE)),
                             selectInput("age_input",
                                         "Age Group",
-                                        choices = unique(greenspace$age)),
+                                        choices = sort(unique(greenspace$age), decreasing = TRUE)),
                             selectInput("distance_input",
                                         "Reported distance to Green Space",
-                                        choices = unique(greenspace$distance_to_nearest_green_or_blue_space)),
+                                        choices = sort(unique(greenspace$distance_to_nearest_green_or_blue_space))),
                             selectInput("map_indic_input",
                                         "Select indicator",
                                         choices = unique(scottish_survey_local$scottish_health_survey_indicator)),
@@ -57,18 +57,30 @@ shinyUI(navbarPage("Scottish Public Health",
           ),
           tabPanel("Summary and statistics",
                    fluidRow(
+                     column(12,
+                     h2(" Distance from Greenspace and Indicators of Health for Scotland")
+                     ),
+                     column(12,
+                     p(" Generate summary statistics for Scotland by age for 
+                       distance to green space and by exercise-related health indicator")
+                     )
+                   ),
+                   fluidRow(
                      column(4,
                             selectInput("age_table_input",
                                         "Age Group",
-                                        choices = unique(greenspace$age)),
-                            selectInput("indic_table_input",
-                                        "Select indicator",
-                                        choices = unique(scottish_survey_local$scottish_health_survey_indicator)),
+                                        choices = sort(unique(greenspace$age))),
                      ),
                      column(6, DT::dataTableOutput("greenspace_stats_table"))
                      ),
+                   fluidRow(column(12,)),
                    fluidRow(
-                     column(4,),
+                     column(4,
+                            selectInput("indic_table_input",
+                                        "Select indicator",
+                                        choices = unique(
+                                          scottish_survey_local$scottish_health_survey_indicator)),
+                            ),
                      column(6, DT::dataTableOutput("indicator_stats_table"))
                    )
                    ),
