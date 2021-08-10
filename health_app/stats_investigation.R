@@ -38,6 +38,7 @@ greenspace_histogram <- greenspace_council_names %>%
 greenspace_council_stats <- greenspace_council_names %>% 
   group_by(distance_to_nearest_green_or_blue_space, date_code) %>% 
   filter(
+    date_code >= 2016,
     str_detect(area_code, "^S12"),
     age == "All", 
     gender == "All",
@@ -51,8 +52,9 @@ greenspace_council_stats <- greenspace_council_names %>%
             sd_percent = sd(value_percent))
 
 greenspace_histogram <- greenspace_council_names %>% 
-  group_by(distance_to_nearest_green_or_blue_space, date_code) %>% 
+  group_by(distance_to_nearest_green_or_blue_space, date_code) %>%
   filter(
+    date_code >= 2016,
     str_detect(area_code, "^S12"),
     age == "All", 
     gender == "All",
@@ -63,6 +65,8 @@ greenspace_histogram <- greenspace_council_names %>%
     ethnicity == "All") %>% 
   ggplot() +
   geom_histogram() +
-  aes(x = value_percent)
+  aes(x = value_percent) +
+  facet_wrap(~distance_to_nearest_green_or_blue_space)
+
 
 
