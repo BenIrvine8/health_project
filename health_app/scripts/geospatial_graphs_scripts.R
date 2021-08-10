@@ -46,6 +46,19 @@ scotland_health_survey_local_clean <- read_csv(
 
 head(scotland_health_survey_local_clean)
 
+local_zones <- scotland_health_survey_local_clean %>% 
+  distinct(area_code)
+
+all_zones <- as_tibble(la_zones) %>% 
+  distinct(code)
+
+not_in_all <- all_zones %>% 
+  filter(!code %in% local_zones$area_code)
+
+zones_to_add <- la_zones %>% 
+  filter(code %in% not_in_all$code)
+head(zones_to_add)
+
 #use merge to merge health data to shape file
 scotland_health_survey_local_clean_zones <- la_zones %>% 
   merge(scotland_health_survey_local_clean, by.x = "code", by.y = "area_code")
