@@ -22,6 +22,7 @@ shinyUI(navbarPage("Scottish Public Health",
             column(9, plotOutput("trendPlot",width = "800"))
 
           ),
+            
           mainPanel(
             fluidRow(
               column(4, selectInput("sex_input",
