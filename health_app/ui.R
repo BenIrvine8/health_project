@@ -7,7 +7,7 @@ library(shiny)
 
 # Define UI for health application
 shinyUI(navbarPage("Scottish Public Health",
-          tabPanel("Scottish Health Survey Overview"),
+          tabPanel("Scottish Health Survey Overview",
           fluidRow(
             column(3, selectInput("gender_input",
                                   "Select gender",
@@ -34,6 +34,7 @@ shinyUI(navbarPage("Scottish Public Health",
               
               column(8, plotOutput("localPlot", width = "800")),
             )
+          )
           ),
           
           tabPanel("Focus"),

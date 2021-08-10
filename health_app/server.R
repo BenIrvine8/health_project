@@ -19,6 +19,7 @@ server <- function(input, output) {
             ggplot() +
             aes(x = year, y = percentage) +
             geom_line() +
+            geom_point() +
             scale_x_continuous(breaks = 2008:2019) +
             expand_limits(y = c(1, 100))
         
@@ -28,12 +29,21 @@ server <- function(input, output) {
         scottish_survey_local %>%
             filter(sex == input$sex_input,
                    scottish_health_survey_indicator == input$indic_input) %>% 
+            group_by(scottish_health_survey_indicator, sex) %>% 
+            mutate(scotland_percent = mean(percentage)) %>% 
             ggplot() +
-            aes(x= ca_name, y = percentage, fill = ca_name) +
+            aes(x= ca_name, y = percentage, fill = case_when(
+                ca_name == "Scotland" ~ "Scotland",
+                percentage > scotland_percent ~ "Above Scotland",
+                percentage < scotland_percent ~ "Below Scotland",
+                )) +
             geom_col() +
             theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
-            scale_fill_manual(values = c("Scotland" = "darkgreen"
-            ))
+            labs(x = "Local Authority",
+                 y = "Percent",
+                 fill = "") +
+            scale_fill_manual(values = c("Above Scotland" = "dark green", "Below Scotland" = "red", "Scotland" = "dark blue"))
+            
         
     })
 }
