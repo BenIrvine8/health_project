@@ -67,7 +67,7 @@ healthy_life_expectancy_clean <- read_csv(here("data/raw_data/healthy_life_expec
   clean_names() %>%
   filter(measurement == "Count",
          date_code == "2016-2018") %>%
-  rename("years_to_live" = "value",
+  rename("years_of_quality_life" = "value",
          "area_code" = "feature_code") %>%
   select(-"measurement", -"units")  %>%
   filter(!str_detect(area_code, pattern = "S08")) %>% 
