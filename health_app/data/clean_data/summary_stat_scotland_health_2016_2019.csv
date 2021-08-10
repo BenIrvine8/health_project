@@ -1,0 +1,118 @@
+scottish_health_survey_indicator,sex,measurement,proportion
+Any cardiovascular condition: Has a cardiovascular condition,All,95% Upper Confidence Limit,0.161
+Any cardiovascular condition: Has a cardiovascular condition,Female,95% Upper Confidence Limit,0.156
+Any cardiovascular condition: Has a cardiovascular condition,Male,95% Upper Confidence Limit,0.172
+Any cardiovascular condition: No cardiovascular condition,All,95% Upper Confidence Limit,0.85
+Any cardiovascular condition: No cardiovascular condition,Female,95% Upper Confidence Limit,0.8590000000000001
+Any cardiovascular condition: No cardiovascular condition,Male,95% Upper Confidence Limit,0.846
+Life satisfaction: Above the mode (9 to 10-Extremely satisfied),All,95% Upper Confidence Limit,0.355
+Life satisfaction: Above the mode (9 to 10-Extremely satisfied),Female,95% Upper Confidence Limit,0.364
+Life satisfaction: Above the mode (9 to 10-Extremely satisfied),Male,95% Upper Confidence Limit,0.35100000000000003
+Life satisfaction: Below the mode (0-Extremely dissatisfied to 7),All,95% Upper Confidence Limit,0.353
+Life satisfaction: Below the mode (0-Extremely dissatisfied to 7),Female,95% Upper Confidence Limit,0.349
+Life satisfaction: Below the mode (0-Extremely dissatisfied to 7),Male,95% Upper Confidence Limit,0.364
+Life satisfaction: Mode (8),All,95% Upper Confidence Limit,0.317
+Life satisfaction: Mode (8),Female,95% Upper Confidence Limit,0.318
+Life satisfaction: Mode (8),Male,95% Upper Confidence Limit,0.322
+Obesity: Not obese,All,95% Upper Confidence Limit,0.72
+Obesity: Not obese,Female,95% Upper Confidence Limit,0.7140000000000001
+Obesity: Not obese,Male,95% Upper Confidence Limit,0.733
+Obesity: Obese,All,95% Upper Confidence Limit,0.297
+Obesity: Obese,Female,95% Upper Confidence Limit,0.308
+Obesity: Obese,Male,95% Upper Confidence Limit,0.292
+Overweight: Not overweight or obese,All,95% Upper Confidence Limit,0.35600000000000004
+Overweight: Not overweight or obese,Female,95% Upper Confidence Limit,0.387
+Overweight: Not overweight or obese,Male,95% Upper Confidence Limit,0.332
+Overweight: Overweight (including obese),All,95% Upper Confidence Limit,0.6629999999999999
+Overweight: Overweight (including obese),Female,95% Upper Confidence Limit,0.638
+Overweight: Overweight (including obese),Male,95% Upper Confidence Limit,0.6970000000000001
+Summary activity levels: Low activity,All,95% Upper Confidence Limit,0.043
+Summary activity levels: Low activity,Female,95% Upper Confidence Limit,0.052000000000000005
+Summary activity levels: Low activity,Male,95% Upper Confidence Limit,0.035
+Summary activity levels: Meets recommendations,All,95% Upper Confidence Limit,0.6579999999999999
+Summary activity levels: Meets recommendations,Female,95% Upper Confidence Limit,0.614
+Summary activity levels: Meets recommendations,Male,95% Upper Confidence Limit,0.7120000000000001
+Summary activity levels: Some activity,All,95% Upper Confidence Limit,0.11
+Summary activity levels: Some activity,Female,95% Upper Confidence Limit,0.128
+Summary activity levels: Some activity,Male,95% Upper Confidence Limit,0.096
+Summary activity levels: Very low activity,All,95% Upper Confidence Limit,0.212
+Summary activity levels: Very low activity,Female,95% Upper Confidence Limit,0.23800000000000002
+Summary activity levels: Very low activity,Male,95% Upper Confidence Limit,0.19
+Any cardiovascular condition: Has a cardiovascular condition,All,95% Lower Confidence Limit,0.15
+Any cardiovascular condition: Has a cardiovascular condition,Female,95% Lower Confidence Limit,0.141
+Any cardiovascular condition: Has a cardiovascular condition,Male,95% Lower Confidence Limit,0.154
+Any cardiovascular condition: No cardiovascular condition,All,95% Lower Confidence Limit,0.8390000000000001
+Any cardiovascular condition: No cardiovascular condition,Female,95% Lower Confidence Limit,0.8440000000000001
+Any cardiovascular condition: No cardiovascular condition,Male,95% Lower Confidence Limit,0.828
+Life satisfaction: Above the mode (9 to 10-Extremely satisfied),All,95% Lower Confidence Limit,0.33899999999999997
+Life satisfaction: Above the mode (9 to 10-Extremely satisfied),Female,95% Lower Confidence Limit,0.34299999999999997
+Life satisfaction: Above the mode (9 to 10-Extremely satisfied),Male,95% Lower Confidence Limit,0.326
+Life satisfaction: Below the mode (0-Extremely dissatisfied to 7),All,95% Lower Confidence Limit,0.336
+Life satisfaction: Below the mode (0-Extremely dissatisfied to 7),Female,95% Lower Confidence Limit,0.32799999999999996
+Life satisfaction: Below the mode (0-Extremely dissatisfied to 7),Male,95% Lower Confidence Limit,0.33799999999999997
+Life satisfaction: Mode (8),All,95% Lower Confidence Limit,0.301
+Life satisfaction: Mode (8),Female,95% Lower Confidence Limit,0.297
+Life satisfaction: Mode (8),Male,95% Lower Confidence Limit,0.298
+Obesity: Not obese,All,95% Lower Confidence Limit,0.703
+Obesity: Not obese,Female,95% Lower Confidence Limit,0.6920000000000001
+Obesity: Not obese,Male,95% Lower Confidence Limit,0.708
+Obesity: Obese,All,95% Lower Confidence Limit,0.28
+Obesity: Obese,Female,95% Lower Confidence Limit,0.28600000000000003
+Obesity: Obese,Male,95% Lower Confidence Limit,0.267
+Overweight: Not overweight or obese,All,95% Lower Confidence Limit,0.337
+Overweight: Not overweight or obese,Female,95% Lower Confidence Limit,0.36200000000000004
+Overweight: Not overweight or obese,Male,95% Lower Confidence Limit,0.303
+Overweight: Overweight (including obese),All,95% Lower Confidence Limit,0.644
+Overweight: Overweight (including obese),Female,95% Lower Confidence Limit,0.613
+Overweight: Overweight (including obese),Male,95% Lower Confidence Limit,0.6679999999999999
+Summary activity levels: Low activity,All,95% Lower Confidence Limit,0.036000000000000004
+Summary activity levels: Low activity,Female,95% Lower Confidence Limit,0.042
+Summary activity levels: Low activity,Male,95% Lower Confidence Limit,0.027000000000000003
+Summary activity levels: Meets recommendations,All,95% Lower Confidence Limit,0.642
+Summary activity levels: Meets recommendations,Female,95% Lower Confidence Limit,0.593
+Summary activity levels: Meets recommendations,Male,95% Lower Confidence Limit,0.6890000000000001
+Summary activity levels: Some activity,All,95% Lower Confidence Limit,0.1
+Summary activity levels: Some activity,Female,95% Lower Confidence Limit,0.113
+Summary activity levels: Some activity,Male,95% Lower Confidence Limit,0.081
+Summary activity levels: Very low activity,All,95% Lower Confidence Limit,0.19899999999999998
+Summary activity levels: Very low activity,Female,95% Lower Confidence Limit,0.22
+Summary activity levels: Very low activity,Male,95% Lower Confidence Limit,0.17
+Any cardiovascular condition: Has a cardiovascular condition,All,Percent,0.16
+Any cardiovascular condition: Has a cardiovascular condition,Female,Percent,0.15
+Any cardiovascular condition: Has a cardiovascular condition,Male,Percent,0.16
+Any cardiovascular condition: No cardiovascular condition,All,Percent,0.84
+Any cardiovascular condition: No cardiovascular condition,Female,Percent,0.85
+Any cardiovascular condition: No cardiovascular condition,Male,Percent,0.84
+Life satisfaction: Above the mode (9 to 10-Extremely satisfied),All,Percent,0.35
+Life satisfaction: Above the mode (9 to 10-Extremely satisfied),Female,Percent,0.35
+Life satisfaction: Above the mode (9 to 10-Extremely satisfied),Male,Percent,0.34
+Life satisfaction: Below the mode (0-Extremely dissatisfied to 7),All,Percent,0.34
+Life satisfaction: Below the mode (0-Extremely dissatisfied to 7),Female,Percent,0.34
+Life satisfaction: Below the mode (0-Extremely dissatisfied to 7),Male,Percent,0.35
+Life satisfaction: Mode (8),All,Percent,0.31
+Life satisfaction: Mode (8),Female,Percent,0.31
+Life satisfaction: Mode (8),Male,Percent,0.31
+Obesity: Not obese,All,Percent,0.71
+Obesity: Not obese,Female,Percent,0.7
+Obesity: Not obese,Male,Percent,0.72
+Obesity: Obese,All,Percent,0.29
+Obesity: Obese,Female,Percent,0.3
+Obesity: Obese,Male,Percent,0.28
+Overweight: Not overweight or obese,All,Percent,0.35
+Overweight: Not overweight or obese,Female,Percent,0.37
+Overweight: Not overweight or obese,Male,Percent,0.32
+Overweight: Overweight (including obese),All,Percent,0.65
+Overweight: Overweight (including obese),Female,Percent,0.63
+Overweight: Overweight (including obese),Male,Percent,0.68
+Summary activity levels: Low activity,All,Percent,0.04
+Summary activity levels: Low activity,Female,Percent,0.05
+Summary activity levels: Low activity,Male,Percent,0.03
+Summary activity levels: Meets recommendations,All,Percent,0.65
+Summary activity levels: Meets recommendations,Female,Percent,0.6
+Summary activity levels: Meets recommendations,Male,Percent,0.7
+Summary activity levels: Some activity,All,Percent,0.11
+Summary activity levels: Some activity,Female,Percent,0.12
+Summary activity levels: Some activity,Male,Percent,0.09
+Summary activity levels: Very low activity,All,Percent,0.21
+Summary activity levels: Very low activity,Female,Percent,0.23
+Summary activity levels: Very low activity,Male,Percent,0.18
