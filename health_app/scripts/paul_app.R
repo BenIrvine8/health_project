@@ -2,6 +2,7 @@ library(tidyverse)
 library(shiny)
 library(CodeClanData)
 library(shinythemes)
+library(here)
 
 life <- read_csv(here("data/clean_data/life_expectancy_clean.csv"))
 # reformatting and sorting the age categories
