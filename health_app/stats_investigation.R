@@ -53,14 +53,11 @@ greenspace_stats_2016_2019 <- greenspace_council_names %>%
             median_percent = median(value_percent),
             sd_percent = sd(value_percent))
 
-#Local Health survey stats scotland
-
+# Summary stats Scottish Health Survey by Local Area
 raw_scotland_health_survey_local <- read_csv("data/raw_data/scotland health survey local level.csv") %>% 
   clean_names()
 
-head(raw_scotland_health_survey_local)
-
-summary <- raw_scotland_health_survey_local %>% 
+summary_stat_scottish_health_survey_local_area <- raw_scotland_health_survey_local %>% 
   filter(
     date_code == "2016-2019",
     str_detect(feature_code, "^S92"),
@@ -74,7 +71,6 @@ summary <- raw_scotland_health_survey_local %>%
       "Overweight: Overweight (including obese)", "Summary activity levels: Low activity",
       "Summary activity levels: Meets recommendations", "Summary activity levels: Some activity",
       "Summary activity levels: Very low activity"),
-    sex == "All",
   measurement == "Mean" | 
     measurement == "95% Lower Confidence Limit" | 
     measurement == "95% Upper Confidence Limit"
