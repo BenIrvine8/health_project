@@ -43,9 +43,9 @@ ui <- fluidPage(
 
 server <- function(input, output) {
   
+  # life expectancy at zero years
   output$birth_plot <- renderPlot({
-    
-    # life expectancy at zero years
+
     life %>% 
       filter(age == "0 years",
              date_code == "2016-2018",
@@ -66,10 +66,11 @@ server <- function(input, output) {
       expand_limits(y = c(1,100)) +
       geom_text(aes(label = years_to_live), vjust = -0.5)
   })
-  
+ 
+   # bar graph of male life expectancy, with age on the x axis, years to live on y axis
   output$gender_plot <- renderPlot({
     
-    # bar graph of male life expectancy, with age on the x axis, years to live on y axis
+  
     
     
     life %>% 

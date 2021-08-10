@@ -26,3 +26,11 @@ greenspace_la_geo <- la_zones %>%
 # filter scottish survey local
 scottish_survey_local <- scottish_survey_local %>% 
   filter(scottish_health_survey_indicator %in% c("Any cardiovascular condition: Has a cardiovascular condition", "Life satisfaction: Below the mode (0-Extremely dissatisfied to 7)", "Obesity: Obese", "Overweight: Overweight (including obese)", "Summary activity levels: Low activity", "Summary activity levels: Very low activity"))
+
+# read in the life expectancy data
+life <- read_csv(here("data/clean_data/life_expectancy_clean.csv"))
+# reformatting and sorting the age categories
+life <- life %>% 
+  mutate(age_new = str_remove(age, " years"))
+#simd_codes <- distinct(.data = life, simd_quintiles)
+simd_codes <- c("All", "5 - least deprived", "4", "3", "2", "1 - most deprived")
