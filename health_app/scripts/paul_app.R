@@ -1,7 +1,7 @@
 library(tidyverse)
 library(shiny)
 library(CodeClanData)
-library(shinythemes)
+library(ggthemes)
 library(here)
 
 life <- read_csv(here("data/clean_data/life_expectancy_clean.csv"))
