@@ -57,7 +57,8 @@ server <- function(input, output) {
                   axis.text.y = element_text(face = "bold", size = 12),
                   title = element_text(size=14, face='bold'),
                   axis.title=element_text(size=16),
-                  legend.text = element_text(face = "bold")) +
+                  legend.text = element_text(face = "bold"),
+                  ) +
             labs(x = "",
                  y = "Percent\n",
                  fill = "",
@@ -81,7 +82,8 @@ server <- function(input, output) {
                 axis.text.y = element_text(face = "bold", size = 10),
                 title =element_text(size=12, face='bold'),
                 axis.title=element_text(size=12),
-                legend.position = "bottom") +
+                legend.position = "bottom",
+                legend.text = element_text(size = "10")) +
           labs(title = "Less than 5 min",
                subtitle = "\nDistance to Greenspace 2016-2019",
                fill = "Mean percent")
@@ -101,7 +103,8 @@ server <- function(input, output) {
                 axis.text.y = element_text(face = "bold", size = 10),
                 title =element_text(size=12, face='bold'),
                 axis.title=element_text(size=12),
-                legend.position = "bottom") +
+                legend.position = "bottom",
+                legend.text = element_text(size = "8")) +
           labs(title = "Health Indicators",
                subtitle = "\n2016-2019",
                fill = "Mean percent")
