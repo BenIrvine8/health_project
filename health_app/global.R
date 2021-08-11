@@ -6,7 +6,7 @@ library(here)
 library(ggthemes)
 library(sf)
 library(DT)
-
+library(shinythemes)
 
 # read in survey data
 scottish_survey <- read.csv(here("data/clean_data/scotland_health_survey_clean.csv"))
