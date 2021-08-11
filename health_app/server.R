@@ -111,6 +111,10 @@ server <- function(input, output) {
           filter(
             scottish_health_survey_indicator == input$map_indic_input
           ) %>% 
+          rename("Local Authority" = ca_name,
+                 "Mean Percentage with Indicator" = indicator_percentage,
+                 "Mean Percentage Living 5 min from Greenspace" = mean_percent) %>%
+          select(-scottish_health_survey_indicator) %>% 
           DT::datatable(
             caption = paste0("Health Survey Indicators by Local Authority 2016-2019 for ", input$map_indic_input),
             options = list(dom = "t"),
