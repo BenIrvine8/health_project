@@ -85,7 +85,8 @@ server <- function(input, output) {
           labs(title = "Less than 5 min",
                subtitle = "\nDistance to Greenspace 2016-2019",
                fill = "Mean percent")
-      })
+      },
+      width = 650, height = 650)
       
       #Scottish survey local Geospatial Graph
       output$indicatormap <- renderPlot({
@@ -104,7 +105,8 @@ server <- function(input, output) {
           labs(title = "Health Indicators",
                subtitle = "\n2016-2019",
                fill = "Mean percent")
-      })
+      },
+      width = 650, height = 650)
       
       #Summary table for Health Indicator and Greenspace tab
       

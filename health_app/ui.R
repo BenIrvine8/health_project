@@ -44,8 +44,8 @@ shinyUI(navbarPage("Scottish Public Health",
 
           tabPanel("Health Indicators and Greenspace",
                    fluidRow(
-                     column(4, plotOutput("greenspacemap", width = "575", height = "575")),
-                     column(4, plotOutput("indicatormap", width = "575", height = "575")),
+                     column(4, plotOutput("greenspacemap")),
+                     column(4, plotOutput("indicatormap")),
                      column(4,
                             selectInput("map_indic_input",
                                         "Select indicator",
@@ -53,6 +53,25 @@ shinyUI(navbarPage("Scottish Public Health",
                             
                             )
                        ),
+                   
+                  br(),
+                  br(),
+                  br(),
+                  br(),
+                  br(),
+                  br(),
+                  br(),
+                  br(),
+                  br(),
+                  br(),
+                  br(),
+                  br(),
+                  br(),
+                  br(),
+                  br(),
+                  br(),
+                  br(),
+                  
                    fluidRow(
                      column(8, DT::dataTableOutput("greenspace_indicator_table")),
                      column(4,)
