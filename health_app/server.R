@@ -102,7 +102,7 @@ server <- function(input, output) {
       #Summary table for Health Indicator and Greenspace tab
       
       output$greenspace_health_table <- DT::renderDataTable({
-        greenspace_la %>% 
+        local_greenspace %>% 
           filter(
             age == "All"
           )

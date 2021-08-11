@@ -58,3 +58,7 @@ life <- life %>%
   mutate(age_new = str_remove(age, " years"))
 #simd_codes <- distinct(.data = life, simd_quintiles)
 simd_codes <- c("All", "5 - least deprived", "4", "3", "2", "1 - most deprived")
+
+#adds summary table for Health Indicators and Greenspace tab
+
+local_greenspace <- read_csv(here("data/clean_data/local_greenspace.csv"))
