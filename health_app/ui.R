@@ -41,19 +41,16 @@ shinyUI(navbarPage("Scottish Public Health",
 
           ),
 
-          tabPanel("Focus",
+          tabPanel("Health Indicators and Distance from Greenspace",
                    fluidRow(
-                     column(4, plotOutput("greenspacemap", width = "575", height = "575")),
-                     column(4, plotOutput("indicatormap", width = "575", height = "575")),
-                       ),
+                     column(5, plotOutput("greenspacemap", width = "575", height = "575")),
+                     column(5, plotOutput("indicatormap", width = "575", height = "575")),
+                     column(2, selectInput("map_indic_input", "Select indicator", 
+                                           choices = unique(scottish_survey_local$scottish_health_survey_indicator)),
+                     )
+                    ),
                    fluidRow(
-                     column(5,),
-                     column(7,
-                            selectInput("map_indic_input",
-                                        "Select indicator",
-                                        choices = unique(scottish_survey_local$scottish_health_survey_indicator)),
-                            
-                            )
+                     column(12,)
                    )
                    ),
           tabPanel("Summary and statistics",
@@ -63,7 +60,7 @@ shinyUI(navbarPage("Scottish Public Health",
                      ),
                      column(12,
                      p(" Generate summary statistics for Scotland by age for
-                       distance to green space and by exercise-related health indicator")
+                       distance to green space and by exercise-related health indicator.")
                      )
                    ),
                    fluidRow(
