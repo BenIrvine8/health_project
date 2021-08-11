@@ -62,23 +62,7 @@ server <- function(input, output) {
 
 
     })
-     # Green space Bar Graph
-      output$greenspacebar <- renderPlot({
-        greenspace %>%
-          filter(gender == "All",
-                 age == input$age_input,
-                 distance_to_nearest_green_or_blue_space == input$distance_input,
-                 date_code == input$year_input,
-                 urban_rural_classification == "All",
-                 simd_quintiles == "All",
-                 type_of_tenure ==  "All",
-                 household_type == "All",
-                 ethnicity == "All") %>%
-          ggplot() +
-          aes(x = ca_name, y = value_percent) +
-          geom_col() +
-          theme(axis.text.x = element_text(angle = 90))
-          })
+  
       
       #Green space Geospatial Graph
       output$greenspacemap <- renderPlot({
@@ -91,8 +75,7 @@ server <- function(input, output) {
             type_of_tenure == "All",
             household_type == "All",
             ethnicity == "All") %>% 
-          filter(date_code == input$year_input |is.na(date_code),
-                 age == input$age_input |is.na(age)) %>% 
+                filter(age == input$age_input |is.na(age)) %>% 
           ggplot() +
           geom_sf(aes(fill = value_percent), colour = "black") +
           theme_minimal() +
