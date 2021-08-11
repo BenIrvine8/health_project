@@ -113,12 +113,14 @@ shinyUI(navbarPage("Scottish Public Health",
                    br(),
                    br(),
                    br(),
+                   br(),
+                   br(),
                    fluidRow(
                      column(4,),
                      column(6, 
                             h4("Interpreting the summary statistics:"),
                             p("The median shows the middle value of the percentage 
-                              data for Scotland when ordered and the mean is the 
+                              data for Scotland when the data is sorted and the mean is the 
                               average value for the data."),
                             p("The standard deviation shows how much the data 
                               varies from the mean. A low standard deviation shows 
