@@ -1,0 +1,73 @@
+area_code,ca_name.x,year,scottish_health_survey_indicator,sex,indicator_percentage,ca_name.y,age,mean_percent
+S12000006,Dumfries and Galloway,2016-2019,Any cardiovascular condition: Has a cardiovascular condition,All,16,Dumfries and Galloway,All,77.25
+S12000006,Dumfries and Galloway,2016-2019,Life satisfaction: Below the mode (0-Extremely dissatisfied to 7),All,33,Dumfries and Galloway,All,77.25
+S12000006,Dumfries and Galloway,2016-2019,Obesity: Obese,All,33,Dumfries and Galloway,All,77.25
+S12000006,Dumfries and Galloway,2016-2019,Overweight: Overweight (including obese),All,72,Dumfries and Galloway,All,77.25
+S12000006,Dumfries and Galloway,2016-2019,Summary activity levels: Low activity,All,3,Dumfries and Galloway,All,77.25
+S12000006,Dumfries and Galloway,2016-2019,Summary activity levels: Very low activity,All,20,Dumfries and Galloway,All,77.25
+S12000013,Na h-Eileanan Siar,2016-2019,Any cardiovascular condition: Has a cardiovascular condition,All,16,Na h-Eileanan Siar,All,76
+S12000013,Na h-Eileanan Siar,2016-2019,Life satisfaction: Below the mode (0-Extremely dissatisfied to 7),All,22,Na h-Eileanan Siar,All,76
+S12000013,Na h-Eileanan Siar,2016-2019,Obesity: Obese,All,28,Na h-Eileanan Siar,All,76
+S12000013,Na h-Eileanan Siar,2016-2019,Overweight: Overweight (including obese),All,71,Na h-Eileanan Siar,All,76
+S12000013,Na h-Eileanan Siar,2016-2019,Summary activity levels: Low activity,All,2,Na h-Eileanan Siar,All,76
+S12000013,Na h-Eileanan Siar,2016-2019,Summary activity levels: Very low activity,All,23,Na h-Eileanan Siar,All,76
+S12000023,Orkney Islands,2016-2019,Any cardiovascular condition: Has a cardiovascular condition,All,19,Orkney Islands,All,63.75
+S12000023,Orkney Islands,2016-2019,Life satisfaction: Below the mode (0-Extremely dissatisfied to 7),All,24,Orkney Islands,All,63.75
+S12000023,Orkney Islands,2016-2019,Obesity: Obese,All,33,Orkney Islands,All,63.75
+S12000023,Orkney Islands,2016-2019,Overweight: Overweight (including obese),All,75,Orkney Islands,All,63.75
+S12000023,Orkney Islands,2016-2019,Summary activity levels: Low activity,All,5,Orkney Islands,All,63.75
+S12000023,Orkney Islands,2016-2019,Summary activity levels: Very low activity,All,22,Orkney Islands,All,63.75
+S12000026,Scottish Borders,2016-2019,Any cardiovascular condition: Has a cardiovascular condition,All,20,Scottish Borders,All,78
+S12000026,Scottish Borders,2016-2019,Life satisfaction: Below the mode (0-Extremely dissatisfied to 7),All,34,Scottish Borders,All,78
+S12000026,Scottish Borders,2016-2019,Obesity: Obese,All,28,Scottish Borders,All,78
+S12000026,Scottish Borders,2016-2019,Overweight: Overweight (including obese),All,65,Scottish Borders,All,78
+S12000026,Scottish Borders,2016-2019,Summary activity levels: Low activity,All,5,Scottish Borders,All,78
+S12000026,Scottish Borders,2016-2019,Summary activity levels: Very low activity,All,19,Scottish Borders,All,78
+S12000027,Shetland Islands,2016-2019,Any cardiovascular condition: Has a cardiovascular condition,All,13,Shetland Islands,All,85.25
+S12000027,Shetland Islands,2016-2019,Life satisfaction: Below the mode (0-Extremely dissatisfied to 7),All,25,Shetland Islands,All,85.25
+S12000027,Shetland Islands,2016-2019,Obesity: Obese,All,34,Shetland Islands,All,85.25
+S12000027,Shetland Islands,2016-2019,Overweight: Overweight (including obese),All,68,Shetland Islands,All,85.25
+S12000027,Shetland Islands,2016-2019,Summary activity levels: Low activity,All,4,Shetland Islands,All,85.25
+S12000027,Shetland Islands,2016-2019,Summary activity levels: Very low activity,All,22,Shetland Islands,All,85.25
+S12000029,South Lanarkshire,2016-2019,Any cardiovascular condition: Has a cardiovascular condition,All,13,South Lanarkshire,All,61.5
+S12000029,South Lanarkshire,2016-2019,Life satisfaction: Below the mode (0-Extremely dissatisfied to 7),All,38,South Lanarkshire,All,61.5
+S12000029,South Lanarkshire,2016-2019,Obesity: Obese,All,31,South Lanarkshire,All,61.5
+S12000029,South Lanarkshire,2016-2019,Overweight: Overweight (including obese),All,69,South Lanarkshire,All,61.5
+S12000029,South Lanarkshire,2016-2019,Summary activity levels: Low activity,All,5,South Lanarkshire,All,61.5
+S12000029,South Lanarkshire,2016-2019,Summary activity levels: Very low activity,All,22,South Lanarkshire,All,61.5
+S12000033,Aberdeen City,2016-2019,Any cardiovascular condition: Has a cardiovascular condition,All,13,Aberdeen City,All,57.25
+S12000033,Aberdeen City,2016-2019,Life satisfaction: Below the mode (0-Extremely dissatisfied to 7),All,36,Aberdeen City,All,57.25
+S12000033,Aberdeen City,2016-2019,Obesity: Obese,All,23,Aberdeen City,All,57.25
+S12000033,Aberdeen City,2016-2019,Overweight: Overweight (including obese),All,59,Aberdeen City,All,57.25
+S12000033,Aberdeen City,2016-2019,Summary activity levels: Low activity,All,4,Aberdeen City,All,57.25
+S12000033,Aberdeen City,2016-2019,Summary activity levels: Very low activity,All,18,Aberdeen City,All,57.25
+S12000034,Aberdeenshire,2016-2019,Any cardiovascular condition: Has a cardiovascular condition,All,18,Aberdeenshire,All,69.75
+S12000034,Aberdeenshire,2016-2019,Life satisfaction: Below the mode (0-Extremely dissatisfied to 7),All,27,Aberdeenshire,All,69.75
+S12000034,Aberdeenshire,2016-2019,Obesity: Obese,All,33,Aberdeenshire,All,69.75
+S12000034,Aberdeenshire,2016-2019,Overweight: Overweight (including obese),All,70,Aberdeenshire,All,69.75
+S12000034,Aberdeenshire,2016-2019,Summary activity levels: Low activity,All,4,Aberdeenshire,All,69.75
+S12000034,Aberdeenshire,2016-2019,Summary activity levels: Very low activity,All,21,Aberdeenshire,All,69.75
+S12000036,City of Edinburgh,2016-2019,Any cardiovascular condition: Has a cardiovascular condition,All,9,City of Edinburgh,All,68.25
+S12000036,City of Edinburgh,2016-2019,Life satisfaction: Below the mode (0-Extremely dissatisfied to 7),All,34,City of Edinburgh,All,68.25
+S12000036,City of Edinburgh,2016-2019,Obesity: Obese,All,19,City of Edinburgh,All,68.25
+S12000036,City of Edinburgh,2016-2019,Overweight: Overweight (including obese),All,53,City of Edinburgh,All,68.25
+S12000036,City of Edinburgh,2016-2019,Summary activity levels: Low activity,All,3,City of Edinburgh,All,68.25
+S12000036,City of Edinburgh,2016-2019,Summary activity levels: Very low activity,All,14,City of Edinburgh,All,68.25
+S12000047,Fife,2016-2019,Any cardiovascular condition: Has a cardiovascular condition,All,17,Fife,All,73.75
+S12000047,Fife,2016-2019,Life satisfaction: Below the mode (0-Extremely dissatisfied to 7),All,33,Fife,All,73.75
+S12000047,Fife,2016-2019,Obesity: Obese,All,31,Fife,All,73.75
+S12000047,Fife,2016-2019,Overweight: Overweight (including obese),All,68,Fife,All,73.75
+S12000047,Fife,2016-2019,Summary activity levels: Low activity,All,5,Fife,All,73.75
+S12000047,Fife,2016-2019,Summary activity levels: Very low activity,All,22,Fife,All,73.75
+S12000049,Glasgow City,2016-2019,Any cardiovascular condition: Has a cardiovascular condition,All,15,Glasgow City,All,54.25
+S12000049,Glasgow City,2016-2019,Life satisfaction: Below the mode (0-Extremely dissatisfied to 7),All,43,Glasgow City,All,54.25
+S12000049,Glasgow City,2016-2019,Obesity: Obese,All,27,Glasgow City,All,54.25
+S12000049,Glasgow City,2016-2019,Overweight: Overweight (including obese),All,61,Glasgow City,All,54.25
+S12000049,Glasgow City,2016-2019,Summary activity levels: Low activity,All,4,Glasgow City,All,54.25
+S12000049,Glasgow City,2016-2019,Summary activity levels: Very low activity,All,23,Glasgow City,All,54.25
+S12000050,North Lanarkshire,2016-2019,Any cardiovascular condition: Has a cardiovascular condition,All,16,North Lanarkshire,All,61.5
+S12000050,North Lanarkshire,2016-2019,Life satisfaction: Below the mode (0-Extremely dissatisfied to 7),All,40,North Lanarkshire,All,61.5
+S12000050,North Lanarkshire,2016-2019,Obesity: Obese,All,33,North Lanarkshire,All,61.5
+S12000050,North Lanarkshire,2016-2019,Overweight: Overweight (including obese),All,70,North Lanarkshire,All,61.5
+S12000050,North Lanarkshire,2016-2019,Summary activity levels: Low activity,All,3,North Lanarkshire,All,61.5
+S12000050,North Lanarkshire,2016-2019,Summary activity levels: Very low activity,All,23,North Lanarkshire,All,61.5
