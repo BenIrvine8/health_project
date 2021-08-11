@@ -106,11 +106,16 @@ server <- function(input, output) {
       
       #Summary table for Health Indicator and Greenspace tab
       
-      output$greenspace_health_table <- DT::renderDataTable({
+      output$greenspace_indicator_table <- DT::renderDataTable({
         local_greenspace %>% 
           filter(
-            age == "All"
-          )
+            scottish_health_survey_indicator == input$map_indic_input
+          ) %>% 
+          DT::datatable(
+            caption = paste0("Health Survey Indicators by Local Authority 2016-2019 for ", input$map_indic_input),
+            options = list(dom = "t"),
+            rownames = FALSE,
+            style = "bootstrap") 
       })
       
       #Summary Stats tables

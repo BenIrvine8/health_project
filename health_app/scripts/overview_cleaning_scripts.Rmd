@@ -231,7 +231,10 @@ add data together for datatable
 ```{r}
 local_greenspace <- filtered_scotland_health_survey_local_clean %>% 
   rename(indicator_percentage = percentage) %>% 
-  left_join(filtered_greenspace, by = "area_code")
+  left_join(filtered_greenspace, by = "area_code") %>% 
+  select(-ca_name.x) %>% 
+  rename(ca_name = ca_name.y) %>% 
+  select(ca_name, scottish_health_survey_indicator, indicator_percentage, mean_percent)
 
 write_csv(local_greenspace, here("data/clean_data/local_greenspace.csv"))
 ```
