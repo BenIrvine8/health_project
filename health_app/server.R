@@ -118,7 +118,8 @@ server <- function(input, output) {
                  "Mean Percentage Living 5 min from Greenspace" = mean_percent) %>%
           select(-scottish_health_survey_indicator) %>% 
           DT::datatable(
-            caption = paste0("Health Survey Indicators by Local Authority 2016-2019 for ", input$map_indic_input),
+            caption = htmltools::tags$caption(paste0("Health Survey Indicators by Local Authority 2016-2019 for ",
+                                   input$map_indic_input), style="color:black"),
             options = list(dom = "t"),
             rownames = FALSE,
             style = "bootstrap") 
@@ -146,9 +147,9 @@ server <- function(input, output) {
           select("Distance to Green or Blue space", "Median percent", 
                  "Mean percent", "Std deviation") %>% 
           DT::datatable(
-            caption = paste0(
+            caption = htmltools::tags$caption(paste0(
               "Summary of Distance to Green or Blue Space for Scotland 2016-2019 for ",
-              input$age_table_input),
+              input$age_table_input), style="color:black"),
             options = list(dom = "t"),
             rownames = FALSE,
             style = "bootstrap") 
@@ -160,9 +161,9 @@ server <- function(input, output) {
             sex == "All") %>%
           select("Percent", "95% Lower Confidence Limit", "95% Upper Confidence Limit") %>% 
           DT::datatable(
-            caption = paste0(
+            caption = htmltools::tags$caption(paste0(
               "Health Survey Indicators for Scotland 2016-2019: ", 
-              input$indic_table_input),
+              input$indic_table_input), style="color:black"),
             options = list(dom = "t"),
             rownames = FALSE,
             style = "bootstrap")           
