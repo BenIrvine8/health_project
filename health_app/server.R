@@ -26,12 +26,12 @@ server <- function(input, output) {
         theme(axis.text.x = element_text(face = "bold", size = 10),
               axis.text.y = element_text(face = "bold", size = 10),
               title =element_text(size=14, face='bold'),
-              axis.title=element_text(size=12)) +
-        labs(x = "Year",
+              axis.title=element_text(size=16)) +
+        labs(x = "\nYear",
              y = "Percent\n",
              colour = "",
              title = "Scottish Health Survey - Scotland level data\n",
-             subtitle = "Trends from 2008 to 2019 for the key Indicators relating to exercise") +
+             subtitle = "Trends from 2008 to 2019 for the key Health Indicators") +
         scale_colour_manual(values = c("All" = "black", "Male" = "#2E45B8", "Female" = "#C91D42"))
 
     },
@@ -55,12 +55,12 @@ server <- function(input, output) {
             theme(axis.text.x = element_text(face = "bold", size = 10, angle = 45, hjust = 1, vjust = 1),
                   axis.text.y = element_text(face = "bold", size = 10),
                   title = element_text(size=14, face='bold'),
-                  axis.title=element_text(size=12)) +
+                  axis.title=element_text(size=16)) +
             labs(x = "",
                  y = "Percent\n",
                  fill = "",
                  title = "Scottish Health Survey - Local area level data\n",
-                 subtitle = "Local authority comparison against national average for the key Indicators relating to exercise for 2016 - 2019") +
+                 subtitle = "Local authority comparison against national average for the key HealthIndicators for 2016 - 2019") +
         scale_fill_manual(values = c("Above Scotland" = "#F6423C", "Below Scotland" = "#1DC9A4", "Scotland" = "#141F52"))
                 
 
