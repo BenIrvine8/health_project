@@ -62,11 +62,33 @@ shinyUI(navbarPage("Scottish Public Health",
                      column (9),
                      column (3, selectInput("council_input","Local Authority",
                                             choices = unique(greenspace$ca_name)))
+                   )
                    ),
 
 
-          tabPanel("SMID"),
-          tabPanel("Download")
+          tabPanel("SMID",
+                   fluidPage(
+                           titlePanel(tags$h1("Life Expectancy at Birth")),
+                           fluidRow(
+                                   column(3, 
+                                          selectInput("simd_quintiles",
+                                                      "Which SIMD quintile?",
+                                                      choices = simd_codes)
+                                   ),
+                                   column(9,
+                                          plotOutput("birth_plot"))
+                           ),
+                           br(),
+                           br(),
+                           fluidRow(
+                                   column(3),
+                                   column(9,
+                                          plotOutput("gender_plot"))
+                           )
                    )
+                   
+                   ),
+          tabPanel("Download")
+                   
 )
 )

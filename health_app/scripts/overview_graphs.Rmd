@@ -6,6 +6,7 @@ output: html_notebook
 ```{r}
 library(tidyverse)
 library(here)
+library(ggthemes)
 ```
 
 ```{r}
@@ -41,14 +42,16 @@ life %>%
          urban_rural_classification == "All",
           str_detect(area_code, "^S92")) %>% 
   ggplot() +
-  aes(x = sex, y = years_to_live) +
+  aes(x = sex, y = years_to_live, fill = sex) +
   geom_col() +
   scale_y_continuous() +
   labs(
     x = "\nSex",
     y = "Life expectancy (years) at birth",
     title = "Life expectancy in Scotland in 2016\n",
-    subtitle = "Data from the Scottish Government\n")
+    subtitle = "Data from the Scottish Government\n") +
+  theme_wsj() +
+  scale_fill_wsj(palette = "rgby")
 ```
 
 
