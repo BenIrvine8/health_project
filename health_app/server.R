@@ -31,7 +31,7 @@ server <- function(input, output) {
              y = "Percent\n",
              colour = "",
              title = "Scottish Health Survey-Scotland level data") +
-        scale_colour_manual(values = c("All" = "black", "Male" = "light blue", "Female" = "pink"))
+        scale_colour_manual(values = c("All" = "#F97A1F", "Male" = "#1DC9A4", "Female" = "#C91D42"))
 
     })
     # Area Level Survey Visualisation
@@ -53,11 +53,11 @@ server <- function(input, output) {
                   axis.text.y = element_text(face = "bold", size = 10),
                   title =element_text(size=12, face='bold'),
                   axis.title=element_text(size=12)) +
-            labs(x = "Local Authority",
+            labs(x = "",
                  y = "Percent\n",
                  fill = "",
                  title = "Scottish Health Survey-Local area level data") +
-                scale_fill_wsj(palette = "rgby")
+        scale_fill_wsj()
                 
 
 

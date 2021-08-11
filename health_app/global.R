@@ -5,6 +5,7 @@ library(janitor)
 library(here)
 library(ggthemes)
 library(sf)
+library(shinythemes)
 
 # read in survey data
 scottish_survey <- read.csv(here("data/clean_data/scotland_health_survey_clean.csv"))
@@ -23,14 +24,18 @@ la_zones <- st_read(here::here("data/raw_data/Local_Authority_Boundaries_-_Scotl
 greenspace_la_geo <- la_zones %>%
   merge(greenspace_la, by.x = "code", by.y = "area_code")
 
-# filter scottish survey local
-scottish_survey_local <- scottish_survey_local %>% 
+# filter scottish surveys
+scottish_survey_local <- scottish_survey_local %>%
+  filter(scottish_health_survey_indicator %in% c("Any cardiovascular condition: Has a cardiovascular condition", "Life satisfaction: Below the mode (0-Extremely dissatisfied to 7)", "Obesity: Obese", "Overweight: Overweight (including obese)", "Summary activity levels: Low activity", "Summary activity levels: Very low activity"))
+
+
+scottish_survey <- scottish_survey %>%
   filter(scottish_health_survey_indicator %in% c("Any cardiovascular condition: Has a cardiovascular condition", "Life satisfaction: Below the mode (0-Extremely dissatisfied to 7)", "Obesity: Obese", "Overweight: Overweight (including obese)", "Summary activity levels: Low activity", "Summary activity levels: Very low activity"))
 
 # read in the life expectancy data
 life <- read_csv(here("data/clean_data/life_expectancy_clean.csv"))
 # reformatting and sorting the age categories
-life <- life %>% 
+life <- life %>%
   mutate(age_new = str_remove(age, " years"))
 #simd_codes <- distinct(.data = life, simd_quintiles)
 simd_codes <- c("All", "5 - least deprived", "4", "3", "2", "1 - most deprived")
