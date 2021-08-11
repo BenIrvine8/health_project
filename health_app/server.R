@@ -22,7 +22,7 @@ server <- function(input, output) {
             geom_point() +
             scale_x_continuous(breaks = 2008:2019) +
             expand_limits(y = c(1, 100)) +
-        theme_wsj() +
+        theme_economist() +
         theme(axis.text.x = element_text(face = "bold", size = 10),
               axis.text.y = element_text(face = "bold", size = 10),
               title =element_text(size=12, face='bold'),
@@ -48,7 +48,7 @@ server <- function(input, output) {
                 percentage > scotland_percent ~ "Above Scotland"
                 )) +
             geom_col() +
-            theme_wsj() +
+            theme_economist() +
             theme(axis.text.x = element_text(face = "bold", size = 10, angle = 45, hjust = 1),
                   axis.text.y = element_text(face = "bold", size = 10),
                   title =element_text(size=12, face='bold'),
@@ -174,8 +174,7 @@ server <- function(input, output) {
             y = "Life expectancy (years)",
             title = "Life expectancy in Scotland at birth in 2016-2018\n",
             subtitle = "(years) Data from the Scottish Government\n") +
-          theme_wsj() +
-          scale_fill_wsj(palette = "rgby") +
+          theme_economist() +
           expand_limits(y = c(1,100)) +
           geom_text(aes(label = years_to_live), vjust = -0.5)
       })
@@ -201,8 +200,7 @@ server <- function(input, output) {
             y = "years to live",
             title = "Life expectancy in Scotland in 2016-2018\n",
             subtitle = "(years, by age group) Data from the Scottish Government\n") +
-          theme_wsj() +
-          scale_fill_wsj(palette = "rgby") +
+          theme_economist() +
           expand_limits(y = c(1,100)) 
         
       })
