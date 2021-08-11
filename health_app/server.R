@@ -62,22 +62,22 @@ server <- function(input, output) {
 
 
     })
-     # Green space Line Graph
-      output$greenspaceline <- renderPlot({
+     # Green space Bar Graph
+      output$greenspacebar <- renderPlot({
         greenspace %>%
           filter(gender == "All",
                  age == input$age_input,
                  distance_to_nearest_green_or_blue_space == input$distance_input,
+                 date_code == input$year_input,
                  urban_rural_classification == "All",
                  simd_quintiles == "All",
                  type_of_tenure ==  "All",
                  household_type == "All",
-                 ethnicity == "All",
-                 ca_name == input$council_input) %>%
+                 ethnicity == "All") %>%
           ggplot() +
-          aes(x = date_code, y = value_percent) +
-          geom_line() +
-          geom_point()
+          aes(x = ca_name, y = value_percent) +
+          geom_col() +
+          theme(axis.text.x = element_text(angle = 90))
           })
       
       #Green space Geospatial Graph
