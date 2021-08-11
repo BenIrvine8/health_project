@@ -116,7 +116,10 @@ server <- function(input, output) {
                  "Mean Percentage Living 5 min from Greenspace" = mean_percent) %>%
           select(-scottish_health_survey_indicator) %>% 
           DT::datatable(
-            caption = paste0("Health Survey Indicators by Local Authority 2016-2019 for ", input$map_indic_input),
+            caption = htmltools::tags$caption(
+              htmltools::b(paste0("Health Survey Indicators by Local Authority 2016-2019 for ",
+                                   input$map_indic_input))
+            ),
             options = list(dom = "t"),
             rownames = FALSE,
             style = "bootstrap") 
