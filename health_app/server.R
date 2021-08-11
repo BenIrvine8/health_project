@@ -23,15 +23,16 @@ server <- function(input, output) {
             scale_x_continuous(breaks = 2008:2019) +
             expand_limits(y = c(1, 100)) +
         theme_economist() +
-        theme(axis.text.x = element_text(face = "bold", size = 10),
-              axis.text.y = element_text(face = "bold", size = 10),
+        theme(axis.text.x = element_text(face = "bold", size = 12),
+              axis.text.y = element_text(face = "bold", size = 12),
               title =element_text(size=14, face='bold'),
-              axis.title=element_text(size=12)) +
-        labs(x = "Year",
+              axis.title=element_text(size=16),
+              legend.text = element_text(face = "bold")) +
+        labs(x = "\nYear",
              y = "Percent\n",
              colour = "",
              title = "Scottish Health Survey - Scotland level data\n",
-             subtitle = "Trends from 2008 to 2019 for the key Indicators relating to exercise") +
+             subtitle = "Trends from 2008 to 2019 for the key Health Indicators") +
         scale_colour_manual(values = c("All" = "black", "Male" = "#2E45B8", "Female" = "#C91D42"))
 
     },
@@ -52,15 +53,16 @@ server <- function(input, output) {
                 )) +
             geom_col() +
             theme_economist() +
-            theme(axis.text.x = element_text(face = "bold", size = 10, angle = 45, hjust = 1, vjust = 1),
-                  axis.text.y = element_text(face = "bold", size = 10),
+            theme(axis.text.x = element_text(face = "bold", size = 12, angle = 45, hjust = 1, vjust = 1),
+                  axis.text.y = element_text(face = "bold", size = 12),
                   title = element_text(size=14, face='bold'),
-                  axis.title=element_text(size=12)) +
+                  axis.title=element_text(size=16),
+                  legend.text = element_text(face = "bold")) +
             labs(x = "",
                  y = "Percent\n",
                  fill = "",
                  title = "Scottish Health Survey - Local area level data\n",
-                 subtitle = "Local authority comparison against national average for the key Indicators relating to exercise for 2016 - 2019") +
+                 subtitle = "Local authority comparison against National average for the key HealthIndicators for 2016 - 2019") +
         scale_fill_manual(values = c("Above Scotland" = "#F6423C", "Below Scotland" = "#1DC9A4", "Scotland" = "#141F52"))
                 
 
@@ -188,7 +190,11 @@ server <- function(input, output) {
             title = "Life expectancy in Scotland at birth in 2016-2018\n",
             subtitle = "Data from the Scottish Government\n") +
           theme_economist() +
-          theme(legend.position = "none") +
+          theme(axis.title = element_text(size = 16, face = "bold"),
+                axis.text.y = element_text(size = 10, face = "bold"),
+                axis.text.x = element_text(size = 10, face = "bold"),
+                title = element_text(size = 14, face = "bold"),
+                legend.position = "none") +
           expand_limits(y = c(1,100)) +
           geom_text(aes(label = years_to_live), vjust = -0.5) +
           scale_fill_manual(values = c("Male" = "#2E45B8", "Female" = "#C91D42"))
@@ -196,10 +202,6 @@ server <- function(input, output) {
       
       # bar graph of male life expectancy, with age on the x axis, years to live on y axis
       output$gender_plot <- renderPlot({
-        
-        
-        
-        
         life %>% 
           filter(sex != "All",
                  date_code == "2016-2018",
@@ -216,7 +218,12 @@ server <- function(input, output) {
             subtitle = "Data from the Scottish Government\n",
             fill = "") +
           theme_economist() +
-          theme(axis.text = element_text(angle = 90)) +
+          theme(axis.text = element_text(angle = 90),
+                axis.title = element_text(size = 16, face = "bold"),
+                axis.text.y = element_text(size = 10, face = "bold"),
+                axis.text.x = element_text(size = 10, face = "bold"),
+                title = element_text(size = 14, face = "bold"),
+                legend.text = element_text(face = "bold")) +
           expand_limits(y = c(1,100)) +
           scale_fill_manual(values = c("Male" = "#2E45B8", "Female" = "#C91D42"))
         
