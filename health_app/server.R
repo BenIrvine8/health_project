@@ -169,12 +169,14 @@ server <- function(input, output) {
           scale_y_continuous() +
           labs(
             x = "\nSex",
-            y = "Life expectancy (years)",
+            y = "Life expectancy (years)\n",
             title = "Life expectancy in Scotland at birth in 2016-2018\n",
-            subtitle = "(years) Data from the Scottish Government\n") +
+            subtitle = "Data from the Scottish Government\n") +
           theme_economist() +
+          theme(legend.position = "none") +
           expand_limits(y = c(1,100)) +
-          geom_text(aes(label = years_to_live), vjust = -0.5)
+          geom_text(aes(label = years_to_live), vjust = -0.5) +
+          scale_fill_manual(values = c("Male" = "#2E45B8", "Female" = "#C91D42"))
       })
       
       # bar graph of male life expectancy, with age on the x axis, years to live on y axis
@@ -191,15 +193,17 @@ server <- function(input, output) {
                  str_detect(area_code, "^S92")) %>% 
           ggplot() +
           aes(x = reorder(age_new, desc(years_to_live)), y = years_to_live, fill = sex) +
-          geom_col(position = "identity", alpha = 0.5) +
-          theme(axis.text = element_text(angle = 90)) +
+          geom_col(position = "dodge", alpha = 1) +
           labs(
-            x = "\nage (years)",
-            y = "years to live",
+            x = "\nAge (years)",
+            y = "Life expectancy (years)\n",
             title = "Life expectancy in Scotland in 2016-2018\n",
-            subtitle = "(years, by age group) Data from the Scottish Government\n") +
+            subtitle = "Data from the Scottish Government\n",
+            fill = "") +
           theme_economist() +
-          expand_limits(y = c(1,100)) 
+          theme(axis.text = element_text(angle = 90)) +
+          expand_limits(y = c(1,100)) +
+          scale_fill_manual(values = c("Male" = "#2E45B8", "Female" = "#C91D42"))
         
       })
       
