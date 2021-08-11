@@ -44,14 +44,14 @@ shinyUI(navbarPage("Scottish Public Health",
 
           tabPanel("Health Indicators and Distance from Greenspace",
                    fluidRow(
-                     column(5, plotOutput("greenspacemap", width = "575", height = "575")),
-                     column(5, plotOutput("indicatormap", width = "575", height = "575")),
-                     column(2, selectInput("map_indic_input", "Select indicator", 
+                     column(4, plotOutput("greenspacemap", width = "375", height = "600")),
+                     column(4, plotOutput("indicatormap", width = "375", height = "600")),
+                     column(4, selectInput("map_indic_input", "Select indicator", 
                                            choices = unique(scottish_survey_local$scottish_health_survey_indicator)),
                      )
                     ),
                    fluidRow(
-                     column(12,)
+                     column(12, DT::dataTableOutput("greenspace_health_indicator_table"))
                    )
                    ),
           tabPanel("Summary and statistics",
