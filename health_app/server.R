@@ -67,7 +67,6 @@ server <- function(input, output) {
       #Green space Geospatial Graph
       output$greenspacemap <- renderPlot({
         greenspace_la_geo %>%
-                filter(age == input$age_input |is.na(age)) %>% 
           ggplot() +
           geom_sf(aes(fill = mean_percent), colour = "black") +
           theme_minimal() +

@@ -43,19 +43,18 @@ shinyUI(navbarPage("Scottish Public Health",
 
           tabPanel("Focus",
                    fluidRow(
-                     column(3,
-                            
-                            selectInput("age_input",
-                                        "Age Group",
-                                        choices = sort(unique(greenspace$age), decreasing = TRUE)),
-                            selectInput("map_indic_input",
-                                        "Select indicator",
-                                        choices = unique(scottish_survey_local$scottish_health_survey_indicator)),
-                            ),
-
                      column(4, plotOutput("greenspacemap", width = "575", height = "575")),
                      column(4, plotOutput("indicatormap", width = "575", height = "575")),
                        ),
+                   fluidRow(
+                     column(5,),
+                     column(7,
+                            selectInput("map_indic_input",
+                                        "Select indicator",
+                                        choices = unique(scottish_survey_local$scottish_health_survey_indicator)),
+                            
+                            )
+                   )
                    ),
           tabPanel("Summary and statistics",
                    fluidRow(
