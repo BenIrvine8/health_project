@@ -26,7 +26,8 @@ server <- function(input, output) {
         theme(axis.text.x = element_text(face = "bold", size = 12),
               axis.text.y = element_text(face = "bold", size = 12),
               title =element_text(size=14, face='bold'),
-              axis.title=element_text(size=16)) +
+              axis.title=element_text(size=16),
+              legend.text = element_text(face = "bold")) +
         labs(x = "\nYear",
              y = "Percent\n",
              colour = "",
@@ -55,7 +56,8 @@ server <- function(input, output) {
             theme(axis.text.x = element_text(face = "bold", size = 12, angle = 45, hjust = 1, vjust = 1),
                   axis.text.y = element_text(face = "bold", size = 12),
                   title = element_text(size=14, face='bold'),
-                  axis.title=element_text(size=16)) +
+                  axis.title=element_text(size=16),
+                  legend.text = element_text(face = "bold")) +
             labs(x = "",
                  y = "Percent\n",
                  fill = "",
