@@ -5,6 +5,8 @@ library(tidyverse)
 library(Rcpp)
 library(sf)
 library(here)
+library(rnaturalearth)
+library(rnaturalearthdata)
 
 
 # greenspace data ---------------------------------------------------------
@@ -90,6 +92,19 @@ scotland_health_survey_local_clean_zones %>%
   filter(scottish_health_survey_indicator == "Life satisfaction: Mode (8)" | 
            is.na(scottish_health_survey_indicator),
          sex == "All" | is.na(sex)) %>% 
+  mutate(centres = st_centroid(geometry)) %>%
+  # pull out the lat/longs from centres and create new columns with these
+  mutate(lat = st_coordinates(centres)[,1],
+         long = st_coordinates(centres)[,2]) %>% 
   ggplot() +
   geom_sf(aes(fill = percentage), colour = "black") +
-  theme_minimal()
+  geom_text(aes(x = lat, y = long, label = ca_name),
+            color = "black", fontface = "bold", size = 4,
+            check_overlap = TRUE)
+
+spdf_uk <- ne_countries(country = 'united kingdom',
+                        scale = "medium", returnclass = "sf")
+class(spdf_uk)
+
+ggplot(data = spdf_uk) +
+  geom_sf()
