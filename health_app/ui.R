@@ -42,14 +42,17 @@ shinyUI(navbarPage("Scottish Public Health",
 
           ),
 
-          tabPanel("Health Indicators and Distance from Greenspace",
+          tabPanel("Health Indicators and Greenspace",
                    fluidRow(
-                     column(4, plotOutput("greenspacemap", width = "375", height = "600")),
-                     column(4, plotOutput("indicatormap", width = "375", height = "600")),
-                     column(4, selectInput("map_indic_input", "Select indicator", 
-                                           choices = unique(scottish_survey_local$scottish_health_survey_indicator)),
-                     )
-                    ),
+                     column(4, plotOutput("greenspacemap", width = "575", height = "575")),
+                     column(4, plotOutput("indicatormap", width = "575", height = "575")),
+                     column(4,
+                            selectInput("map_indic_input",
+                                        "Select indicator",
+                                        choices = unique(scottish_survey_local$scottish_health_survey_indicator)),
+                            
+                            )
+                       ),
                    fluidRow(
                      column(8, DT::dataTableOutput("greenspace_indicator_table")),
                      column(4,)
@@ -62,7 +65,7 @@ shinyUI(navbarPage("Scottish Public Health",
                      ),
                      column(12,
                      p(" Generate summary statistics for Scotland by age for
-                       distance to green space and by exercise-related health indicator.")
+                       distance to green space and by exercise-related health indicator")
                      )
                    ),
                    fluidRow(
@@ -74,6 +77,8 @@ shinyUI(navbarPage("Scottish Public Health",
                      column(6, DT::dataTableOutput("greenspace_stats_table"))
                      ),
                    fluidRow(column(12,)),
+                   br(),
+                   br(),
                    fluidRow(
                      column(4,
                             selectInput("indic_table_input",
@@ -84,8 +89,6 @@ shinyUI(navbarPage("Scottish Public Health",
                      column(6, DT::dataTableOutput("indicator_stats_table"))
                    )
                    ),
-          tabPanel(""),
-
           tabPanel("SIMD",
                    fluidPage(
                            titlePanel(tags$h1("Life Expectancy at Birth")),
@@ -107,8 +110,8 @@ shinyUI(navbarPage("Scottish Public Health",
                            )
                    )
 
-                   ),
-          tabPanel("Download")
+                   )
+
 
 )
 )
