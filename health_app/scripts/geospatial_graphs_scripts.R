@@ -54,8 +54,9 @@ greenspace %>%
       labs(title = "Percentage of people less than 5 min away from Green space")
 
 
-greenspace %>% 
+greenspace_map <- greenspace %>% 
   filter(
+    str_detect(area_code, "^S120"),
     date_code >= 2016,
     distance_to_nearest_green_or_blue_space == "A 5 minute walk or less",
     gender == "All",
@@ -65,7 +66,7 @@ greenspace %>%
     household_type == "All",
     ethnicity == "All") %>% 
   group_by(
-    area_code, age
+    area_code, ca_name, age
   ) %>% 
   summarise(
     mean_percent = mean(value_percent)
