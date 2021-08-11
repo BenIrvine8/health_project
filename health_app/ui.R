@@ -44,26 +44,19 @@ shinyUI(navbarPage("Scottish Public Health",
           tabPanel("Focus",
                    fluidRow(
                      column(3,
-                            selectInput("year_input",
-                                        "Year",
-                                        choices = sort(unique(greenspace$date_code), decreasing = TRUE)),
+                            
                             selectInput("age_input",
                                         "Age Group",
                                         choices = sort(unique(greenspace$age), decreasing = TRUE)),
                             selectInput("map_indic_input",
                                         "Select indicator",
                                         choices = unique(scottish_survey_local$scottish_health_survey_indicator)),
-                            selectInput("distance_input",
-                                         "Reported Distance to Green Space",
-                                         choices = unique(greenspace$distance_to_nearest_green_or_blue_space)),
                             ),
 
                      column(4, plotOutput("greenspacemap", width = "575", height = "575")),
                      column(4, plotOutput("indicatormap", width = "575", height = "575")),
                        ),
-                   fluidRow(column(4, plotOutput("greenspacebar", width = "500", height = "600"))
-                   )
-          ),
+                   ),
           tabPanel("Summary and statistics",
                    fluidRow(
                      column(12,
