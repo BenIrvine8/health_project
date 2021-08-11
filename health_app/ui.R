@@ -51,7 +51,7 @@ shinyUI(navbarPage("Scottish Public Health",
                      )
                     ),
                    fluidRow(
-                     column(12, DT::dataTableOutput("greenspace_health_indicator_table"))
+                     column(12, DT::dataTableOutput("greenspace_indicator_table"))
                    )
                    ),
           tabPanel("Summary and statistics",

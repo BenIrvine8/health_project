@@ -99,6 +99,15 @@ server <- function(input, output) {
                fill = "Mean percent")
       })
       
+      #Summary table for Health Indicator and Greenspace tab
+      
+      output$greenspace_health_table <- DT::renderDataTable({
+        greenspace_la %>% 
+          filter(
+            age == "All"
+          )
+      })
+      
       #Summary Stats tables
       output$greenspace_stats_table <- DT::renderDataTable({
         greenspace %>% 
