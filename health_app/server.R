@@ -169,7 +169,11 @@ server <- function(input, output) {
             title = "Life expectancy in Scotland at birth in 2016-2018\n",
             subtitle = "Data from the Scottish Government\n") +
           theme_economist() +
-          theme(legend.position = "none") +
+          theme(axis.title = element_text(size = 16, face = "bold"),
+                axis.text.y = element_text(size = 10, face = "bold"),
+                axis.text.x = element_text(size = 10, face = "bold"),
+                title = element_text(size = 14, face = "bold"),
+                legend.position = "none") +
           expand_limits(y = c(1,100)) +
           geom_text(aes(label = years_to_live), vjust = -0.5) +
           scale_fill_manual(values = c("Male" = "#2E45B8", "Female" = "#C91D42"))
@@ -177,10 +181,6 @@ server <- function(input, output) {
       
       # bar graph of male life expectancy, with age on the x axis, years to live on y axis
       output$gender_plot <- renderPlot({
-        
-        
-        
-        
         life %>% 
           filter(sex != "All",
                  date_code == "2016-2018",
@@ -197,7 +197,12 @@ server <- function(input, output) {
             subtitle = "Data from the Scottish Government\n",
             fill = "") +
           theme_economist() +
-          theme(axis.text = element_text(angle = 90)) +
+          theme(axis.text = element_text(angle = 90),
+                axis.title = element_text(size = 16, face = "bold"),
+                axis.text.y = element_text(size = 10, face = "bold"),
+                axis.text.x = element_text(size = 10, face = "bold"),
+                title = element_text(size = 14, face = "bold"),
+                legend.text = element_text(face = "bold")) +
           expand_limits(y = c(1,100)) +
           scale_fill_manual(values = c("Male" = "#2E45B8", "Female" = "#C91D42"))
         
