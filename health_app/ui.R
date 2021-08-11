@@ -42,19 +42,20 @@ shinyUI(navbarPage("Scottish Public Health",
 
           ),
 
-          tabPanel("Focus",
+          tabPanel("Health Indicators and Greenspace",
                    fluidRow(
                      column(4, plotOutput("greenspacemap", width = "575", height = "575")),
                      column(4, plotOutput("indicatormap", width = "575", height = "575")),
-                       ),
-                   fluidRow(
-                     column(5,),
-                     column(7,
+                     column(4,
                             selectInput("map_indic_input",
                                         "Select indicator",
                                         choices = unique(scottish_survey_local$scottish_health_survey_indicator)),
                             
                             )
+                       ),
+                   fluidRow(
+                     column(8, DT::dataTableOutput("greenspace_indicator_table")),
+                     column(4,)
                    )
                    ),
           tabPanel("Summary and statistics",

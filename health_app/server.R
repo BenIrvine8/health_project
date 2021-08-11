@@ -23,15 +23,16 @@ server <- function(input, output) {
             scale_x_continuous(breaks = 2008:2019) +
             expand_limits(y = c(1, 100)) +
         theme_economist() +
-        theme(axis.text.x = element_text(face = "bold", size = 10),
-              axis.text.y = element_text(face = "bold", size = 10),
+        theme(axis.text.x = element_text(face = "bold", size = 12),
+              axis.text.y = element_text(face = "bold", size = 12),
               title =element_text(size=14, face='bold'),
-              axis.title=element_text(size=12)) +
-        labs(x = "Year",
+              axis.title=element_text(size=16),
+              legend.text = element_text(face = "bold")) +
+        labs(x = "\nYear",
              y = "Percent\n",
              colour = "",
              title = "Scottish Health Survey - Scotland level data\n",
-             subtitle = "Trends from 2008 to 2019 for the key Indicators relating to exercise") +
+             subtitle = "Trends from 2008 to 2019 for the key Health Indicators") +
         scale_colour_manual(values = c("All" = "black", "Male" = "#2E45B8", "Female" = "#C91D42"))
 
     },
@@ -52,15 +53,16 @@ server <- function(input, output) {
                 )) +
             geom_col() +
             theme_economist() +
-            theme(axis.text.x = element_text(face = "bold", size = 10, angle = 45, hjust = 1, vjust = 1),
-                  axis.text.y = element_text(face = "bold", size = 10),
+            theme(axis.text.x = element_text(face = "bold", size = 12, angle = 45, hjust = 1, vjust = 1),
+                  axis.text.y = element_text(face = "bold", size = 12),
                   title = element_text(size=14, face='bold'),
-                  axis.title=element_text(size=12)) +
+                  axis.title=element_text(size=16),
+                  legend.text = element_text(face = "bold")) +
             labs(x = "",
                  y = "Percent\n",
                  fill = "",
                  title = "Scottish Health Survey - Local area level data\n",
-                 subtitle = "Local authority comparison against national average for the key Indicators relating to exercise for 2016 - 2019") +
+                 subtitle = "Local authority comparison against National average for the key HealthIndicators for 2016 - 2019") +
         scale_fill_manual(values = c("Above Scotland" = "#F6423C", "Below Scotland" = "#1DC9A4", "Scotland" = "#141F52"))
                 
 
@@ -102,6 +104,24 @@ server <- function(input, output) {
           labs(title = "Health Indicators",
                subtitle = "\n2016-2019",
                fill = "Mean percent")
+      })
+      
+      #Summary table for Health Indicator and Greenspace tab
+      
+      output$greenspace_indicator_table <- DT::renderDataTable({
+        local_greenspace %>% 
+          filter(
+            scottish_health_survey_indicator == input$map_indic_input
+          ) %>% 
+          rename("Local Authority" = ca_name,
+                 "Mean Percentage with Indicator" = indicator_percentage,
+                 "Mean Percentage Living 5 min from Greenspace" = mean_percent) %>%
+          select(-scottish_health_survey_indicator) %>% 
+          DT::datatable(
+            caption = paste0("Health Survey Indicators by Local Authority 2016-2019 for ", input$map_indic_input),
+            options = list(dom = "t"),
+            rownames = FALSE,
+            style = "bootstrap") 
       })
       
       #Summary Stats tables
