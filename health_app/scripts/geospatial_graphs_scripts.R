@@ -2,6 +2,7 @@
 
 #load libraries
 library(tidyverse)
+library(Rcpp)
 library(sf)
 library(here)
 
