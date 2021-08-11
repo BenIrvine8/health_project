@@ -48,7 +48,7 @@ server <- function(input, output) {
                 percentage > scotland_percent ~ "Above Scotland"
                 )) +
             geom_col() +
-            theme_economist() +
+            theme_wsj() +
             theme(axis.text.x = element_text(face = "bold", size = 10, angle = 45, hjust = 1),
                   axis.text.y = element_text(face = "bold", size = 10),
                   title =element_text(size=12, face='bold'),
@@ -57,7 +57,7 @@ server <- function(input, output) {
                  y = "Percent\n",
                  fill = "",
                  title = "Scottish Health Survey-Local area level data") +
-        scale_fill_economist()
+        scale_fill_wsj()
                 
 
 
