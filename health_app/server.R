@@ -69,8 +69,15 @@ server <- function(input, output) {
         greenspace_la_geo %>%
           ggplot() +
           geom_sf(aes(fill = mean_percent), colour = "black") +
-          theme_minimal() +
-          labs(title = "Percentage of people less than 5 min away from Green space")
+          theme_economist() +
+          theme(axis.text.x = element_text(face = "bold", size = 10),
+                axis.text.y = element_text(face = "bold", size = 10),
+                title =element_text(size=12, face='bold'),
+                axis.title=element_text(size=12),
+                legend.position = "bottom") +
+          labs(title = "Less than 5 min",
+               subtitle = "\nDistance to Greenspace 2016-2019",
+               fill = "Mean percent")
       })
       
       #Scottish survey local Geospatial Graph
@@ -81,7 +88,15 @@ server <- function(input, output) {
                                             sex == "All" | is.na(sex)) %>% 
           ggplot() +
           geom_sf(aes(fill = percentage), colour = "black") +
-          theme_minimal()
+          theme_economist() +
+          theme(axis.text.x = element_text(face = "bold", size = 10),
+                axis.text.y = element_text(face = "bold", size = 10),
+                title =element_text(size=12, face='bold'),
+                axis.title=element_text(size=12),
+                legend.position = "bottom") +
+          labs(title = "Health Indicators",
+               subtitle = "\n2016-2019",
+               fill = "Mean percent")
       })
       
       #Summary Stats tables

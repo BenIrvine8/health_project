@@ -8,6 +8,7 @@ library(sf)
 library(DT)
 library(shinythemes)
 
+
 # read in survey data
 scottish_survey <- read.csv(here("data/clean_data/scotland_health_survey_clean.csv"))
 scottish_survey_local <- read_csv(here("data/clean_data/scotland_health_survey_local_clean.csv"))
@@ -25,10 +26,10 @@ greenspace_la <- greenspace %>%
     simd_quintiles == "All",
     type_of_tenure == "All",
     household_type == "All",
-    ethnicity == "All") %>% 
+    ethnicity == "All") %>%
   group_by(
     area_code, ca_name, age
-  ) %>% 
+  ) %>%
   summarise(mean_percent = mean(value_percent))
 
 #read in spatial local authority data and simplify to 1km
@@ -39,7 +40,7 @@ la_zones <- st_read(here::here("data/raw_data/Local_Authority_Boundaries_-_Scotl
 greenspace_la_geo <- la_zones %>%
   merge(greenspace_la, by.x = "code", by.y = "area_code", all = TRUE)
 
-scottish_survey_la_geo <- la_zones %>% 
+scottish_survey_la_geo <- la_zones %>%
     merge(scottish_survey_local, by.x = "code", by.y = "area_code", all = TRUE)
 
 # filter scottish surveys
