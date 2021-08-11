@@ -21,7 +21,9 @@ greenspace_council_names_only_zones <- la_zones %>%
   merge(greenspace_council_names_only, by.x = "code", by.y = "area_code")
 
 #plot geospatial graph with example filters
-greenspace_council_names_only_zones %>% 
+greenspace %>% 
+  group_by(area_code, date_code, age) %>% 
+  slice_max(value_percent)
   filter(date_code == "2019",
          distance_to_nearest_green_or_blue_space == "A 5 minute walk or less",
          age == "All", 
