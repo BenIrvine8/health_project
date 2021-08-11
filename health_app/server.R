@@ -23,8 +23,8 @@ server <- function(input, output) {
             scale_x_continuous(breaks = 2008:2019) +
             expand_limits(y = c(1, 100)) +
         theme_economist() +
-        theme(axis.text.x = element_text(face = "bold", size = 10),
-              axis.text.y = element_text(face = "bold", size = 10),
+        theme(axis.text.x = element_text(face = "bold", size = 12),
+              axis.text.y = element_text(face = "bold", size = 12),
               title =element_text(size=14, face='bold'),
               axis.title=element_text(size=16)) +
         labs(x = "\nYear",
@@ -52,15 +52,15 @@ server <- function(input, output) {
                 )) +
             geom_col() +
             theme_economist() +
-            theme(axis.text.x = element_text(face = "bold", size = 10, angle = 45, hjust = 1, vjust = 1),
-                  axis.text.y = element_text(face = "bold", size = 10),
+            theme(axis.text.x = element_text(face = "bold", size = 12, angle = 45, hjust = 1, vjust = 1),
+                  axis.text.y = element_text(face = "bold", size = 12),
                   title = element_text(size=14, face='bold'),
                   axis.title=element_text(size=16)) +
             labs(x = "",
                  y = "Percent\n",
                  fill = "",
                  title = "Scottish Health Survey - Local area level data\n",
-                 subtitle = "Local authority comparison against national average for the key HealthIndicators for 2016 - 2019") +
+                 subtitle = "Local authority comparison against National average for the key HealthIndicators for 2016 - 2019") +
         scale_fill_manual(values = c("Above Scotland" = "#F6423C", "Below Scotland" = "#1DC9A4", "Scotland" = "#141F52"))
                 
 
