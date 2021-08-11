@@ -36,7 +36,7 @@ server <- function(input, output) {
         scale_colour_manual(values = c("All" = "black", "Male" = "#2E45B8", "Female" = "#C91D42"))
 
     },
-    height = 400, width = 1000)
+    height = 400, width = 1300)
     
     # Area Level Survey Visualisation
     output$localPlot <- renderPlot({
@@ -68,7 +68,7 @@ server <- function(input, output) {
 
 
     },
-    height = 400, width = 1000)
+    height = 400, width = 1300)
   
       
       #Green space Geospatial Graph
@@ -197,7 +197,8 @@ server <- function(input, output) {
           expand_limits(y = c(1,100)) +
           geom_text(aes(label = years_to_live), vjust = -0.5) +
           scale_fill_manual(values = c("Male" = "#2E45B8", "Female" = "#C91D42"))
-      })
+      },
+      height = 400, width = 1300)
       
       # bar graph of male life expectancy, with age on the x axis, years to live on y axis
       output$gender_plot <- renderPlot({
@@ -226,7 +227,8 @@ server <- function(input, output) {
           expand_limits(y = c(1,100)) +
           scale_fill_manual(values = c("Male" = "#2E45B8", "Female" = "#C91D42"))
         
-      })
+      },
+      height = 400, width = 1300)
       
 }
 
