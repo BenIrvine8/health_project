@@ -110,6 +110,8 @@ shinyUI(navbarPage("Scottish Public Health",
                    ),
           tabPanel("SIMD",
                    fluidPage(
+                          tags$text("The Scottish Index of Multiple Deprivation is a relative measure of deprivation across 6,976 small areas (called data zones). If an area is identified as ‘deprived’, this can relate to people having a low income but it can also mean fewer resources or opportunities. SIMD looks at the extent to which an area is deprived across seven domains: income, employment, education, health, access to services, crime and housing.
+SIMD is an area-based measure of relative deprivation: not every person in a highly deprived area will themselves be experiencing high levels of deprivation."),
                            titlePanel(tags$h1("Life Expectancy at Birth")),
                            fluidRow(
                                    column(3,
