@@ -7,6 +7,7 @@ library(shiny)
 
 # Define UI for health application
 shinyUI(navbarPage("Scottish Public Health",
+          theme = shinytheme("flatly"), 
           tabPanel("Scottish Health Survey Overview",
           fluidRow(
             column(3, selectInput("gender_input",
