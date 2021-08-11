@@ -77,14 +77,16 @@ shinyUI(navbarPage("Scottish Public Health",
                      column(4,)
                    )
                    ),
-          tabPanel("Summary and statistics",
+          tabPanel("Summary statistics",
                    fluidRow(
                      column(12,
                      h2(" Distance from Greenspace and Indicators of Health for Scotland")
                      ),
                      column(12,
-                     p(" Generate summary statistics for Scotland by age for
-                       distance to green space and by exercise-related health indicator")
+                     p(" To assess the quality of the data behind the graphs, 
+                       use the drop down boxes to generate summary statistics for Scotland 
+                       by age for distance to green space and by exercise-related health indicator 
+                       for the health survey.")
                      )
                    ),
                    fluidRow(
@@ -106,6 +108,26 @@ shinyUI(navbarPage("Scottish Public Health",
                                           scottish_survey_local$scottish_health_survey_indicator)),
                             ),
                      column(6, DT::dataTableOutput("indicator_stats_table"))
+                   ),
+                   br(),
+                   br(),
+                   br(),
+                   br(),
+                   fluidRow(
+                     column(4,),
+                     column(6, 
+                            h4("Interpreting the summary statistics:"),
+                            p("The median shows the middle value of the percentage 
+                              data for Scotland when ordered and the mean is the 
+                              average value for the data."),
+                            p("The standard deviation shows how much the data 
+                              varies from the mean. A low standard deviation shows 
+                              that the values in the data tend to be found close to the mean."),
+                            p("The values for the 95% confidence limits indicate 
+                              the higher and lower limits of the 95% confidence interval.
+                              There is a 95% chance that the true population mean percentage
+                              for the data falls within these two values.")
+                     )
                    )
                    ),
           tabPanel("SIMD",

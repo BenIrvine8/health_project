@@ -165,6 +165,7 @@ server <- function(input, output) {
           filter(scottish_health_survey_indicator == input$indic_table_input,
             sex == "All") %>%
           select("Percent", "95% Lower Confidence Limit", "95% Upper Confidence Limit") %>% 
+          rename("Mean Percent" = "Percent") %>% 
           DT::datatable(
             caption = htmltools::tags$caption(paste0(
               "Health Survey Indicators for Scotland 2016-2019: ", 
