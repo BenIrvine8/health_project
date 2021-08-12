@@ -146,9 +146,13 @@ server <- function(input, output) {
             ethnicity == "All") %>% 
           summarise("Median percent" = median(value_percent),
                     "Mean percent" = mean(value_percent),
-                    "Std deviation" = round(sd(value_percent), digits = 2)) %>% 
+                    "Std deviation" = round(sd(value_percent), digits = 2)) %>%
+          mutate(distance_to_nearest_green_or_blue_space =
+                   str_replace(distance_to_nearest_green_or_blue_space,
+                               "Within a", "A")) %>% 
+          arrange(distance_to_nearest_green_or_blue_space) %>% 
           rename("Distance to Green or Blue space" = 
-                   distance_to_nearest_green_or_blue_space) %>% 
+                   distance_to_nearest_green_or_blue_space) %>%
           select("Distance to Green or Blue space", "Median percent", 
                  "Mean percent", "Std deviation") %>% 
           DT::datatable(
