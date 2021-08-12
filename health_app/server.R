@@ -63,7 +63,7 @@ server <- function(input, output) {
                  y = "Percent\n",
                  fill = "",
                  title = "Scottish Health Survey - Local area level data\n",
-                 subtitle = "Local authority comparison against National average for the key HealthIndicators for 2016 - 2019") +
+                 subtitle = "Local authority comparison against National average for the key Health Indicators for 2016 - 2019") +
         scale_fill_manual(values = c("Above Scotland" = "#F6423C", "Below Scotland" = "#1DC9A4", "Scotland" = "#141F52"))
                 
 
