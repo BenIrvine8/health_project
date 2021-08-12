@@ -126,7 +126,7 @@ shinyUI(navbarPage("Scottish Public Health",
                               varies from the mean. A low standard deviation shows 
                               that the values in the data tend to be found close to the mean."),
                             p("The values for the 95% confidence limits indicate 
-                              the higher and lower limits of the 95% confidence interval.
+                              the higher and lower limits of the 95% confidence interval for the sample mean percentage calculated from the data.
                               There is a 95% chance that the true population mean percentage
                               for the data falls within these two values.")
                      )
